@@ -56,14 +56,21 @@ public class AlGuiDialogBox {
 
     public static AlertDialog showTextDiaLog(Context context, CharSequence charSequence, CharSequence charSequence2, CharSequence charSequence3) {
         if (context != null) {
-            dialog = showDiaLog(context, -822412550, 50.0f, AlGui.GUI(context).addLinearLayout(17, 1, -1, -2, AlGui.GUI(context).addTextView(charSequence, 18, -14606047, Typeface.create(Typeface.DEFAULT, 1)), AlGui.GUI(context).addTextView(charSequence2, 15.0f, -12434878, null)), AlGui.GUI(context).addButton(charSequence3, 15, -1, null, 50, -12627531, 0, ViewCompat.MEASURED_STATE_MASK, -1, -2, new AlGui.T_ButtonOnChangeListener() { // from class: irene.window.algui.AlGuiDialogBox.100000000
-                @Override // irene.window.algui.AlGui.T_ButtonOnChangeListener
-                public void onClick(View view, GradientDrawable gradientDrawable, TextView textView, boolean z) {
-                    AlGuiDialogBox.dialog.dismiss();
-                }
-            }));
+            dialog = showDiaLog(context, -822412550, 50.0f, AlGui.GUI(context).addLinearLayout(17, 1, -1, -2, AlGui.GUI(context).addTextView(charSequence, 18, -14606047, Typeface.create(Typeface.DEFAULT, 1)), AlGui.GUI(context).addTextView(charSequence2, 15.0f, -12434878, null)), AlGui.GUI(context).addButton(charSequence3, 15, -1, null, 50, -12627531, 0, ViewCompat.MEASURED_STATE_MASK, -1, -2, new AnonymousClass100000000()));
             return dialog;
         }
         return null;
+    }
+
+    /* renamed from: irene.window.algui.AlGuiDialogBox$100000000, reason: invalid class name */
+    /* loaded from: classes.dex */
+    static class AnonymousClass100000000 implements AlGui.T_ButtonOnChangeListener {
+        AnonymousClass100000000() {
+        }
+
+        @Override // irene.window.algui.AlGui.T_ButtonOnChangeListener
+        public void onClick(View view, GradientDrawable gradientDrawable, TextView textView, boolean z) {
+            AlGuiDialogBox.dialog.dismiss();
+        }
     }
 }

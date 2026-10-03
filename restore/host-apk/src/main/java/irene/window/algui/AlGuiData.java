@@ -40,38 +40,8 @@ public class AlGuiData {
     public static float menuTransparency = 1.0f;
     public static float menuScrollWidth = 809.0f;
     public static float menuScrollHeight = 554.0f;
-    private static HashMap<String, Object> DiaLogFlagData = new HashMap<String, Object>() { // from class: irene.window.algui.AlGuiData.100000002
-        {
-            block$13181();
-        }
-
-        private void block$13181() {
-            put("悬浮窗隐藏弹窗不再提示键名", "hideMenuDiaLogBZTS");
-            put("悬浮窗隐藏弹窗不再提示默认数据", new Boolean(false));
-            put("悬浮窗退出弹窗不再提示键名", "exitMenuDiaLogBZTS");
-            put("悬浮窗退出弹窗不再提示默认数据", new Boolean(false));
-        }
-    };
-    private static HashMap<String, Object> GameFrontSightData = new HashMap<String, Object>() { // from class: irene.window.algui.AlGuiData.100000003
-        {
-            block$15664();
-        }
-
-        private void block$15664() {
-            put("游戏准星样式键名", "Style");
-            put("游戏准星样式默认数据", "╋");
-            put("游戏准星颜色键名", "Color");
-            put("游戏准星颜色默认数据", new Integer(-11751600));
-            put("游戏准星大小键名", "Size");
-            put("游戏准星大小默认数据", new Float(15.0f));
-            put("游戏准星透明度键名", "Transparency");
-            put("游戏准星透明度默认数据", new Float(1.0f));
-            put("游戏准星X偏移键名", "X_Offset");
-            put("游戏准星X偏移默认数据", new Integer(0));
-            put("游戏准星Y偏移键名", "Y_Offset");
-            put("游戏准星Y偏移默认数据", new Integer(0));
-        }
-    };
+    private static HashMap<String, Object> DiaLogFlagData = new AnonymousClass100000002();
+    private static HashMap<String, Object> GameFrontSightData = new AnonymousClass100000003();
     private static String video_Icon_LiveStart = "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";
     private static String video_Icon_LiveEnd = "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";
     private static String exquisiteNotice_Icon_Message = "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";
@@ -102,7 +72,9 @@ public class AlGuiData {
         }
         AlGui.GUI(context).getBallWindowParams().flags = 16777224;
         AlGui.GUI(context).updateBall();
-        AlGui.GUI(context).getMenuWindowParams().flags = android.R.string.config_feedbackIntentNameKey;
+        // 还原修正: 原为 android.R.string.config_feedbackIntentNameKey（int 值，
+        // AOSP 里是 0x01040013），jadx 误还原成字符串
+        AlGui.GUI(context).getMenuWindowParams().flags = 0x01040013;
         AlGui.GUI(context).updateMenu();
         AlGuiBubbleNotification.Inform(context).getWindowManageLayoutParams().flags = 16777224;
         AlGuiBubbleNotification.Inform(context).updateW();
@@ -138,39 +110,44 @@ public class AlGuiData {
     }
 
     public static HashMap getMenuColorData() {
-        MenuColorData = new HashMap<String, Object>() { // from class: irene.window.algui.AlGuiData.100000000
-            {
-                block$8290();
-            }
-
-            private void block$8290() {
-                put("根布局背景颜色键名", "rootLayoutBackColor");
-                put("根布局背景颜色默认数据", new Integer(AlGuiData.rootLayoutBackColor));
-                put("根布局描边颜色键名", "rootLayoutStrokeColor");
-                put("根布局描边颜色默认数据", new Integer(AlGuiData.rootLayoutStrokeColor));
-                put("菜单顶部线条颜色键名", "menuTopLineColor");
-                put("菜单顶部线条颜色默认数据", new Integer(AlGuiData.menuTopLineColor));
-                put("菜单主标题文本颜色键名", "menuMainTitleTextColor");
-                put("菜单主标题文本颜色默认数据", new Integer(AlGuiData.menuMainTitleTextColor));
-                put("菜单副标题文本颜色键名", "menuSubTitleTextColor");
-                put("菜单副标题文本颜色默认数据", new Integer(AlGuiData.menuSubTitleTextColor));
-                put("菜单直播模式图标颜色键名", "menuLiveStreamIconColor");
-                put("菜单直播模式图标颜色默认数据", new Integer(AlGuiData.menuLiveStreamIconColor));
-                put("菜单说明背景颜色键名", "menuExplanationBackColor");
-                put("菜单说明背景颜色默认数据", new Integer(AlGuiData.menuExplanationBackColor));
-                put("菜单说明文本颜色键名", "menuExplanationTextColor");
-                put("菜单说明文本颜色默认数据", new Integer(AlGuiData.menuExplanationTextColor));
-                put("菜单滚动列表背景颜色键名", "menuScrollBackColor");
-                put("菜单滚动列表背景颜色默认数据", new Integer(AlGuiData.menuScrollBackColor));
-                put("菜单左下角按钮文本颜色键名", "menuBottLeftButtonTextColor");
-                put("菜单左下角按钮文本颜色默认数据", new Integer(AlGuiData.menuBottLeftButtonTextColor));
-                put("菜单右下角按钮文本颜色键名", "menuBottRightButtonTextColor");
-                put("菜单右下角按钮文本颜色默认数据", new Integer(AlGuiData.menuBottRightButtonTextColor));
-                put("菜单右下角三角形颜色键名", "menuBottRightTriangleColor");
-                put("菜单右下角三角形颜色默认数据", new Integer(AlGuiData.menuBottRightTriangleColor));
-            }
-        };
+        MenuColorData = new AnonymousClass100000000();
         return MenuColorData;
+    }
+
+    /* JADX INFO: Access modifiers changed from: package-private */
+    /* renamed from: irene.window.algui.AlGuiData$100000000, reason: invalid class name */
+    /* loaded from: classes.dex */
+    static public class AnonymousClass100000000 extends HashMap<String, Object> {
+        AnonymousClass100000000() {
+            block$8290();
+        }
+
+        private void block$8290() {
+            put("根布局背景颜色键名", "rootLayoutBackColor");
+            put("根布局背景颜色默认数据", new Integer(AlGuiData.rootLayoutBackColor));
+            put("根布局描边颜色键名", "rootLayoutStrokeColor");
+            put("根布局描边颜色默认数据", new Integer(AlGuiData.rootLayoutStrokeColor));
+            put("菜单顶部线条颜色键名", "menuTopLineColor");
+            put("菜单顶部线条颜色默认数据", new Integer(AlGuiData.menuTopLineColor));
+            put("菜单主标题文本颜色键名", "menuMainTitleTextColor");
+            put("菜单主标题文本颜色默认数据", new Integer(AlGuiData.menuMainTitleTextColor));
+            put("菜单副标题文本颜色键名", "menuSubTitleTextColor");
+            put("菜单副标题文本颜色默认数据", new Integer(AlGuiData.menuSubTitleTextColor));
+            put("菜单直播模式图标颜色键名", "menuLiveStreamIconColor");
+            put("菜单直播模式图标颜色默认数据", new Integer(AlGuiData.menuLiveStreamIconColor));
+            put("菜单说明背景颜色键名", "menuExplanationBackColor");
+            put("菜单说明背景颜色默认数据", new Integer(AlGuiData.menuExplanationBackColor));
+            put("菜单说明文本颜色键名", "menuExplanationTextColor");
+            put("菜单说明文本颜色默认数据", new Integer(AlGuiData.menuExplanationTextColor));
+            put("菜单滚动列表背景颜色键名", "menuScrollBackColor");
+            put("菜单滚动列表背景颜色默认数据", new Integer(AlGuiData.menuScrollBackColor));
+            put("菜单左下角按钮文本颜色键名", "menuBottLeftButtonTextColor");
+            put("菜单左下角按钮文本颜色默认数据", new Integer(AlGuiData.menuBottLeftButtonTextColor));
+            put("菜单右下角按钮文本颜色键名", "menuBottRightButtonTextColor");
+            put("菜单右下角按钮文本颜色默认数据", new Integer(AlGuiData.menuBottRightButtonTextColor));
+            put("菜单右下角三角形颜色键名", "menuBottRightTriangleColor");
+            put("菜单右下角三角形颜色默认数据", new Integer(AlGuiData.menuBottRightTriangleColor));
+        }
     }
 
     public static SharedPreferences getMenuAttributeSP(Context context) {
@@ -194,27 +171,32 @@ public class AlGuiData {
     }
 
     public static HashMap getMenuAttributeData() {
-        MenuAttributeData = new HashMap<String, Object>() { // from class: irene.window.algui.AlGuiData.100000001
-            {
-                block$11325();
-            }
-
-            private void block$11325() {
-                put("根布局圆角半径键名", "rootLayoutFilletRadius");
-                put("根布局圆角半径默认数据", new Float(AlGuiData.rootLayoutFilletRadius));
-                put("根布局描边宽度键名", "rootLayoutStrokeWidth");
-                put("根布局描边宽度默认数据", new Float(AlGuiData.rootLayoutStrokeWidth));
-                put("菜单顶部线条圆角半径键名", "menuTopLineFilletRadius");
-                put("菜单顶部线条圆角半径默认数据", new Float(AlGuiData.menuTopLineFilletRadius));
-                put("菜单透明度键名", "menuTransparency");
-                put("菜单透明度默认数据", new Float(AlGuiData.menuTransparency));
-                put("菜单滚动列表宽度键名", "menuScrollWidth");
-                put("菜单滚动列表宽度默认数据", new Float(AlGuiData.menuScrollWidth));
-                put("菜单滚动列表高度键名", "menuScrollHeight");
-                put("菜单滚动列表高度默认数据", new Float(AlGuiData.menuScrollHeight));
-            }
-        };
+        MenuAttributeData = new AnonymousClass100000001();
         return MenuAttributeData;
+    }
+
+    /* JADX INFO: Access modifiers changed from: package-private */
+    /* renamed from: irene.window.algui.AlGuiData$100000001, reason: invalid class name */
+    /* loaded from: classes.dex */
+    static public class AnonymousClass100000001 extends HashMap<String, Object> {
+        AnonymousClass100000001() {
+            block$11325();
+        }
+
+        private void block$11325() {
+            put("根布局圆角半径键名", "rootLayoutFilletRadius");
+            put("根布局圆角半径默认数据", new Float(AlGuiData.rootLayoutFilletRadius));
+            put("根布局描边宽度键名", "rootLayoutStrokeWidth");
+            put("根布局描边宽度默认数据", new Float(AlGuiData.rootLayoutStrokeWidth));
+            put("菜单顶部线条圆角半径键名", "menuTopLineFilletRadius");
+            put("菜单顶部线条圆角半径默认数据", new Float(AlGuiData.menuTopLineFilletRadius));
+            put("菜单透明度键名", "menuTransparency");
+            put("菜单透明度默认数据", new Float(AlGuiData.menuTransparency));
+            put("菜单滚动列表宽度键名", "menuScrollWidth");
+            put("菜单滚动列表宽度默认数据", new Float(AlGuiData.menuScrollWidth));
+            put("菜单滚动列表高度键名", "menuScrollHeight");
+            put("菜单滚动列表高度默认数据", new Float(AlGuiData.menuScrollHeight));
+        }
     }
 
     public static SharedPreferences getDiaLogFlagSP(Context context) {
@@ -235,6 +217,21 @@ public class AlGuiData {
             diaLogFlagSPED = getDiaLogFlagSP(context).edit();
         }
         return diaLogFlagSPED;
+    }
+
+    /* renamed from: irene.window.algui.AlGuiData$100000002, reason: invalid class name */
+    /* loaded from: classes.dex */
+    static class AnonymousClass100000002 extends HashMap<String, Object> {
+        AnonymousClass100000002() {
+            block$13181();
+        }
+
+        private void block$13181() {
+            put("悬浮窗隐藏弹窗不再提示键名", "hideMenuDiaLogBZTS");
+            put("悬浮窗隐藏弹窗不再提示默认数据", new Boolean(false));
+            put("悬浮窗退出弹窗不再提示键名", "exitMenuDiaLogBZTS");
+            put("悬浮窗退出弹窗不再提示默认数据", new Boolean(false));
+        }
     }
 
     public static HashMap getDiaLogFlagData() {
@@ -261,6 +258,29 @@ public class AlGuiData {
         return GameFrontSightSPED;
     }
 
+    /* renamed from: irene.window.algui.AlGuiData$100000003, reason: invalid class name */
+    /* loaded from: classes.dex */
+    static class AnonymousClass100000003 extends HashMap<String, Object> {
+        AnonymousClass100000003() {
+            block$15664();
+        }
+
+        private void block$15664() {
+            put("游戏准星样式键名", "Style");
+            put("游戏准星样式默认数据", "╋");
+            put("游戏准星颜色键名", "Color");
+            put("游戏准星颜色默认数据", new Integer(-11751600));
+            put("游戏准星大小键名", "Size");
+            put("游戏准星大小默认数据", new Float(15.0f));
+            put("游戏准星透明度键名", "Transparency");
+            put("游戏准星透明度默认数据", new Float(1.0f));
+            put("游戏准星X偏移键名", "X_Offset");
+            put("游戏准星X偏移默认数据", new Integer(0));
+            put("游戏准星Y偏移键名", "Y_Offset");
+            put("游戏准星Y偏移默认数据", new Integer(0));
+        }
+    }
+
     public static HashMap getGameFrontSightData() {
         return GameFrontSightData;
     }
@@ -283,14 +303,7 @@ public class AlGuiData {
 
         private final int id;
 
-        public static AlguiView valueOf(String str) {
-            for (AlguiView alguiView : values()) {
-                if (alguiView.name().equals(str)) {
-                    return alguiView;
-                }
-            }
-            throw new IllegalArgumentException();
-        }
+
 
         AlguiView(int i) {
             this.id = i;
@@ -308,14 +321,7 @@ public class AlGuiData {
 
         private final int id;
 
-        public static AlguiNotification valueOf(String str) {
-            for (AlguiNotification alguiNotification : values()) {
-                if (alguiNotification.name().equals(str)) {
-                    return alguiNotification;
-                }
-            }
-            throw new IllegalArgumentException();
-        }
+
 
         AlguiNotification(int i) {
             this.id = i;

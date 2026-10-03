@@ -66,35 +66,51 @@ public class FloatControlView extends LinearLayout {
         this.wParams.height = -2;
         this.wParams.format = 1;
         this.floatContentView = new FloatContentView(this.mContext);
-        this.controlView.setOnClickListener(new View.OnClickListener() { // from class: com.Riruriru.Sx.FloatControlView.1
-            @Override // android.view.View.OnClickListener
-            public void onClick(View v) {
-                FloatControlView.this.floatContentView.showView();
+        this.controlView.setOnClickListener(new AnonymousClass1());
+        this.controlView.setOnTouchListener(new AnonymousClass2());
+    }
+
+    /* JADX INFO: Access modifiers changed from: package-private */
+    /* renamed from: com.Riruriru.Sx.FloatControlView$1, reason: invalid class name */
+    /* loaded from: classes3.dex */
+    public class AnonymousClass1 implements View.OnClickListener {
+        AnonymousClass1() {
+        }
+
+        @Override // android.view.View.OnClickListener
+        public void onClick(View v) {
+            FloatControlView.this.floatContentView.showView();
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: package-private */
+    /* renamed from: com.Riruriru.Sx.FloatControlView$2, reason: invalid class name */
+    /* loaded from: classes3.dex */
+    public class AnonymousClass2 implements View.OnTouchListener {
+        AnonymousClass2() {
+        }
+
+        @Override // android.view.View.OnTouchListener
+        public boolean onTouch(View view, MotionEvent event) {
+            switch (event.getActionMasked()) {
+                case 0:
+                    FloatControlView.this.signX = FloatControlView.this.wParams.x;
+                    FloatControlView.this.signY = FloatControlView.this.wParams.y;
+                    FloatControlView.this.downX = event.getRawX();
+                    FloatControlView.this.downY = event.getRawY();
+                    return false;
+                case 1:
+                default:
+                    return false;
+                case 2:
+                    FloatControlView.this.moveX = event.getRawX();
+                    FloatControlView.this.moveY = event.getRawY();
+                    FloatControlView.this.wParams.x = FloatControlView.this.signX + ((int) (FloatControlView.this.moveX - FloatControlView.this.downX));
+                    FloatControlView.this.wParams.y = FloatControlView.this.signY + ((int) (FloatControlView.this.moveY - FloatControlView.this.downY));
+                    FloatControlView.this.updateView();
+                    return false;
             }
-        });
-        this.controlView.setOnTouchListener(new View.OnTouchListener() { // from class: com.Riruriru.Sx.FloatControlView.2
-            @Override // android.view.View.OnTouchListener
-            public boolean onTouch(View view, MotionEvent event) {
-                switch (event.getActionMasked()) {
-                    case 0:
-                        FloatControlView.this.signX = FloatControlView.this.wParams.x;
-                        FloatControlView.this.signY = FloatControlView.this.wParams.y;
-                        FloatControlView.this.downX = event.getRawX();
-                        FloatControlView.this.downY = event.getRawY();
-                        return false;
-                    case 1:
-                    default:
-                        return false;
-                    case 2:
-                        FloatControlView.this.moveX = event.getRawX();
-                        FloatControlView.this.moveY = event.getRawY();
-                        FloatControlView.this.wParams.x = FloatControlView.this.signX + ((int) (FloatControlView.this.moveX - FloatControlView.this.downX));
-                        FloatControlView.this.wParams.y = FloatControlView.this.signY + ((int) (FloatControlView.this.moveY - FloatControlView.this.downY));
-                        FloatControlView.this.updateView();
-                        return false;
-                }
-            }
-        });
+        }
     }
 
     private void startRotationAnimation() {
@@ -102,14 +118,22 @@ public class FloatControlView extends LinearLayout {
         this.rotationAnimator.setDuration(10000L);
         this.rotationAnimator.setInterpolator(new LinearInterpolator());
         this.rotationAnimator.setRepeatCount(-1);
-        this.rotationAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() { // from class: com.Riruriru.Sx.FloatControlView.3
-            @Override // android.animation.ValueAnimator.AnimatorUpdateListener
-            public void onAnimationUpdate(ValueAnimator animation) {
-                float rotation = ((Float) animation.getAnimatedValue()).floatValue();
-                FloatControlView.this.controlView.setRotation(rotation);
-            }
-        });
+        this.rotationAnimator.addUpdateListener(new AnonymousClass3());
         this.rotationAnimator.start();
+    }
+
+    /* JADX INFO: Access modifiers changed from: package-private */
+    /* renamed from: com.Riruriru.Sx.FloatControlView$3, reason: invalid class name */
+    /* loaded from: classes3.dex */
+    public class AnonymousClass3 implements ValueAnimator.AnimatorUpdateListener {
+        AnonymousClass3() {
+        }
+
+        @Override // android.animation.ValueAnimator.AnimatorUpdateListener
+        public void onAnimationUpdate(ValueAnimator animation) {
+            float rotation = ((Float) animation.getAnimatedValue()).floatValue();
+            FloatControlView.this.controlView.setRotation(rotation);
+        }
     }
 
     public void showView() {
@@ -124,15 +148,22 @@ public class FloatControlView extends LinearLayout {
         this.wManager.updateViewLayout(this, this.wParams);
     }
 
+    /* renamed from: com.Riruriru.Sx.FloatControlView$4, reason: invalid class name */
+    /* loaded from: classes3.dex */
+    class AnonymousClass4 implements Runnable {
+        AnonymousClass4() {
+        }
+
+        @Override // java.lang.Runnable
+        public void run() {
+            FloatControlView.this.isView = false;
+            FloatControlView.this.wManager.removeView(FloatControlView.this);
+        }
+    }
+
     public void clearView() {
         if (this.isView) {
-            startHideAnimation(new Runnable() { // from class: com.Riruriru.Sx.FloatControlView.4
-                @Override // java.lang.Runnable
-                public void run() {
-                    FloatControlView.this.isView = false;
-                    FloatControlView.this.wManager.removeView(FloatControlView.this);
-                }
-            });
+            startHideAnimation(new AnonymousClass4());
         }
     }
 
@@ -145,18 +176,29 @@ public class FloatControlView extends LinearLayout {
         translationAnimator.start();
     }
 
-    private void startHideAnimation(final Runnable endAction) {
+    private void startHideAnimation(Runnable endAction) {
         ObjectAnimator alphaAnimator = ObjectAnimator.ofFloat(this, "alpha", 1.0f, 0.0f);
         alphaAnimator.setDuration(500L);
         ObjectAnimator translationAnimator = ObjectAnimator.ofFloat(this, "translationY", 0.0f, -200.0f);
         translationAnimator.setDuration(500L);
-        alphaAnimator.addListener(new AnimatorListenerAdapter() { // from class: com.Riruriru.Sx.FloatControlView.5
-            @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
-            public void onAnimationEnd(Animator animation) {
-                endAction.run();
-            }
-        });
+        alphaAnimator.addListener(new AnonymousClass5(endAction));
         alphaAnimator.start();
         translationAnimator.start();
+    }
+
+    /* JADX INFO: Access modifiers changed from: package-private */
+    /* renamed from: com.Riruriru.Sx.FloatControlView$5, reason: invalid class name */
+    /* loaded from: classes3.dex */
+    static public class AnonymousClass5 extends AnimatorListenerAdapter {
+        final /* synthetic */ Runnable val$endAction;
+
+        AnonymousClass5(Runnable runnable) {
+            this.val$endAction = runnable;
+        }
+
+        @Override // android.animation.AnimatorListenerAdapter, android.animation.Animator.AnimatorListener
+        public void onAnimationEnd(Animator animation) {
+            this.val$endAction.run();
+        }
     }
 }

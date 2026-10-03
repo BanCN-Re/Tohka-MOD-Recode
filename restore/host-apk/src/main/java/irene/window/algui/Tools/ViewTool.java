@@ -6,14 +6,12 @@ import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import kotlin.jvm.internal.ByteCompanionObject;
-
 /* loaded from: classes.dex */
 public class ViewTool {
     public static final String TAG = "ViewTool";
 
     public static int getByteCount(byte b) {
-        if ((b & ByteCompanionObject.MIN_VALUE) == 0) {
+        if ((b & -128) == 0) {
             return 1;
         }
         if ((b & 224) == 192) {
@@ -68,9 +66,12 @@ public class ViewTool {
     }
 
     public static int brightenColor(int i) {
-        Color.colorToHSV(i, r0);
-        float[] fArr = {0.0f, fArr[1] * 1.2f, fArr[2] * 1.2f};
-        return Color.HSVToColor(fArr);
+        // 还原修正: jadx 丢了 hsv 数组声明与引用
+        float[] hsv = new float[3];
+        Color.colorToHSV(i, hsv);
+        hsv[1] = Math.min(hsv[1] * 1.2f, 1.0f);
+        hsv[2] = Math.min(hsv[2] * 1.2f, 1.0f);
+        return Color.HSVToColor(hsv);
     }
 
     public static int convertDpToPx(Context context, float f) {

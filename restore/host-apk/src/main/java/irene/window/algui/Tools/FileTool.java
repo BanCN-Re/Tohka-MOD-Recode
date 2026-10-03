@@ -5,7 +5,6 @@ import android.icu.text.DecimalFormat;
 import android.icu.text.SimpleDateFormat;
 import android.os.Environment;
 import android.util.Log;
-import androidx.constraintlayout.solver.widgets.analyzer.BasicMeasure;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -273,7 +272,7 @@ public class FileTool {
         if (j < 1048576) {
             return new StringBuffer().append(decimalFormat.format(((float) j) / 1024.0f)).append("KB").toString();
         }
-        if (j < BasicMeasure.EXACTLY) {
+        if (j < 1073741824) {
             return new StringBuffer().append(decimalFormat.format((((float) j) / 1024.0f) / 1024.0f)).append("MB").toString();
         }
         if (j < 1099511627776L) {

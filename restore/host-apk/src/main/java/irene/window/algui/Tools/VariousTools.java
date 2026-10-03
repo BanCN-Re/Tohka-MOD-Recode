@@ -56,40 +56,44 @@ public class VariousTools {
         Intent intent = new Intent();
         intent.setAction("android.speech.tts.engine.CHECK_TTS_DATA");
         if (packageManager.resolveActivity(intent, 65536) != null) {
-            textToSpeech = new TextToSpeech(context, new TextToSpeech.OnInitListener(locale, str, context) { // from class: irene.window.algui.Tools.VariousTools.100000000
-                private final Locale val$language;
-                private final Context val$tContext;
-                private final String val$text;
-
-                {
-                    this.val$language = locale;
-                    this.val$text = str;
-                    this.val$tContext = context;
-                }
-
-                @Override // android.speech.tts.TextToSpeech.OnInitListener
-                public void onInit(int i) {
-                    Locale locale2;
-                    if (i == 0) {
-                        VariousTools.textToSpeech.setEngineByPackageName(VariousTools.textToSpeech.getDefaultEngine());
-                        if (this.val$language != null) {
-                            locale2 = this.val$language;
-                        } else {
-                            locale2 = Locale.getDefault();
-                        }
-                        if (VariousTools.textToSpeech.isLanguageAvailable(locale2) == 0) {
-                            VariousTools.textToSpeech.setLanguage(locale2);
-                            VariousTools.textToSpeech.speak(this.val$text, 0, null, null);
-                            return;
-                        }
-                        Toast.makeText(this.val$tContext, "该语言无法识别此内容", 1).show();
-                    }
-                }
-            });
+            textToSpeech = new TextToSpeech(context, new AnonymousClass100000000(locale, str, context));
             textToSpeech.shutdown();
             return true;
         }
         Toast.makeText(context, "未安装系统自带的TTS引擎", 1).show();
         return false;
+    }
+
+    /* renamed from: irene.window.algui.Tools.VariousTools$100000000, reason: invalid class name */
+    /* loaded from: classes.dex */
+    static class AnonymousClass100000000 implements TextToSpeech.OnInitListener {
+        private final Locale val$language;
+        private final Context val$tContext;
+        private final String val$text;
+
+        AnonymousClass100000000(Locale locale, String str, Context context) {
+            this.val$language = locale;
+            this.val$text = str;
+            this.val$tContext = context;
+        }
+
+        @Override // android.speech.tts.TextToSpeech.OnInitListener
+        public void onInit(int i) {
+            Locale locale;
+            if (i == 0) {
+                VariousTools.textToSpeech.setEngineByPackageName(VariousTools.textToSpeech.getDefaultEngine());
+                if (this.val$language != null) {
+                    locale = this.val$language;
+                } else {
+                    locale = Locale.getDefault();
+                }
+                if (VariousTools.textToSpeech.isLanguageAvailable(locale) == 0) {
+                    VariousTools.textToSpeech.setLanguage(locale);
+                    VariousTools.textToSpeech.speak(this.val$text, 0, null, null);
+                    return;
+                }
+                Toast.makeText(this.val$tContext, "该语言无法识别此内容", 1).show();
+            }
+        }
     }
 }

@@ -62,49 +62,42 @@ public class AlGuiPrefabricatedMenu_LB {
         float f = 0;
         float f2 = 11;
         float f3 = 5;
-        vLinearLayout addCollapse = this.algui.addCollapse((CharSequence) "使用说明", 10, ViewCompat.MEASURED_STATE_MASK, (Typeface) null, 3, -1, f, -3814679, true, AlGui.GUI(this.context).addLinearLayout(17, 1, -1, -2, this.algui.addLine(0.5f, -2039584, true), this.algui.addTextView("使用说明", f2, ViewCompat.MEASURED_STATE_MASK, Typeface.create(Typeface.DEFAULT, 1)), this.algui.addLine(0.5f, -2039584, true), this.algui.addTextView(Html.fromHtml("本项目由 <font color='#EF5350'>麻省理工学院许可证</font> 进行发布和分发"), f2, ViewCompat.MEASURED_STATE_MASK, null)), this.algui.addLine(0.5f, -2039584, true), this.algui.addTextView(Html.fromHtml("开发者：<font color='#424242'>艾琳 (唯一作者)</font>"), f2, ViewCompat.MEASURED_STATE_MASK, null), this.algui.addLine(0.5f, -2039584, true), this.algui.addTextView(Html.fromHtml("开发者QQ：<a href=\"https://qm.qq.com/q/3U1H3JMf5Y\">3353484607</a>"), f2, ViewCompat.MEASURED_STATE_MASK, null), this.algui.addLine(0.5f, -2039584, true), this.algui.addTextView(Html.fromHtml("交流群QQ：<a color='#3F51B5' href=\"mqqopensdkapi://bizAgent/qm/qr?url=http%3A%2F%2Fqm.qq.com%2Fcgi-bin%2Fqm%2Fqr%3Ffrom%3Dapp%26p%3Dandroid%26jump_from%3Dwebapi%26k%3Dqeey7hum96m64eaHkKKjHC6micNY9_oI\">730967224</a>"), f2, ViewCompat.MEASURED_STATE_MASK, null), this.algui.addLine(0.5f, -2039584, true), this.algui.addTextView(Html.fromHtml("当前版本：<font color='#424242'>v2.0 (正式版)</font>"), f2, ViewCompat.MEASURED_STATE_MASK, null), this.algui.addLine(0.5f, -2039584, true), this.algui.addButton("使用文档", f2, -1, null, f3, -12627531, f, ViewCompat.MEASURED_STATE_MASK, -1, -2, new AlGui.T_ButtonOnChangeListener(this) { // from class: irene.window.algui.AlGuiPrefabricatedMenu_LB.100000000
-            private final AlGuiPrefabricatedMenu_LB this$0;
-
-            {
-                this.this$0 = this;
-            }
-
-            @Override // irene.window.algui.AlGui.T_ButtonOnChangeListener
-            public void onClick(View view, GradientDrawable gradientDrawable, TextView textView, boolean z) {
-                VariousTools.gotoWeb(this.this$0.context, "https://gitee.com/ByteAL/ALGUI");
-            }
-        }), this.algui.addButton("更新GUI", f2, -1, null, f3, -12627531, f, ViewCompat.MEASURED_STATE_MASK, -1, -2, new AlGui.T_ButtonOnChangeListener(this) { // from class: irene.window.algui.AlGuiPrefabricatedMenu_LB.100000001
-            private final AlGuiPrefabricatedMenu_LB this$0;
-
-            {
-                this.this$0 = this;
-            }
-
-            @Override // irene.window.algui.AlGui.T_ButtonOnChangeListener
-            public void onClick(View view, GradientDrawable gradientDrawable, TextView textView, boolean z) {
-                VariousTools.gotoWeb(this.this$0.context, "https://www.123pan.com/s/RMOtVv-G8ijh.html");
-            }
-        }), this.algui.addButton("作者B站", f2, -1, null, f3, -12627531, f, ViewCompat.MEASURED_STATE_MASK, -1, -2, new AnonymousClass100000004(this)), this.algui.addButton("赞助作者(加入开发)", f2, -1, null, f3, -12627531, f, ViewCompat.MEASURED_STATE_MASK, -1, -2, new AlGui.T_ButtonOnChangeListener(this) { // from class: irene.window.algui.AlGuiPrefabricatedMenu_LB.100000005
-            private final AlGuiPrefabricatedMenu_LB this$0;
-
-            {
-                this.this$0 = this;
-            }
-
-            @Override // irene.window.algui.AlGui.T_ButtonOnChangeListener
-            public void onClick(View view, GradientDrawable gradientDrawable, TextView textView, boolean z) {
-                if (AppPermissionTool.isAndroidManifestPermissionExist(this.this$0.context, "android.permission.INTERNET")) {
-                    AlGuiWindowView.showWebView(this.this$0.context, "赞助", "<html><body><img src=\"https://img2.imgtp.com/2024/02/14/aOxtoFpY.png\"></img></body></html>");
-                } else {
-                    VariousTools.gotoWeb(this.this$0.context, "https://img2.imgtp.com/2024/02/14/aOxtoFpY.png");
-                }
-            }
-        }), this.algui.addButton("交流社区(Bug反馈)", f2, -1, null, f3, -12627531, f, ViewCompat.MEASURED_STATE_MASK, -1, -2, new AnonymousClass100000008(this)), this.algui.addLine(0.5f, -2039584, true), AlGui.GUI(this.context).addLinearLayout(17, 0, -1, -2, this.algui.addTextView("Copyright © 2023 艾琳 版权所有", 9, -6381922, Typeface.create(Typeface.DEFAULT, 0))));
+        vLinearLayout addCollapse = this.algui.addCollapse((CharSequence) "使用说明", 10, ViewCompat.MEASURED_STATE_MASK, (Typeface) null, 3, -1, f, -3814679, true, AlGui.GUI(this.context).addLinearLayout(17, 1, -1, -2, this.algui.addLine(0.5f, -2039584, true), this.algui.addTextView("使用说明", f2, ViewCompat.MEASURED_STATE_MASK, Typeface.create(Typeface.DEFAULT, 1)), this.algui.addLine(0.5f, -2039584, true), this.algui.addTextView(Html.fromHtml("本项目由 <font color='#EF5350'>麻省理工学院许可证</font> 进行发布和分发"), f2, ViewCompat.MEASURED_STATE_MASK, null)), this.algui.addLine(0.5f, -2039584, true), this.algui.addTextView(Html.fromHtml("开发者：<font color='#424242'>艾琳 (唯一作者)</font>"), f2, ViewCompat.MEASURED_STATE_MASK, null), this.algui.addLine(0.5f, -2039584, true), this.algui.addTextView(Html.fromHtml("开发者QQ：<a href=\"https://qm.qq.com/q/3U1H3JMf5Y\">3353484607</a>"), f2, ViewCompat.MEASURED_STATE_MASK, null), this.algui.addLine(0.5f, -2039584, true), this.algui.addTextView(Html.fromHtml("交流群QQ：<a color='#3F51B5' href=\"mqqopensdkapi://bizAgent/qm/qr?url=http%3A%2F%2Fqm.qq.com%2Fcgi-bin%2Fqm%2Fqr%3Ffrom%3Dapp%26p%3Dandroid%26jump_from%3Dwebapi%26k%3Dqeey7hum96m64eaHkKKjHC6micNY9_oI\">730967224</a>"), f2, ViewCompat.MEASURED_STATE_MASK, null), this.algui.addLine(0.5f, -2039584, true), this.algui.addTextView(Html.fromHtml("当前版本：<font color='#424242'>v2.0 (正式版)</font>"), f2, ViewCompat.MEASURED_STATE_MASK, null), this.algui.addLine(0.5f, -2039584, true), this.algui.addButton("使用文档", f2, -1, null, f3, -12627531, f, ViewCompat.MEASURED_STATE_MASK, -1, -2, new AnonymousClass100000000(this)), this.algui.addButton("更新GUI", f2, -1, null, f3, -12627531, f, ViewCompat.MEASURED_STATE_MASK, -1, -2, new AnonymousClass100000001(this)), this.algui.addButton("作者B站", f2, -1, null, f3, -12627531, f, ViewCompat.MEASURED_STATE_MASK, -1, -2, new AnonymousClass100000004(this)), this.algui.addButton("赞助作者(加入开发)", f2, -1, null, f3, -12627531, f, ViewCompat.MEASURED_STATE_MASK, -1, -2, new AnonymousClass100000005(this)), this.algui.addButton("交流社区(Bug反馈)", f2, -1, null, f3, -12627531, f, ViewCompat.MEASURED_STATE_MASK, -1, -2, new AnonymousClass100000008(this)), this.algui.addLine(0.5f, -2039584, true), AlGui.GUI(this.context).addLinearLayout(17, 0, -1, -2, this.algui.addTextView("Copyright © 2023 艾琳 版权所有", 9, -6381922, Typeface.create(Typeface.DEFAULT, 0))));
         if (viewGroup != null) {
             viewGroup.addView(addCollapse);
             return addCollapse;
         }
         return addCollapse;
+    }
+
+    /* renamed from: irene.window.algui.AlGuiPrefabricatedMenu_LB$100000000, reason: invalid class name */
+    /* loaded from: classes.dex */
+    class AnonymousClass100000000 implements AlGui.T_ButtonOnChangeListener {
+        private final AlGuiPrefabricatedMenu_LB this$0;
+
+        AnonymousClass100000000(AlGuiPrefabricatedMenu_LB alGuiPrefabricatedMenu_LB) {
+            this.this$0 = alGuiPrefabricatedMenu_LB;
+        }
+
+        @Override // irene.window.algui.AlGui.T_ButtonOnChangeListener
+        public void onClick(View view, GradientDrawable gradientDrawable, TextView textView, boolean z) {
+            VariousTools.gotoWeb(this.this$0.context, "https://gitee.com/ByteAL/ALGUI");
+        }
+    }
+
+    /* renamed from: irene.window.algui.AlGuiPrefabricatedMenu_LB$100000001, reason: invalid class name */
+    /* loaded from: classes.dex */
+    class AnonymousClass100000001 implements AlGui.T_ButtonOnChangeListener {
+        private final AlGuiPrefabricatedMenu_LB this$0;
+
+        AnonymousClass100000001(AlGuiPrefabricatedMenu_LB alGuiPrefabricatedMenu_LB) {
+            this.this$0 = alGuiPrefabricatedMenu_LB;
+        }
+
+        @Override // irene.window.algui.AlGui.T_ButtonOnChangeListener
+        public void onClick(View view, GradientDrawable gradientDrawable, TextView textView, boolean z) {
+            VariousTools.gotoWeb(this.this$0.context, "https://www.123pan.com/s/RMOtVv-G8ijh.html");
+        }
     }
 
     /* renamed from: irene.window.algui.AlGuiPrefabricatedMenu_LB$100000004, reason: invalid class name */
@@ -118,34 +111,61 @@ public class AlGuiPrefabricatedMenu_LB {
 
         @Override // irene.window.algui.AlGui.T_ButtonOnChangeListener
         public void onClick(View view, GradientDrawable gradientDrawable, TextView textView, boolean z) {
-            AlGuiBubbleNotification.Inform(this.this$0.context).showMessageNotification_Simplicity_Button(null, "请选择打开方式", "你希望在内部直接打开，还是在外部游览器打开", "内部", new AlGuiBubbleNotification.T_ButtonOnChangeListener(this) { // from class: irene.window.algui.AlGuiPrefabricatedMenu_LB.100000004.100000002
-                private final AnonymousClass100000004 this$0;
+            AlGuiBubbleNotification.Inform(this.this$0.context).showMessageNotification_Simplicity_Button(null, "请选择打开方式", "你希望在内部直接打开，还是在外部游览器打开", "内部", new AnonymousClass100000002(this), "外部", new AnonymousClass100000003(this));
+        }
 
-                {
-                    this.this$0 = this;
-                }
+        /* renamed from: irene.window.algui.AlGuiPrefabricatedMenu_LB$100000004$100000002, reason: invalid class name */
+        /* loaded from: classes.dex */
+        class AnonymousClass100000002 implements AlGuiBubbleNotification.T_ButtonOnChangeListener {
+            private final AnonymousClass100000004 this$0;
 
-                @Override // irene.window.algui.AlGuiBubbleNotification.T_ButtonOnChangeListener
-                public void onClick(View view2, GradientDrawable gradientDrawable2, TextView textView2, boolean z2) {
-                    if (AppPermissionTool.isAndroidManifestPermissionExist(this.this$0.this$0.context, "android.permission.INTERNET")) {
-                        AlGuiWindowView.showWebSite(this.this$0.this$0.context, "B站", "https://b23.tv/NoEaEXW");
-                        return;
-                    }
-                    AlGuiBubbleNotification.Inform(this.this$0.this$0.context).showMistakeNotification_Simplicity(null, "内部无法加载", "可能没有网络权限，我们将自动跳转到第三方游览器加载！", 5000);
-                    VariousTools.gotoWeb(this.this$0.this$0.context, "https://b23.tv/NoEaEXW");
-                }
-            }, "外部", new AlGuiBubbleNotification.T_ButtonOnChangeListener(this) { // from class: irene.window.algui.AlGuiPrefabricatedMenu_LB.100000004.100000003
-                private final AnonymousClass100000004 this$0;
+            AnonymousClass100000002(AnonymousClass100000004 anonymousClass100000004) {
+                this.this$0 = anonymousClass100000004;
+            }
 
-                {
-                    this.this$0 = this;
+            @Override // irene.window.algui.AlGuiBubbleNotification.T_ButtonOnChangeListener
+            public void onClick(View view, GradientDrawable gradientDrawable, TextView textView, boolean z) {
+                if (AppPermissionTool.isAndroidManifestPermissionExist(this.this$0.this$0.context, "android.permission.INTERNET")) {
+                    AlGuiWindowView.showWebSite(this.this$0.this$0.context, "B站", "https://b23.tv/NoEaEXW");
+                    return;
                 }
+                AlGuiBubbleNotification.Inform(this.this$0.this$0.context).showMistakeNotification_Simplicity(null, "内部无法加载", "可能没有网络权限，我们将自动跳转到第三方游览器加载！", 5000);
+                VariousTools.gotoWeb(this.this$0.this$0.context, "https://b23.tv/NoEaEXW");
+            }
+        }
 
-                @Override // irene.window.algui.AlGuiBubbleNotification.T_ButtonOnChangeListener
-                public void onClick(View view2, GradientDrawable gradientDrawable2, TextView textView2, boolean z2) {
-                    VariousTools.gotoWeb(this.this$0.this$0.context, "https://b23.tv/NoEaEXW");
-                }
-            });
+        /* renamed from: irene.window.algui.AlGuiPrefabricatedMenu_LB$100000004$100000003, reason: invalid class name */
+        /* loaded from: classes.dex */
+        class AnonymousClass100000003 implements AlGuiBubbleNotification.T_ButtonOnChangeListener {
+            private final AnonymousClass100000004 this$0;
+
+            AnonymousClass100000003(AnonymousClass100000004 anonymousClass100000004) {
+                this.this$0 = anonymousClass100000004;
+            }
+
+            @Override // irene.window.algui.AlGuiBubbleNotification.T_ButtonOnChangeListener
+            public void onClick(View view, GradientDrawable gradientDrawable, TextView textView, boolean z) {
+                VariousTools.gotoWeb(this.this$0.this$0.context, "https://b23.tv/NoEaEXW");
+            }
+        }
+    }
+
+    /* renamed from: irene.window.algui.AlGuiPrefabricatedMenu_LB$100000005, reason: invalid class name */
+    /* loaded from: classes.dex */
+    class AnonymousClass100000005 implements AlGui.T_ButtonOnChangeListener {
+        private final AlGuiPrefabricatedMenu_LB this$0;
+
+        AnonymousClass100000005(AlGuiPrefabricatedMenu_LB alGuiPrefabricatedMenu_LB) {
+            this.this$0 = alGuiPrefabricatedMenu_LB;
+        }
+
+        @Override // irene.window.algui.AlGui.T_ButtonOnChangeListener
+        public void onClick(View view, GradientDrawable gradientDrawable, TextView textView, boolean z) {
+            if (AppPermissionTool.isAndroidManifestPermissionExist(this.this$0.context, "android.permission.INTERNET")) {
+                AlGuiWindowView.showWebView(this.this$0.context, "赞助", "<html><body><img src=\"https://img2.imgtp.com/2024/02/14/aOxtoFpY.png\"></img></body></html>");
+            } else {
+                VariousTools.gotoWeb(this.this$0.context, "https://img2.imgtp.com/2024/02/14/aOxtoFpY.png");
+            }
         }
     }
 
@@ -160,78 +180,97 @@ public class AlGuiPrefabricatedMenu_LB {
 
         @Override // irene.window.algui.AlGui.T_ButtonOnChangeListener
         public void onClick(View view, GradientDrawable gradientDrawable, TextView textView, boolean z) {
-            AlGuiBubbleNotification.Inform(this.this$0.context).showMessageNotification_Simplicity_Button(null, "请选择打开方式", "你希望在内部直接打开，还是在外部游览器打开", "内部", new AlGuiBubbleNotification.T_ButtonOnChangeListener(this) { // from class: irene.window.algui.AlGuiPrefabricatedMenu_LB.100000008.100000006
-                private final AnonymousClass100000008 this$0;
+            AlGuiBubbleNotification.Inform(this.this$0.context).showMessageNotification_Simplicity_Button(null, "请选择打开方式", "你希望在内部直接打开，还是在外部游览器打开", "内部", new AnonymousClass100000006(this), "外部", new AnonymousClass100000007(this));
+        }
 
-                {
-                    this.this$0 = this;
-                }
+        /* renamed from: irene.window.algui.AlGuiPrefabricatedMenu_LB$100000008$100000006, reason: invalid class name */
+        /* loaded from: classes.dex */
+        class AnonymousClass100000006 implements AlGuiBubbleNotification.T_ButtonOnChangeListener {
+            private final AnonymousClass100000008 this$0;
 
-                @Override // irene.window.algui.AlGuiBubbleNotification.T_ButtonOnChangeListener
-                public void onClick(View view2, GradientDrawable gradientDrawable2, TextView textView2, boolean z2) {
-                    if (AppPermissionTool.isAndroidManifestPermissionExist(this.this$0.this$0.context, "android.permission.INTERNET")) {
-                        AlGuiWindowView.showWebSite(this.this$0.this$0.context, "社区", "https://txc.qq.com/products/634245");
-                        return;
-                    }
-                    AlGuiBubbleNotification.Inform(this.this$0.this$0.context).showMistakeNotification_Simplicity(null, "内部无法加载", "可能没有网络权限，我们将自动跳转到第三方游览器加载！", 5000);
-                    VariousTools.gotoWeb(this.this$0.this$0.context, "https://txc.qq.com/products/634245");
-                }
-            }, "外部", new AlGuiBubbleNotification.T_ButtonOnChangeListener(this) { // from class: irene.window.algui.AlGuiPrefabricatedMenu_LB.100000008.100000007
-                private final AnonymousClass100000008 this$0;
+            AnonymousClass100000006(AnonymousClass100000008 anonymousClass100000008) {
+                this.this$0 = anonymousClass100000008;
+            }
 
-                {
-                    this.this$0 = this;
+            @Override // irene.window.algui.AlGuiBubbleNotification.T_ButtonOnChangeListener
+            public void onClick(View view, GradientDrawable gradientDrawable, TextView textView, boolean z) {
+                if (AppPermissionTool.isAndroidManifestPermissionExist(this.this$0.this$0.context, "android.permission.INTERNET")) {
+                    AlGuiWindowView.showWebSite(this.this$0.this$0.context, "社区", "https://txc.qq.com/products/634245");
+                    return;
                 }
+                AlGuiBubbleNotification.Inform(this.this$0.this$0.context).showMistakeNotification_Simplicity(null, "内部无法加载", "可能没有网络权限，我们将自动跳转到第三方游览器加载！", 5000);
+                VariousTools.gotoWeb(this.this$0.this$0.context, "https://txc.qq.com/products/634245");
+            }
+        }
 
-                @Override // irene.window.algui.AlGuiBubbleNotification.T_ButtonOnChangeListener
-                public void onClick(View view2, GradientDrawable gradientDrawable2, TextView textView2, boolean z2) {
-                    VariousTools.gotoWeb(this.this$0.this$0.context, "https://txc.qq.com/products/634245");
-                }
-            });
+        /* renamed from: irene.window.algui.AlGuiPrefabricatedMenu_LB$100000008$100000007, reason: invalid class name */
+        /* loaded from: classes.dex */
+        class AnonymousClass100000007 implements AlGuiBubbleNotification.T_ButtonOnChangeListener {
+            private final AnonymousClass100000008 this$0;
+
+            AnonymousClass100000007(AnonymousClass100000008 anonymousClass100000008) {
+                this.this$0 = anonymousClass100000008;
+            }
+
+            @Override // irene.window.algui.AlGuiBubbleNotification.T_ButtonOnChangeListener
+            public void onClick(View view, GradientDrawable gradientDrawable, TextView textView, boolean z) {
+                VariousTools.gotoWeb(this.this$0.this$0.context, "https://txc.qq.com/products/634245");
+            }
         }
     }
 
     private HorizontalScrollView textAddSELinuxMode(HorizontalScrollView horizontalScrollView) {
         if (horizontalScrollView != null) {
             MarqueeTextView marqueeTextView = (MarqueeTextView) horizontalScrollView.findViewById(AlGuiData.AlguiView.MarqueeTextView.getId());
-            new Thread(new Runnable(this, new Handler(this, Looper.getMainLooper(), marqueeTextView, marqueeTextView.getText().toString() != null ? marqueeTextView.getText().toString() : "") { // from class: irene.window.algui.AlGuiPrefabricatedMenu_LB.100000009
-                private final AlGuiPrefabricatedMenu_LB this$0;
-                private final String val$text;
-                private final MarqueeTextView val$textView_A;
-
-                {
-                    this.this$0 = this;
-                    this.val$textView_A = marqueeTextView;
-                    this.val$text = r4;
-                }
-
-                @Override // android.os.Handler
-                public void handleMessage(Message message) {
-                    this.val$textView_A.setText(Html.fromHtml(new StringBuffer().append(this.val$text).append(SystemTool.isSELinuxPermissive() ? "<font color='#EF5350'>环境危险！SELinux处于-宽容模式</font>" : "<font color='#3F51B5'>环境安全！SELinux处于-强制模式</font>").toString()));
-                }
-            }) { // from class: irene.window.algui.AlGuiPrefabricatedMenu_LB.100000010
-                private final AlGuiPrefabricatedMenu_LB this$0;
-                private final Handler val$handler;
-
-                {
-                    this.this$0 = this;
-                    this.val$handler = r2;
-                }
-
-                @Override // java.lang.Runnable
-                public void run() {
-                    while (true) {
-                        this.val$handler.sendEmptyMessage(0);
-                        try {
-                            Thread.sleep(1000);
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }
-            }).start();
+            new Thread(new AnonymousClass100000010(this, new AnonymousClass100000009(this, Looper.getMainLooper(), marqueeTextView, marqueeTextView.getText().toString() != null ? marqueeTextView.getText().toString() : ""))).start();
         }
         return horizontalScrollView;
+    }
+
+    /* JADX INFO: Access modifiers changed from: package-private */
+    /* renamed from: irene.window.algui.AlGuiPrefabricatedMenu_LB$100000009, reason: invalid class name */
+    /* loaded from: classes.dex */
+    public class AnonymousClass100000009 extends Handler {
+        private final AlGuiPrefabricatedMenu_LB this$0;
+        private final String val$text;
+        private final MarqueeTextView val$textView_A;
+
+        AnonymousClass100000009(AlGuiPrefabricatedMenu_LB alGuiPrefabricatedMenu_LB, Looper looper, MarqueeTextView marqueeTextView, String str) {
+            super(looper);
+            this.this$0 = alGuiPrefabricatedMenu_LB;
+            this.val$textView_A = marqueeTextView;
+            this.val$text = str;
+        }
+
+        @Override // android.os.Handler
+        public void handleMessage(Message message) {
+            this.val$textView_A.setText(Html.fromHtml(new StringBuffer().append(this.val$text).append(SystemTool.isSELinuxPermissive() ? "<font color='#EF5350'>环境危险！SELinux处于-宽容模式</font>" : "<font color='#3F51B5'>环境安全！SELinux处于-强制模式</font>").toString()));
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: package-private */
+    /* renamed from: irene.window.algui.AlGuiPrefabricatedMenu_LB$100000010, reason: invalid class name */
+    /* loaded from: classes.dex */
+    public class AnonymousClass100000010 implements Runnable {
+        private final AlGuiPrefabricatedMenu_LB this$0;
+        private final Handler val$handler;
+
+        AnonymousClass100000010(AlGuiPrefabricatedMenu_LB alGuiPrefabricatedMenu_LB, Handler handler) {
+            this.this$0 = alGuiPrefabricatedMenu_LB;
+            this.val$handler = handler;
+        }
+
+        @Override // java.lang.Runnable
+        public void run() {
+            while (true) {
+                this.val$handler.sendEmptyMessage(0);
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 
     public vLinearLayout addAttributeStatusMenu(ViewGroup viewGroup) {
@@ -343,707 +382,779 @@ public class AlGuiPrefabricatedMenu_LB {
         float f3 = 8;
         float f4 = 9;
         float f5 = 5;
-        vLinearLayout addCollapse = this.algui.addCollapse((CharSequence) "菜单设置", 10, ViewCompat.MEASURED_STATE_MASK, (Typeface) null, 3, -1, f, -3814679, false, this.algui.addLine(0.5f, -2039584, true), AlGui.GUI(this.context).addLinearLayout(17, 1, -1, -2, this.algui.addTextView("全局颜色设置", f2, ViewCompat.MEASURED_STATE_MASK, Typeface.create(Typeface.DEFAULT, 1)), this.algui.addTextView("支持的颜色格式 ARGB格式(0xFF4DB6AC)  HEX格式(#4DB6AC)", f3, ViewCompat.MEASURED_STATE_MASK, null), this.algui.addTextView("设置完成后将自动保存配置", f3, ViewCompat.MEASURED_STATE_MASK, null)), this.algui.addEditText(f4, null, -3223858, "菜单上下边栏背景颜色", -1040122112, "", f5, -1476395008, f, 0, -1, "应用", f5, -11234587, f, -1, new AlGui.T_EditTextOnChangeListener(this) { // from class: irene.window.algui.AlGuiPrefabricatedMenu_LB.100000011
-            private final AlGuiPrefabricatedMenu_LB this$0;
-
-            {
-                this.this$0 = this;
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void beforeTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void onTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void afterTextChanged(EditText editText, Editable editable) {
-                if (editable.toString().matches("[a-zA-Z0-9#]*")) {
-                    return;
-                }
-                String replaceAll = editable.toString().replaceAll("[^a-zA-Z0-9#]", "");
-                editText.setText(replaceAll);
-                editText.setSelection(replaceAll.length());
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void buttonOnClick(EditText editText, View view, TextView textView, boolean z) {
-                int parseColor;
-                String obj = editText.getText().toString() != null ? editText.getText().toString() : "";
-                if (!obj.isEmpty()) {
-                    try {
-                        if (obj.startsWith("0x") && obj.length() == 10) {
-                            parseColor = (int) Long.parseLong(obj.substring(2), 16);
-                        } else {
-                            parseColor = Color.parseColor(obj);
-                        }
-                        this.this$0.algui.getMenuRootLayout().setBackColor(parseColor);
-                        AlGuiData.getMenuColorSPED(this.this$0.context).putInt((String) AlGuiData.getMenuColorData().get("根布局背景颜色键名"), parseColor);
-                        AlGuiData.getMenuColorSPED(this.this$0.context).apply();
-                        AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "应用成功", "已自动保存", 5000);
-                        return;
-                    } catch (IllegalArgumentException e) {
-                        AlGuiBubbleNotification.Inform(this.this$0.context).showMistakeNotification_Simplicity(null, "应用失败", "无效的颜色值", 5000);
-                        return;
-                    }
-                }
-                AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "应用失败", "请输入颜色值 例如：#009688 或 0xFF009688", 5000);
-            }
-        }), this.algui.addEditText(f4, null, -3223858, "菜单说明布局背景颜色", -1040122112, "", f5, -1476395008, f, 0, -1, "应用", f5, -11234587, f, -1, new AlGui.T_EditTextOnChangeListener(this) { // from class: irene.window.algui.AlGuiPrefabricatedMenu_LB.100000012
-            private final AlGuiPrefabricatedMenu_LB this$0;
-
-            {
-                this.this$0 = this;
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void beforeTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void onTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void afterTextChanged(EditText editText, Editable editable) {
-                if (editable.toString().matches("[a-zA-Z0-9#]*")) {
-                    return;
-                }
-                String replaceAll = editable.toString().replaceAll("[^a-zA-Z0-9#]", "");
-                editText.setText(replaceAll);
-                editText.setSelection(replaceAll.length());
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void buttonOnClick(EditText editText, View view, TextView textView, boolean z) {
-                int parseColor;
-                String obj = editText.getText().toString() != null ? editText.getText().toString() : "";
-                if (!obj.isEmpty()) {
-                    try {
-                        if (obj.startsWith("0x") && obj.length() == 10) {
-                            parseColor = (int) Long.parseLong(obj.substring(2), 16);
-                        } else {
-                            parseColor = Color.parseColor(obj);
-                        }
-                        this.this$0.algui.getMenuExplanationLayout().setBackgroundColor(parseColor);
-                        AlGuiData.getMenuColorSPED(this.this$0.context).putInt((String) AlGuiData.getMenuColorData().get("菜单说明背景颜色键名"), parseColor);
-                        AlGuiData.getMenuColorSPED(this.this$0.context).apply();
-                        AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "应用成功", "已自动保存", 5000);
-                        return;
-                    } catch (IllegalArgumentException e) {
-                        AlGuiBubbleNotification.Inform(this.this$0.context).showMistakeNotification_Simplicity(null, "应用失败", "无效的颜色值", 5000);
-                        return;
-                    }
-                }
-                AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "应用失败", "请输入颜色值 例如：#009688 或 0xFF009688", 5000);
-            }
-        }), this.algui.addEditText(f4, null, -3223858, "菜单滚动列表背景颜色", -1040122112, "", f5, -1476395008, f, 0, -1, "应用", f5, -11234587, f, -1, new AlGui.T_EditTextOnChangeListener(this) { // from class: irene.window.algui.AlGuiPrefabricatedMenu_LB.100000013
-            private final AlGuiPrefabricatedMenu_LB this$0;
-
-            {
-                this.this$0 = this;
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void beforeTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void onTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void afterTextChanged(EditText editText, Editable editable) {
-                if (editable.toString().matches("[a-zA-Z0-9#]*")) {
-                    return;
-                }
-                String replaceAll = editable.toString().replaceAll("[^a-zA-Z0-9#]", "");
-                editText.setText(replaceAll);
-                editText.setSelection(replaceAll.length());
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void buttonOnClick(EditText editText, View view, TextView textView, boolean z) {
-                int parseColor;
-                String obj = editText.getText().toString() != null ? editText.getText().toString() : "";
-                if (!obj.isEmpty()) {
-                    try {
-                        if (obj.startsWith("0x") && obj.length() == 10) {
-                            parseColor = (int) Long.parseLong(obj.substring(2), 16);
-                        } else {
-                            parseColor = Color.parseColor(obj);
-                        }
-                        this.this$0.algui.getMenuScrollingList().setBackgroundColor(parseColor);
-                        AlGuiData.getMenuColorSPED(this.this$0.context).putInt((String) AlGuiData.getMenuColorData().get("菜单滚动列表背景颜色键名"), parseColor);
-                        AlGuiData.getMenuColorSPED(this.this$0.context).apply();
-                        AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "应用成功", "已自动保存", 5000);
-                        return;
-                    } catch (IllegalArgumentException e) {
-                        AlGuiBubbleNotification.Inform(this.this$0.context).showMistakeNotification_Simplicity(null, "应用失败", "无效的颜色值", 5000);
-                        return;
-                    }
-                }
-                AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "应用失败", "请输入颜色值 例如：#009688 或 0xFF009688", 5000);
-            }
-        }), this.algui.addEditText(f4, null, -3223858, "菜单描边边框绘制颜色", -1040122112, "", f5, -1476395008, f, 0, -1, "应用", f5, -11234587, f, -1, new AlGui.T_EditTextOnChangeListener(this) { // from class: irene.window.algui.AlGuiPrefabricatedMenu_LB.100000014
-            private final AlGuiPrefabricatedMenu_LB this$0;
-
-            {
-                this.this$0 = this;
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void beforeTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void onTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void afterTextChanged(EditText editText, Editable editable) {
-                if (editable.toString().matches("[a-zA-Z0-9#]*")) {
-                    return;
-                }
-                String replaceAll = editable.toString().replaceAll("[^a-zA-Z0-9#]", "");
-                editText.setText(replaceAll);
-                editText.setSelection(replaceAll.length());
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void buttonOnClick(EditText editText, View view, TextView textView, boolean z) {
-                int parseColor;
-                String obj = editText.getText().toString() != null ? editText.getText().toString() : "";
-                if (!obj.isEmpty()) {
-                    try {
-                        if (obj.startsWith("0x") && obj.length() == 10) {
-                            parseColor = (int) Long.parseLong(obj.substring(2), 16);
-                        } else {
-                            parseColor = Color.parseColor(obj);
-                        }
-                        this.this$0.algui.getMenuRootLayout().setBorderColor(parseColor);
-                        AlGuiData.getMenuColorSPED(this.this$0.context).putInt((String) AlGuiData.getMenuColorData().get("根布局描边颜色键名"), parseColor);
-                        AlGuiData.getMenuColorSPED(this.this$0.context).apply();
-                        AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "应用成功", "已自动保存", 5000);
-                        return;
-                    } catch (IllegalArgumentException e) {
-                        AlGuiBubbleNotification.Inform(this.this$0.context).showMistakeNotification_Simplicity(null, "应用失败", "无效的颜色值", 5000);
-                        return;
-                    }
-                }
-                AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "应用失败", "请输入颜色值 例如：#009688 或 0xFF009688", 5000);
-            }
-        }), this.algui.addEditText(f4, null, -3223858, "菜单右下三角绘制颜色", -1040122112, "", f5, -1476395008, f, 0, -1, "应用", f5, -11234587, f, -1, new AlGui.T_EditTextOnChangeListener(this) { // from class: irene.window.algui.AlGuiPrefabricatedMenu_LB.100000015
-            private final AlGuiPrefabricatedMenu_LB this$0;
-
-            {
-                this.this$0 = this;
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void beforeTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void onTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void afterTextChanged(EditText editText, Editable editable) {
-                if (editable.toString().matches("[a-zA-Z0-9#]*")) {
-                    return;
-                }
-                String replaceAll = editable.toString().replaceAll("[^a-zA-Z0-9#]", "");
-                editText.setText(replaceAll);
-                editText.setSelection(replaceAll.length());
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void buttonOnClick(EditText editText, View view, TextView textView, boolean z) {
-                int parseColor;
-                String obj = editText.getText().toString() != null ? editText.getText().toString() : "";
-                if (!obj.isEmpty()) {
-                    try {
-                        if (obj.startsWith("0x") && obj.length() == 10) {
-                            parseColor = (int) Long.parseLong(obj.substring(2), 16);
-                        } else {
-                            parseColor = Color.parseColor(obj);
-                        }
-                        this.this$0.algui.getMenuBottomRightTrianglePaint().setColor(parseColor);
-                        this.this$0.algui.getMenuBottomRightTriangleView().invalidate();
-                        AlGuiData.getMenuColorSPED(this.this$0.context).putInt((String) AlGuiData.getMenuColorData().get("菜单右下角三角形颜色键名"), parseColor);
-                        AlGuiData.getMenuColorSPED(this.this$0.context).apply();
-                        AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "应用成功", "已自动保存", 5000);
-                        return;
-                    } catch (IllegalArgumentException e) {
-                        AlGuiBubbleNotification.Inform(this.this$0.context).showMistakeNotification_Simplicity(null, "应用失败", "无效的颜色值", 5000);
-                        return;
-                    }
-                }
-                AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "应用失败", "请输入颜色值 例如：#009688 或 0xFF009688", 5000);
-            }
-        }), this.algui.addEditText(f4, null, -3223858, "菜单顶部线条绘制颜色", -1040122112, "", f5, -1476395008, f, 0, -1, "应用", f5, -11234587, f, -1, new AlGui.T_EditTextOnChangeListener(this) { // from class: irene.window.algui.AlGuiPrefabricatedMenu_LB.100000016
-            private final AlGuiPrefabricatedMenu_LB this$0;
-
-            {
-                this.this$0 = this;
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void beforeTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void onTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void afterTextChanged(EditText editText, Editable editable) {
-                if (editable.toString().matches("[a-zA-Z0-9#]*")) {
-                    return;
-                }
-                String replaceAll = editable.toString().replaceAll("[^a-zA-Z0-9#]", "");
-                editText.setText(replaceAll);
-                editText.setSelection(replaceAll.length());
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void buttonOnClick(EditText editText, View view, TextView textView, boolean z) {
-                int parseColor;
-                String obj = editText.getText().toString() != null ? editText.getText().toString() : "";
-                if (!obj.isEmpty()) {
-                    try {
-                        if (obj.startsWith("0x") && obj.length() == 10) {
-                            parseColor = (int) Long.parseLong(obj.substring(2), 16);
-                        } else {
-                            parseColor = Color.parseColor(obj);
-                        }
-                        this.this$0.algui.getMenuTopLine().setBackColor(parseColor);
-                        AlGuiData.getMenuColorSPED(this.this$0.context).putInt((String) AlGuiData.getMenuColorData().get("菜单顶部线条颜色键名"), parseColor);
-                        AlGuiData.getMenuColorSPED(this.this$0.context).apply();
-                        AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "应用成功", "已自动保存", 5000);
-                        return;
-                    } catch (IllegalArgumentException e) {
-                        AlGuiBubbleNotification.Inform(this.this$0.context).showMistakeNotification_Simplicity(null, "应用失败", "无效的颜色值", 5000);
-                        return;
-                    }
-                }
-                AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "应用失败", "请输入颜色值 例如：#009688 或 0xFF009688", 5000);
-            }
-        }), this.algui.addEditText(f4, null, -3223858, "菜单主要标题文本颜色", -1040122112, "", f5, -1476395008, f, 0, -1, "应用", f5, -11234587, f, -1, new AlGui.T_EditTextOnChangeListener(this) { // from class: irene.window.algui.AlGuiPrefabricatedMenu_LB.100000017
-            private final AlGuiPrefabricatedMenu_LB this$0;
-
-            {
-                this.this$0 = this;
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void beforeTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void onTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void afterTextChanged(EditText editText, Editable editable) {
-                if (editable.toString().matches("[a-zA-Z0-9#]*")) {
-                    return;
-                }
-                String replaceAll = editable.toString().replaceAll("[^a-zA-Z0-9#]", "");
-                editText.setText(replaceAll);
-                editText.setSelection(replaceAll.length());
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void buttonOnClick(EditText editText, View view, TextView textView, boolean z) {
-                int parseColor;
-                String obj = editText.getText().toString() != null ? editText.getText().toString() : "";
-                if (!obj.isEmpty()) {
-                    try {
-                        if (obj.startsWith("0x") && obj.length() == 10) {
-                            parseColor = (int) Long.parseLong(obj.substring(2), 16);
-                        } else {
-                            parseColor = Color.parseColor(obj);
-                        }
-                        this.this$0.algui.getMenuMainTitle().setTextColor(parseColor);
-                        AlGuiData.getMenuColorSPED(this.this$0.context).putInt((String) AlGuiData.getMenuColorData().get("菜单主标题文本颜色键名"), parseColor);
-                        AlGuiData.getMenuColorSPED(this.this$0.context).apply();
-                        AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "应用成功", "已自动保存", 5000);
-                        return;
-                    } catch (IllegalArgumentException e) {
-                        AlGuiBubbleNotification.Inform(this.this$0.context).showMistakeNotification_Simplicity(null, "应用失败", "无效的颜色值", 5000);
-                        return;
-                    }
-                }
-                AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "应用失败", "请输入颜色值 例如：#009688 或 0xFF009688", 5000);
-            }
-        }), this.algui.addEditText(f4, null, -3223858, "菜单小副标题文本颜色", -1040122112, "", f5, -1476395008, f, 0, -1, "应用", f5, -11234587, f, -1, new AlGui.T_EditTextOnChangeListener(this) { // from class: irene.window.algui.AlGuiPrefabricatedMenu_LB.100000018
-            private final AlGuiPrefabricatedMenu_LB this$0;
-
-            {
-                this.this$0 = this;
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void beforeTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void onTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void afterTextChanged(EditText editText, Editable editable) {
-                if (editable.toString().matches("[a-zA-Z0-9#]*")) {
-                    return;
-                }
-                String replaceAll = editable.toString().replaceAll("[^a-zA-Z0-9#]", "");
-                editText.setText(replaceAll);
-                editText.setSelection(replaceAll.length());
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void buttonOnClick(EditText editText, View view, TextView textView, boolean z) {
-                int parseColor;
-                String obj = editText.getText().toString() != null ? editText.getText().toString() : "";
-                if (!obj.isEmpty()) {
-                    try {
-                        if (obj.startsWith("0x") && obj.length() == 10) {
-                            parseColor = (int) Long.parseLong(obj.substring(2), 16);
-                        } else {
-                            parseColor = Color.parseColor(obj);
-                        }
-                        this.this$0.algui.getMenuSubTitle().setTextColor(parseColor);
-                        AlGuiData.getMenuColorSPED(this.this$0.context).putInt((String) AlGuiData.getMenuColorData().get("菜单副标题文本颜色键名"), parseColor);
-                        AlGuiData.getMenuColorSPED(this.this$0.context).apply();
-                        AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "应用成功", "已自动保存", 5000);
-                        return;
-                    } catch (IllegalArgumentException e) {
-                        AlGuiBubbleNotification.Inform(this.this$0.context).showMistakeNotification_Simplicity(null, "应用失败", "无效的颜色值", 5000);
-                        return;
-                    }
-                }
-                AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "应用失败", "请输入颜色值 例如：#009688 或 0xFF009688", 5000);
-            }
-        }), this.algui.addEditText(f4, null, -3223858, "菜单说明内容文本颜色", -1040122112, "", f5, -1476395008, f, 0, -1, "应用", f5, -11234587, f, -1, new AlGui.T_EditTextOnChangeListener(this) { // from class: irene.window.algui.AlGuiPrefabricatedMenu_LB.100000019
-            private final AlGuiPrefabricatedMenu_LB this$0;
-
-            {
-                this.this$0 = this;
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void beforeTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void onTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void afterTextChanged(EditText editText, Editable editable) {
-                if (editable.toString().matches("[a-zA-Z0-9#]*")) {
-                    return;
-                }
-                String replaceAll = editable.toString().replaceAll("[^a-zA-Z0-9#]", "");
-                editText.setText(replaceAll);
-                editText.setSelection(replaceAll.length());
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void buttonOnClick(EditText editText, View view, TextView textView, boolean z) {
-                int parseColor;
-                String obj = editText.getText().toString() != null ? editText.getText().toString() : "";
-                if (!obj.isEmpty()) {
-                    try {
-                        if (obj.startsWith("0x") && obj.length() == 10) {
-                            parseColor = (int) Long.parseLong(obj.substring(2), 16);
-                        } else {
-                            parseColor = Color.parseColor(obj);
-                        }
-                        this.this$0.algui.getMenuExplanation().setTextColor(parseColor);
-                        AlGuiData.getMenuColorSPED(this.this$0.context).putInt((String) AlGuiData.getMenuColorData().get("菜单说明文本颜色键名"), parseColor);
-                        AlGuiData.getMenuColorSPED(this.this$0.context).apply();
-                        AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "应用成功", "已自动保存", 5000);
-                        return;
-                    } catch (IllegalArgumentException e) {
-                        AlGuiBubbleNotification.Inform(this.this$0.context).showMistakeNotification_Simplicity(null, "应用失败", "无效的颜色值", 5000);
-                        return;
-                    }
-                }
-                AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "应用失败", "请输入颜色值 例如：#009688 或 0xFF009688", 5000);
-            }
-        }), this.algui.addEditText(f4, null, -3223858, "菜单左下按钮文本颜色", -1040122112, "", f5, -1476395008, f, 0, -1, "应用", f5, -11234587, f, -1, new AlGui.T_EditTextOnChangeListener(this) { // from class: irene.window.algui.AlGuiPrefabricatedMenu_LB.100000020
-            private final AlGuiPrefabricatedMenu_LB this$0;
-
-            {
-                this.this$0 = this;
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void beforeTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void onTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void afterTextChanged(EditText editText, Editable editable) {
-                if (editable.toString().matches("[a-zA-Z0-9#]*")) {
-                    return;
-                }
-                String replaceAll = editable.toString().replaceAll("[^a-zA-Z0-9#]", "");
-                editText.setText(replaceAll);
-                editText.setSelection(replaceAll.length());
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void buttonOnClick(EditText editText, View view, TextView textView, boolean z) {
-                int parseColor;
-                String obj = editText.getText().toString() != null ? editText.getText().toString() : "";
-                if (!obj.isEmpty()) {
-                    try {
-                        if (obj.startsWith("0x") && obj.length() == 10) {
-                            parseColor = (int) Long.parseLong(obj.substring(2), 16);
-                        } else {
-                            parseColor = Color.parseColor(obj);
-                        }
-                        this.this$0.algui.getMenuBottomLeftButton().setTextColor(parseColor);
-                        AlGuiData.getMenuColorSPED(this.this$0.context).putInt((String) AlGuiData.getMenuColorData().get("菜单左下角按钮文本颜色键名"), parseColor);
-                        AlGuiData.getMenuColorSPED(this.this$0.context).apply();
-                        AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "应用成功", "已自动保存", 5000);
-                        return;
-                    } catch (IllegalArgumentException e) {
-                        AlGuiBubbleNotification.Inform(this.this$0.context).showMistakeNotification_Simplicity(null, "应用失败", "无效的颜色值", 5000);
-                        return;
-                    }
-                }
-                AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "应用失败", "请输入颜色值 例如：#009688 或 0xFF009688", 5000);
-            }
-        }), this.algui.addEditText(f4, null, -3223858, "菜单右下按钮文本颜色", -1040122112, "", f5, -1476395008, f, 0, -1, "应用", f5, -11234587, f, -1, new AlGui.T_EditTextOnChangeListener(this) { // from class: irene.window.algui.AlGuiPrefabricatedMenu_LB.100000021
-            private final AlGuiPrefabricatedMenu_LB this$0;
-
-            {
-                this.this$0 = this;
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void beforeTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void onTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void afterTextChanged(EditText editText, Editable editable) {
-                if (editable.toString().matches("[a-zA-Z0-9#]*")) {
-                    return;
-                }
-                String replaceAll = editable.toString().replaceAll("[^a-zA-Z0-9#]", "");
-                editText.setText(replaceAll);
-                editText.setSelection(replaceAll.length());
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void buttonOnClick(EditText editText, View view, TextView textView, boolean z) {
-                int parseColor;
-                String obj = editText.getText().toString() != null ? editText.getText().toString() : "";
-                if (!obj.isEmpty()) {
-                    try {
-                        if (obj.startsWith("0x") && obj.length() == 10) {
-                            parseColor = (int) Long.parseLong(obj.substring(2), 16);
-                        } else {
-                            parseColor = Color.parseColor(obj);
-                        }
-                        this.this$0.algui.getMenuBottomRightButton().setTextColor(parseColor);
-                        AlGuiData.getMenuColorSPED(this.this$0.context).putInt((String) AlGuiData.getMenuColorData().get("菜单右下角按钮文本颜色键名"), parseColor);
-                        AlGuiData.getMenuColorSPED(this.this$0.context).apply();
-                        AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "应用成功", "已自动保存", 5000);
-                        return;
-                    } catch (IllegalArgumentException e) {
-                        AlGuiBubbleNotification.Inform(this.this$0.context).showMistakeNotification_Simplicity(null, "应用失败", "无效的颜色值", 5000);
-                        return;
-                    }
-                }
-                AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "应用失败", "请输入颜色值 例如：#009688 或 0xFF009688", 5000);
-            }
-        }), this.algui.addEditText(f4, null, -3223858, "菜单直播模式图标颜色", -1040122112, "", f5, -1476395008, f, 0, -1, "应用", f5, -11234587, f, -1, new AlGui.T_EditTextOnChangeListener(this) { // from class: irene.window.algui.AlGuiPrefabricatedMenu_LB.100000022
-            private final AlGuiPrefabricatedMenu_LB this$0;
-
-            {
-                this.this$0 = this;
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void beforeTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void onTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void afterTextChanged(EditText editText, Editable editable) {
-                if (editable.toString().matches("[a-zA-Z0-9#]*")) {
-                    return;
-                }
-                String replaceAll = editable.toString().replaceAll("[^a-zA-Z0-9#]", "");
-                editText.setText(replaceAll);
-                editText.setSelection(replaceAll.length());
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void buttonOnClick(EditText editText, View view, TextView textView, boolean z) {
-                int parseColor;
-                String obj = editText.getText().toString() != null ? editText.getText().toString() : "";
-                if (!obj.isEmpty()) {
-                    try {
-                        if (obj.startsWith("0x") && obj.length() == 10) {
-                            parseColor = (int) Long.parseLong(obj.substring(2), 16);
-                        } else {
-                            parseColor = Color.parseColor(obj);
-                        }
-                        this.this$0.algui.getMenuLiveStreamIcon().setImageTintList(ColorStateList.valueOf(parseColor));
-                        AlGuiData.getMenuColorSPED(this.this$0.context).putInt((String) AlGuiData.getMenuColorData().get("菜单直播模式图标颜色键名"), parseColor);
-                        AlGuiData.getMenuColorSPED(this.this$0.context).apply();
-                        AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "应用成功", "已自动保存", 5000);
-                        return;
-                    } catch (IllegalArgumentException e) {
-                        AlGuiBubbleNotification.Inform(this.this$0.context).showMistakeNotification_Simplicity(null, "应用失败", "无效的颜色值", 5000);
-                        return;
-                    }
-                }
-                AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "应用失败", "请输入颜色值 例如：#009688 或 0xFF009688", 5000);
-            }
-        }), this.algui.addButton("恢复默认颜色", f2, -1, null, f5, -12627531, f, -1, -1, -2, new AlGui.T_ButtonOnChangeListener(this) { // from class: irene.window.algui.AlGuiPrefabricatedMenu_LB.100000023
-            private final AlGuiPrefabricatedMenu_LB this$0;
-
-            {
-                this.this$0 = this;
-            }
-
-            @Override // irene.window.algui.AlGui.T_ButtonOnChangeListener
-            public void onClick(View view, GradientDrawable gradientDrawable, TextView textView, boolean z) {
-                AlGuiData.getMenuColorSPED(this.this$0.context).clear();
-                AlGuiData.getMenuColorSPED(this.this$0.context).apply();
-                this.this$0.algui.updateMenuAppearance();
-                AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "恢复成功", "已恢复所有颜色并清除保存的颜色配置", 5000);
-            }
-        }), this.algui.addTextView(" ", 10, 0, null), AlGui.GUI(this.context).addLinearLayout(17, 1, -1, -2, this.algui.addTextView("全局属性设置", f2, ViewCompat.MEASURED_STATE_MASK, Typeface.create(Typeface.DEFAULT, 1)), this.algui.addTextView("设置完成后将自动保存配置", f3, ViewCompat.MEASURED_STATE_MASK, null)), this.algui.addSeekBarFloat("菜单圆角半径", f2, ViewCompat.MEASURED_STATE_MASK, null, 0.0f, AlGuiData.getMenuAttributeSP(this.context).getFloat((String) AlGuiData.getMenuAttributeData().get("根布局圆角半径键名"), ((Float) AlGuiData.getMenuAttributeData().get("根布局圆角半径默认数据")).floatValue()), 50.0f, -11234587, -11234587, -11234587, new AlGui.T_SeekBarFloatOnChangeListener(this) { // from class: irene.window.algui.AlGuiPrefabricatedMenu_LB.100000024
-            private final AlGuiPrefabricatedMenu_LB this$0;
-
-            {
-                this.this$0 = this;
-            }
-
-            @Override // irene.window.algui.AlGui.T_SeekBarFloatOnChangeListener
-            public void onStartTrackingTouch(TextView textView, SeekBar seekBar, float f6) {
-            }
-
-            @Override // irene.window.algui.AlGui.T_SeekBarFloatOnChangeListener
-            public void onProgressChanged(TextView textView, SeekBar seekBar, float f6, boolean z) {
-                this.this$0.algui.getMenuRootLayout().setFilletRadiu(ViewTool.convertDpToPx(this.this$0.context, f6));
-            }
-
-            @Override // irene.window.algui.AlGui.T_SeekBarFloatOnChangeListener
-            public void onStopTrackingTouch(TextView textView, SeekBar seekBar, float f6) {
-                AlGuiData.getMenuAttributeSPED(this.this$0.context).putFloat((String) AlGuiData.getMenuAttributeData().get("根布局圆角半径键名"), f6);
-                AlGuiData.getMenuAttributeSPED(this.this$0.context).apply();
-            }
-        }), this.algui.addSeekBarFloat("菜单描边宽度", f2, ViewCompat.MEASURED_STATE_MASK, null, 0.0f, AlGuiData.getMenuAttributeSP(this.context).getFloat((String) AlGuiData.getMenuAttributeData().get("根布局描边宽度键名"), ((Float) AlGuiData.getMenuAttributeData().get("根布局描边宽度默认数据")).floatValue()), 10.0f, -11234587, -11234587, -11234587, new AlGui.T_SeekBarFloatOnChangeListener(this) { // from class: irene.window.algui.AlGuiPrefabricatedMenu_LB.100000025
-            private final AlGuiPrefabricatedMenu_LB this$0;
-
-            {
-                this.this$0 = this;
-            }
-
-            @Override // irene.window.algui.AlGui.T_SeekBarFloatOnChangeListener
-            public void onStartTrackingTouch(TextView textView, SeekBar seekBar, float f6) {
-            }
-
-            @Override // irene.window.algui.AlGui.T_SeekBarFloatOnChangeListener
-            public void onProgressChanged(TextView textView, SeekBar seekBar, float f6, boolean z) {
-                this.this$0.algui.getMenuRootLayout().setBorderSize(ViewTool.convertDpToPx(this.this$0.context, f6));
-            }
-
-            @Override // irene.window.algui.AlGui.T_SeekBarFloatOnChangeListener
-            public void onStopTrackingTouch(TextView textView, SeekBar seekBar, float f6) {
-                AlGuiData.getMenuAttributeSPED(this.this$0.context).putFloat((String) AlGuiData.getMenuAttributeData().get("根布局描边宽度键名"), f6);
-                AlGuiData.getMenuAttributeSPED(this.this$0.context).apply();
-            }
-        }), this.algui.addSeekBarFloat("顶部线条圆角", f2, ViewCompat.MEASURED_STATE_MASK, null, 0.0f, AlGuiData.getMenuAttributeSP(this.context).getFloat((String) AlGuiData.getMenuAttributeData().get("菜单顶部线条圆角半径键名"), ((Float) AlGuiData.getMenuAttributeData().get("菜单顶部线条圆角半径默认数据")).floatValue()), 20.0f, -11234587, -11234587, -11234587, new AlGui.T_SeekBarFloatOnChangeListener(this) { // from class: irene.window.algui.AlGuiPrefabricatedMenu_LB.100000026
-            private final AlGuiPrefabricatedMenu_LB this$0;
-
-            {
-                this.this$0 = this;
-            }
-
-            @Override // irene.window.algui.AlGui.T_SeekBarFloatOnChangeListener
-            public void onStartTrackingTouch(TextView textView, SeekBar seekBar, float f6) {
-            }
-
-            @Override // irene.window.algui.AlGui.T_SeekBarFloatOnChangeListener
-            public void onProgressChanged(TextView textView, SeekBar seekBar, float f6, boolean z) {
-                this.this$0.algui.getMenuTopLine().setFilletRadiu(ViewTool.convertDpToPx(this.this$0.context, f6));
-            }
-
-            @Override // irene.window.algui.AlGui.T_SeekBarFloatOnChangeListener
-            public void onStopTrackingTouch(TextView textView, SeekBar seekBar, float f6) {
-                AlGuiData.getMenuAttributeSPED(this.this$0.context).putFloat((String) AlGuiData.getMenuAttributeData().get("菜单顶部线条圆角半径键名"), f6);
-                AlGuiData.getMenuAttributeSPED(this.this$0.context).apply();
-            }
-        }), this.algui.addSeekBarFloat("悬浮窗透明度", f2, ViewCompat.MEASURED_STATE_MASK, null, 0.1f, AlGuiData.getMenuAttributeSP(this.context).getFloat((String) AlGuiData.getMenuAttributeData().get("菜单透明度键名"), ((Float) AlGuiData.getMenuAttributeData().get("菜单透明度默认数据")).floatValue()), 1.0f, -11234587, -11234587, -11234587, new AlGui.T_SeekBarFloatOnChangeListener(this) { // from class: irene.window.algui.AlGuiPrefabricatedMenu_LB.100000027
-            private final AlGuiPrefabricatedMenu_LB this$0;
-
-            {
-                this.this$0 = this;
-            }
-
-            @Override // irene.window.algui.AlGui.T_SeekBarFloatOnChangeListener
-            public void onStartTrackingTouch(TextView textView, SeekBar seekBar, float f6) {
-            }
-
-            @Override // irene.window.algui.AlGui.T_SeekBarFloatOnChangeListener
-            public void onProgressChanged(TextView textView, SeekBar seekBar, float f6, boolean z) {
-                this.this$0.algui.getMenuRootLayout().setAlpha(f6);
-            }
-
-            @Override // irene.window.algui.AlGui.T_SeekBarFloatOnChangeListener
-            public void onStopTrackingTouch(TextView textView, SeekBar seekBar, float f6) {
-                AlGuiData.getMenuAttributeSPED(this.this$0.context).putFloat((String) AlGuiData.getMenuAttributeData().get("菜单透明度键名"), f6);
-                AlGuiData.getMenuAttributeSPED(this.this$0.context).apply();
-            }
-        }), this.algui.addButton("恢复默认属性", f2, -1, null, f5, -12627531, f, -1, -1, -2, new AlGui.T_ButtonOnChangeListener(this) { // from class: irene.window.algui.AlGuiPrefabricatedMenu_LB.100000028
-            private final AlGuiPrefabricatedMenu_LB this$0;
-
-            {
-                this.this$0 = this;
-            }
-
-            @Override // irene.window.algui.AlGui.T_ButtonOnChangeListener
-            public void onClick(View view, GradientDrawable gradientDrawable, TextView textView, boolean z) {
-                Iterator<Map.Entry<String, ?>> it = AlGuiData.getMenuAttributeSP(this.this$0.context).getAll().entrySet().iterator();
-                while (it.hasNext()) {
-                    String key = it.next().getKey();
-                    if (!key.equals((String) AlGuiData.getMenuAttributeData().get("菜单滚动列表宽度键名")) && !key.equals((String) AlGuiData.getMenuAttributeData().get("菜单滚动列表高度键名"))) {
-                        AlGuiData.getMenuAttributeSPED(this.this$0.context).remove(key);
-                    }
-                }
-                AlGuiData.getMenuAttributeSPED(this.this$0.context).apply();
-                this.this$0.algui.updateMenuAppearance();
-                AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "恢复成功", "已恢复所有属性并清除保存的属性配置", 5000);
-            }
-        }), AlGui.GUI(this.context).addLinearLayout(17, 0, -1, -2, this.algui.addTextView("Copyright © 2023 艾琳 版权所有", f4, -6381922, Typeface.create(Typeface.DEFAULT, 0))));
+        vLinearLayout addCollapse = this.algui.addCollapse((CharSequence) "菜单设置", 10, ViewCompat.MEASURED_STATE_MASK, (Typeface) null, 3, -1, f, -3814679, false, this.algui.addLine(0.5f, -2039584, true), AlGui.GUI(this.context).addLinearLayout(17, 1, -1, -2, this.algui.addTextView("全局颜色设置", f2, ViewCompat.MEASURED_STATE_MASK, Typeface.create(Typeface.DEFAULT, 1)), this.algui.addTextView("支持的颜色格式 ARGB格式(0xFF4DB6AC)  HEX格式(#4DB6AC)", f3, ViewCompat.MEASURED_STATE_MASK, null), this.algui.addTextView("设置完成后将自动保存配置", f3, ViewCompat.MEASURED_STATE_MASK, null)), this.algui.addEditText(f4, null, -3223858, "菜单上下边栏背景颜色", -1040122112, "", f5, -1476395008, f, 0, -1, "应用", f5, -11234587, f, -1, new AnonymousClass100000011(this)), this.algui.addEditText(f4, null, -3223858, "菜单说明布局背景颜色", -1040122112, "", f5, -1476395008, f, 0, -1, "应用", f5, -11234587, f, -1, new AnonymousClass100000012(this)), this.algui.addEditText(f4, null, -3223858, "菜单滚动列表背景颜色", -1040122112, "", f5, -1476395008, f, 0, -1, "应用", f5, -11234587, f, -1, new AnonymousClass100000013(this)), this.algui.addEditText(f4, null, -3223858, "菜单描边边框绘制颜色", -1040122112, "", f5, -1476395008, f, 0, -1, "应用", f5, -11234587, f, -1, new AnonymousClass100000014(this)), this.algui.addEditText(f4, null, -3223858, "菜单右下三角绘制颜色", -1040122112, "", f5, -1476395008, f, 0, -1, "应用", f5, -11234587, f, -1, new AnonymousClass100000015(this)), this.algui.addEditText(f4, null, -3223858, "菜单顶部线条绘制颜色", -1040122112, "", f5, -1476395008, f, 0, -1, "应用", f5, -11234587, f, -1, new AnonymousClass100000016(this)), this.algui.addEditText(f4, null, -3223858, "菜单主要标题文本颜色", -1040122112, "", f5, -1476395008, f, 0, -1, "应用", f5, -11234587, f, -1, new AnonymousClass100000017(this)), this.algui.addEditText(f4, null, -3223858, "菜单小副标题文本颜色", -1040122112, "", f5, -1476395008, f, 0, -1, "应用", f5, -11234587, f, -1, new AnonymousClass100000018(this)), this.algui.addEditText(f4, null, -3223858, "菜单说明内容文本颜色", -1040122112, "", f5, -1476395008, f, 0, -1, "应用", f5, -11234587, f, -1, new AnonymousClass100000019(this)), this.algui.addEditText(f4, null, -3223858, "菜单左下按钮文本颜色", -1040122112, "", f5, -1476395008, f, 0, -1, "应用", f5, -11234587, f, -1, new AnonymousClass100000020(this)), this.algui.addEditText(f4, null, -3223858, "菜单右下按钮文本颜色", -1040122112, "", f5, -1476395008, f, 0, -1, "应用", f5, -11234587, f, -1, new AnonymousClass100000021(this)), this.algui.addEditText(f4, null, -3223858, "菜单直播模式图标颜色", -1040122112, "", f5, -1476395008, f, 0, -1, "应用", f5, -11234587, f, -1, new AnonymousClass100000022(this)), this.algui.addButton("恢复默认颜色", f2, -1, null, f5, -12627531, f, -1, -1, -2, new AnonymousClass100000023(this)), this.algui.addTextView(" ", 10, 0, null), AlGui.GUI(this.context).addLinearLayout(17, 1, -1, -2, this.algui.addTextView("全局属性设置", f2, ViewCompat.MEASURED_STATE_MASK, Typeface.create(Typeface.DEFAULT, 1)), this.algui.addTextView("设置完成后将自动保存配置", f3, ViewCompat.MEASURED_STATE_MASK, null)), this.algui.addSeekBarFloat("菜单圆角半径", f2, ViewCompat.MEASURED_STATE_MASK, null, 0.0f, AlGuiData.getMenuAttributeSP(this.context).getFloat((String) AlGuiData.getMenuAttributeData().get("根布局圆角半径键名"), ((Float) AlGuiData.getMenuAttributeData().get("根布局圆角半径默认数据")).floatValue()), 50.0f, -11234587, -11234587, -11234587, new AnonymousClass100000024(this)), this.algui.addSeekBarFloat("菜单描边宽度", f2, ViewCompat.MEASURED_STATE_MASK, null, 0.0f, AlGuiData.getMenuAttributeSP(this.context).getFloat((String) AlGuiData.getMenuAttributeData().get("根布局描边宽度键名"), ((Float) AlGuiData.getMenuAttributeData().get("根布局描边宽度默认数据")).floatValue()), 10.0f, -11234587, -11234587, -11234587, new AnonymousClass100000025(this)), this.algui.addSeekBarFloat("顶部线条圆角", f2, ViewCompat.MEASURED_STATE_MASK, null, 0.0f, AlGuiData.getMenuAttributeSP(this.context).getFloat((String) AlGuiData.getMenuAttributeData().get("菜单顶部线条圆角半径键名"), ((Float) AlGuiData.getMenuAttributeData().get("菜单顶部线条圆角半径默认数据")).floatValue()), 20.0f, -11234587, -11234587, -11234587, new AnonymousClass100000026(this)), this.algui.addSeekBarFloat("悬浮窗透明度", f2, ViewCompat.MEASURED_STATE_MASK, null, 0.1f, AlGuiData.getMenuAttributeSP(this.context).getFloat((String) AlGuiData.getMenuAttributeData().get("菜单透明度键名"), ((Float) AlGuiData.getMenuAttributeData().get("菜单透明度默认数据")).floatValue()), 1.0f, -11234587, -11234587, -11234587, new AnonymousClass100000027(this)), this.algui.addButton("恢复默认属性", f2, -1, null, f5, -12627531, f, -1, -1, -2, new AnonymousClass100000028(this)), AlGui.GUI(this.context).addLinearLayout(17, 0, -1, -2, this.algui.addTextView("Copyright © 2023 艾琳 版权所有", f4, -6381922, Typeface.create(Typeface.DEFAULT, 0))));
         if (viewGroup != null) {
             viewGroup.addView(addCollapse);
             return addCollapse;
         }
         return addCollapse;
+    }
+
+    /* renamed from: irene.window.algui.AlGuiPrefabricatedMenu_LB$100000011, reason: invalid class name */
+    /* loaded from: classes.dex */
+    class AnonymousClass100000011 implements AlGui.T_EditTextOnChangeListener {
+        private final AlGuiPrefabricatedMenu_LB this$0;
+
+        AnonymousClass100000011(AlGuiPrefabricatedMenu_LB alGuiPrefabricatedMenu_LB) {
+            this.this$0 = alGuiPrefabricatedMenu_LB;
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void beforeTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void onTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void afterTextChanged(EditText editText, Editable editable) {
+            if (editable.toString().matches("[a-zA-Z0-9#]*")) {
+                return;
+            }
+            String replaceAll = editable.toString().replaceAll("[^a-zA-Z0-9#]", "");
+            editText.setText(replaceAll);
+            editText.setSelection(replaceAll.length());
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void buttonOnClick(EditText editText, View view, TextView textView, boolean z) {
+            int parseColor;
+            String obj = editText.getText().toString() != null ? editText.getText().toString() : "";
+            if (!obj.isEmpty()) {
+                try {
+                    if (obj.startsWith("0x") && obj.length() == 10) {
+                        parseColor = (int) Long.parseLong(obj.substring(2), 16);
+                    } else {
+                        parseColor = Color.parseColor(obj);
+                    }
+                    this.this$0.algui.getMenuRootLayout().setBackColor(parseColor);
+                    AlGuiData.getMenuColorSPED(this.this$0.context).putInt((String) AlGuiData.getMenuColorData().get("根布局背景颜色键名"), parseColor);
+                    AlGuiData.getMenuColorSPED(this.this$0.context).apply();
+                    AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "应用成功", "已自动保存", 5000);
+                    return;
+                } catch (IllegalArgumentException e) {
+                    AlGuiBubbleNotification.Inform(this.this$0.context).showMistakeNotification_Simplicity(null, "应用失败", "无效的颜色值", 5000);
+                    return;
+                }
+            }
+            AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "应用失败", "请输入颜色值 例如：#009688 或 0xFF009688", 5000);
+        }
+    }
+
+    /* renamed from: irene.window.algui.AlGuiPrefabricatedMenu_LB$100000012, reason: invalid class name */
+    /* loaded from: classes.dex */
+    class AnonymousClass100000012 implements AlGui.T_EditTextOnChangeListener {
+        private final AlGuiPrefabricatedMenu_LB this$0;
+
+        AnonymousClass100000012(AlGuiPrefabricatedMenu_LB alGuiPrefabricatedMenu_LB) {
+            this.this$0 = alGuiPrefabricatedMenu_LB;
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void beforeTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void onTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void afterTextChanged(EditText editText, Editable editable) {
+            if (editable.toString().matches("[a-zA-Z0-9#]*")) {
+                return;
+            }
+            String replaceAll = editable.toString().replaceAll("[^a-zA-Z0-9#]", "");
+            editText.setText(replaceAll);
+            editText.setSelection(replaceAll.length());
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void buttonOnClick(EditText editText, View view, TextView textView, boolean z) {
+            int parseColor;
+            String obj = editText.getText().toString() != null ? editText.getText().toString() : "";
+            if (!obj.isEmpty()) {
+                try {
+                    if (obj.startsWith("0x") && obj.length() == 10) {
+                        parseColor = (int) Long.parseLong(obj.substring(2), 16);
+                    } else {
+                        parseColor = Color.parseColor(obj);
+                    }
+                    this.this$0.algui.getMenuExplanationLayout().setBackgroundColor(parseColor);
+                    AlGuiData.getMenuColorSPED(this.this$0.context).putInt((String) AlGuiData.getMenuColorData().get("菜单说明背景颜色键名"), parseColor);
+                    AlGuiData.getMenuColorSPED(this.this$0.context).apply();
+                    AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "应用成功", "已自动保存", 5000);
+                    return;
+                } catch (IllegalArgumentException e) {
+                    AlGuiBubbleNotification.Inform(this.this$0.context).showMistakeNotification_Simplicity(null, "应用失败", "无效的颜色值", 5000);
+                    return;
+                }
+            }
+            AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "应用失败", "请输入颜色值 例如：#009688 或 0xFF009688", 5000);
+        }
+    }
+
+    /* renamed from: irene.window.algui.AlGuiPrefabricatedMenu_LB$100000013, reason: invalid class name */
+    /* loaded from: classes.dex */
+    class AnonymousClass100000013 implements AlGui.T_EditTextOnChangeListener {
+        private final AlGuiPrefabricatedMenu_LB this$0;
+
+        AnonymousClass100000013(AlGuiPrefabricatedMenu_LB alGuiPrefabricatedMenu_LB) {
+            this.this$0 = alGuiPrefabricatedMenu_LB;
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void beforeTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void onTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void afterTextChanged(EditText editText, Editable editable) {
+            if (editable.toString().matches("[a-zA-Z0-9#]*")) {
+                return;
+            }
+            String replaceAll = editable.toString().replaceAll("[^a-zA-Z0-9#]", "");
+            editText.setText(replaceAll);
+            editText.setSelection(replaceAll.length());
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void buttonOnClick(EditText editText, View view, TextView textView, boolean z) {
+            int parseColor;
+            String obj = editText.getText().toString() != null ? editText.getText().toString() : "";
+            if (!obj.isEmpty()) {
+                try {
+                    if (obj.startsWith("0x") && obj.length() == 10) {
+                        parseColor = (int) Long.parseLong(obj.substring(2), 16);
+                    } else {
+                        parseColor = Color.parseColor(obj);
+                    }
+                    this.this$0.algui.getMenuScrollingList().setBackgroundColor(parseColor);
+                    AlGuiData.getMenuColorSPED(this.this$0.context).putInt((String) AlGuiData.getMenuColorData().get("菜单滚动列表背景颜色键名"), parseColor);
+                    AlGuiData.getMenuColorSPED(this.this$0.context).apply();
+                    AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "应用成功", "已自动保存", 5000);
+                    return;
+                } catch (IllegalArgumentException e) {
+                    AlGuiBubbleNotification.Inform(this.this$0.context).showMistakeNotification_Simplicity(null, "应用失败", "无效的颜色值", 5000);
+                    return;
+                }
+            }
+            AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "应用失败", "请输入颜色值 例如：#009688 或 0xFF009688", 5000);
+        }
+    }
+
+    /* renamed from: irene.window.algui.AlGuiPrefabricatedMenu_LB$100000014, reason: invalid class name */
+    /* loaded from: classes.dex */
+    class AnonymousClass100000014 implements AlGui.T_EditTextOnChangeListener {
+        private final AlGuiPrefabricatedMenu_LB this$0;
+
+        AnonymousClass100000014(AlGuiPrefabricatedMenu_LB alGuiPrefabricatedMenu_LB) {
+            this.this$0 = alGuiPrefabricatedMenu_LB;
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void beforeTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void onTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void afterTextChanged(EditText editText, Editable editable) {
+            if (editable.toString().matches("[a-zA-Z0-9#]*")) {
+                return;
+            }
+            String replaceAll = editable.toString().replaceAll("[^a-zA-Z0-9#]", "");
+            editText.setText(replaceAll);
+            editText.setSelection(replaceAll.length());
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void buttonOnClick(EditText editText, View view, TextView textView, boolean z) {
+            int parseColor;
+            String obj = editText.getText().toString() != null ? editText.getText().toString() : "";
+            if (!obj.isEmpty()) {
+                try {
+                    if (obj.startsWith("0x") && obj.length() == 10) {
+                        parseColor = (int) Long.parseLong(obj.substring(2), 16);
+                    } else {
+                        parseColor = Color.parseColor(obj);
+                    }
+                    this.this$0.algui.getMenuRootLayout().setBorderColor(parseColor);
+                    AlGuiData.getMenuColorSPED(this.this$0.context).putInt((String) AlGuiData.getMenuColorData().get("根布局描边颜色键名"), parseColor);
+                    AlGuiData.getMenuColorSPED(this.this$0.context).apply();
+                    AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "应用成功", "已自动保存", 5000);
+                    return;
+                } catch (IllegalArgumentException e) {
+                    AlGuiBubbleNotification.Inform(this.this$0.context).showMistakeNotification_Simplicity(null, "应用失败", "无效的颜色值", 5000);
+                    return;
+                }
+            }
+            AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "应用失败", "请输入颜色值 例如：#009688 或 0xFF009688", 5000);
+        }
+    }
+
+    /* renamed from: irene.window.algui.AlGuiPrefabricatedMenu_LB$100000015, reason: invalid class name */
+    /* loaded from: classes.dex */
+    class AnonymousClass100000015 implements AlGui.T_EditTextOnChangeListener {
+        private final AlGuiPrefabricatedMenu_LB this$0;
+
+        AnonymousClass100000015(AlGuiPrefabricatedMenu_LB alGuiPrefabricatedMenu_LB) {
+            this.this$0 = alGuiPrefabricatedMenu_LB;
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void beforeTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void onTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void afterTextChanged(EditText editText, Editable editable) {
+            if (editable.toString().matches("[a-zA-Z0-9#]*")) {
+                return;
+            }
+            String replaceAll = editable.toString().replaceAll("[^a-zA-Z0-9#]", "");
+            editText.setText(replaceAll);
+            editText.setSelection(replaceAll.length());
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void buttonOnClick(EditText editText, View view, TextView textView, boolean z) {
+            int parseColor;
+            String obj = editText.getText().toString() != null ? editText.getText().toString() : "";
+            if (!obj.isEmpty()) {
+                try {
+                    if (obj.startsWith("0x") && obj.length() == 10) {
+                        parseColor = (int) Long.parseLong(obj.substring(2), 16);
+                    } else {
+                        parseColor = Color.parseColor(obj);
+                    }
+                    this.this$0.algui.getMenuBottomRightTrianglePaint().setColor(parseColor);
+                    this.this$0.algui.getMenuBottomRightTriangleView().invalidate();
+                    AlGuiData.getMenuColorSPED(this.this$0.context).putInt((String) AlGuiData.getMenuColorData().get("菜单右下角三角形颜色键名"), parseColor);
+                    AlGuiData.getMenuColorSPED(this.this$0.context).apply();
+                    AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "应用成功", "已自动保存", 5000);
+                    return;
+                } catch (IllegalArgumentException e) {
+                    AlGuiBubbleNotification.Inform(this.this$0.context).showMistakeNotification_Simplicity(null, "应用失败", "无效的颜色值", 5000);
+                    return;
+                }
+            }
+            AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "应用失败", "请输入颜色值 例如：#009688 或 0xFF009688", 5000);
+        }
+    }
+
+    /* renamed from: irene.window.algui.AlGuiPrefabricatedMenu_LB$100000016, reason: invalid class name */
+    /* loaded from: classes.dex */
+    class AnonymousClass100000016 implements AlGui.T_EditTextOnChangeListener {
+        private final AlGuiPrefabricatedMenu_LB this$0;
+
+        AnonymousClass100000016(AlGuiPrefabricatedMenu_LB alGuiPrefabricatedMenu_LB) {
+            this.this$0 = alGuiPrefabricatedMenu_LB;
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void beforeTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void onTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void afterTextChanged(EditText editText, Editable editable) {
+            if (editable.toString().matches("[a-zA-Z0-9#]*")) {
+                return;
+            }
+            String replaceAll = editable.toString().replaceAll("[^a-zA-Z0-9#]", "");
+            editText.setText(replaceAll);
+            editText.setSelection(replaceAll.length());
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void buttonOnClick(EditText editText, View view, TextView textView, boolean z) {
+            int parseColor;
+            String obj = editText.getText().toString() != null ? editText.getText().toString() : "";
+            if (!obj.isEmpty()) {
+                try {
+                    if (obj.startsWith("0x") && obj.length() == 10) {
+                        parseColor = (int) Long.parseLong(obj.substring(2), 16);
+                    } else {
+                        parseColor = Color.parseColor(obj);
+                    }
+                    this.this$0.algui.getMenuTopLine().setBackColor(parseColor);
+                    AlGuiData.getMenuColorSPED(this.this$0.context).putInt((String) AlGuiData.getMenuColorData().get("菜单顶部线条颜色键名"), parseColor);
+                    AlGuiData.getMenuColorSPED(this.this$0.context).apply();
+                    AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "应用成功", "已自动保存", 5000);
+                    return;
+                } catch (IllegalArgumentException e) {
+                    AlGuiBubbleNotification.Inform(this.this$0.context).showMistakeNotification_Simplicity(null, "应用失败", "无效的颜色值", 5000);
+                    return;
+                }
+            }
+            AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "应用失败", "请输入颜色值 例如：#009688 或 0xFF009688", 5000);
+        }
+    }
+
+    /* renamed from: irene.window.algui.AlGuiPrefabricatedMenu_LB$100000017, reason: invalid class name */
+    /* loaded from: classes.dex */
+    class AnonymousClass100000017 implements AlGui.T_EditTextOnChangeListener {
+        private final AlGuiPrefabricatedMenu_LB this$0;
+
+        AnonymousClass100000017(AlGuiPrefabricatedMenu_LB alGuiPrefabricatedMenu_LB) {
+            this.this$0 = alGuiPrefabricatedMenu_LB;
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void beforeTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void onTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void afterTextChanged(EditText editText, Editable editable) {
+            if (editable.toString().matches("[a-zA-Z0-9#]*")) {
+                return;
+            }
+            String replaceAll = editable.toString().replaceAll("[^a-zA-Z0-9#]", "");
+            editText.setText(replaceAll);
+            editText.setSelection(replaceAll.length());
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void buttonOnClick(EditText editText, View view, TextView textView, boolean z) {
+            int parseColor;
+            String obj = editText.getText().toString() != null ? editText.getText().toString() : "";
+            if (!obj.isEmpty()) {
+                try {
+                    if (obj.startsWith("0x") && obj.length() == 10) {
+                        parseColor = (int) Long.parseLong(obj.substring(2), 16);
+                    } else {
+                        parseColor = Color.parseColor(obj);
+                    }
+                    this.this$0.algui.getMenuMainTitle().setTextColor(parseColor);
+                    AlGuiData.getMenuColorSPED(this.this$0.context).putInt((String) AlGuiData.getMenuColorData().get("菜单主标题文本颜色键名"), parseColor);
+                    AlGuiData.getMenuColorSPED(this.this$0.context).apply();
+                    AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "应用成功", "已自动保存", 5000);
+                    return;
+                } catch (IllegalArgumentException e) {
+                    AlGuiBubbleNotification.Inform(this.this$0.context).showMistakeNotification_Simplicity(null, "应用失败", "无效的颜色值", 5000);
+                    return;
+                }
+            }
+            AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "应用失败", "请输入颜色值 例如：#009688 或 0xFF009688", 5000);
+        }
+    }
+
+    /* renamed from: irene.window.algui.AlGuiPrefabricatedMenu_LB$100000018, reason: invalid class name */
+    /* loaded from: classes.dex */
+    class AnonymousClass100000018 implements AlGui.T_EditTextOnChangeListener {
+        private final AlGuiPrefabricatedMenu_LB this$0;
+
+        AnonymousClass100000018(AlGuiPrefabricatedMenu_LB alGuiPrefabricatedMenu_LB) {
+            this.this$0 = alGuiPrefabricatedMenu_LB;
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void beforeTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void onTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void afterTextChanged(EditText editText, Editable editable) {
+            if (editable.toString().matches("[a-zA-Z0-9#]*")) {
+                return;
+            }
+            String replaceAll = editable.toString().replaceAll("[^a-zA-Z0-9#]", "");
+            editText.setText(replaceAll);
+            editText.setSelection(replaceAll.length());
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void buttonOnClick(EditText editText, View view, TextView textView, boolean z) {
+            int parseColor;
+            String obj = editText.getText().toString() != null ? editText.getText().toString() : "";
+            if (!obj.isEmpty()) {
+                try {
+                    if (obj.startsWith("0x") && obj.length() == 10) {
+                        parseColor = (int) Long.parseLong(obj.substring(2), 16);
+                    } else {
+                        parseColor = Color.parseColor(obj);
+                    }
+                    this.this$0.algui.getMenuSubTitle().setTextColor(parseColor);
+                    AlGuiData.getMenuColorSPED(this.this$0.context).putInt((String) AlGuiData.getMenuColorData().get("菜单副标题文本颜色键名"), parseColor);
+                    AlGuiData.getMenuColorSPED(this.this$0.context).apply();
+                    AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "应用成功", "已自动保存", 5000);
+                    return;
+                } catch (IllegalArgumentException e) {
+                    AlGuiBubbleNotification.Inform(this.this$0.context).showMistakeNotification_Simplicity(null, "应用失败", "无效的颜色值", 5000);
+                    return;
+                }
+            }
+            AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "应用失败", "请输入颜色值 例如：#009688 或 0xFF009688", 5000);
+        }
+    }
+
+    /* renamed from: irene.window.algui.AlGuiPrefabricatedMenu_LB$100000019, reason: invalid class name */
+    /* loaded from: classes.dex */
+    class AnonymousClass100000019 implements AlGui.T_EditTextOnChangeListener {
+        private final AlGuiPrefabricatedMenu_LB this$0;
+
+        AnonymousClass100000019(AlGuiPrefabricatedMenu_LB alGuiPrefabricatedMenu_LB) {
+            this.this$0 = alGuiPrefabricatedMenu_LB;
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void beforeTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void onTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void afterTextChanged(EditText editText, Editable editable) {
+            if (editable.toString().matches("[a-zA-Z0-9#]*")) {
+                return;
+            }
+            String replaceAll = editable.toString().replaceAll("[^a-zA-Z0-9#]", "");
+            editText.setText(replaceAll);
+            editText.setSelection(replaceAll.length());
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void buttonOnClick(EditText editText, View view, TextView textView, boolean z) {
+            int parseColor;
+            String obj = editText.getText().toString() != null ? editText.getText().toString() : "";
+            if (!obj.isEmpty()) {
+                try {
+                    if (obj.startsWith("0x") && obj.length() == 10) {
+                        parseColor = (int) Long.parseLong(obj.substring(2), 16);
+                    } else {
+                        parseColor = Color.parseColor(obj);
+                    }
+                    this.this$0.algui.getMenuExplanation().setTextColor(parseColor);
+                    AlGuiData.getMenuColorSPED(this.this$0.context).putInt((String) AlGuiData.getMenuColorData().get("菜单说明文本颜色键名"), parseColor);
+                    AlGuiData.getMenuColorSPED(this.this$0.context).apply();
+                    AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "应用成功", "已自动保存", 5000);
+                    return;
+                } catch (IllegalArgumentException e) {
+                    AlGuiBubbleNotification.Inform(this.this$0.context).showMistakeNotification_Simplicity(null, "应用失败", "无效的颜色值", 5000);
+                    return;
+                }
+            }
+            AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "应用失败", "请输入颜色值 例如：#009688 或 0xFF009688", 5000);
+        }
+    }
+
+    /* renamed from: irene.window.algui.AlGuiPrefabricatedMenu_LB$100000020, reason: invalid class name */
+    /* loaded from: classes.dex */
+    class AnonymousClass100000020 implements AlGui.T_EditTextOnChangeListener {
+        private final AlGuiPrefabricatedMenu_LB this$0;
+
+        AnonymousClass100000020(AlGuiPrefabricatedMenu_LB alGuiPrefabricatedMenu_LB) {
+            this.this$0 = alGuiPrefabricatedMenu_LB;
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void beforeTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void onTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void afterTextChanged(EditText editText, Editable editable) {
+            if (editable.toString().matches("[a-zA-Z0-9#]*")) {
+                return;
+            }
+            String replaceAll = editable.toString().replaceAll("[^a-zA-Z0-9#]", "");
+            editText.setText(replaceAll);
+            editText.setSelection(replaceAll.length());
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void buttonOnClick(EditText editText, View view, TextView textView, boolean z) {
+            int parseColor;
+            String obj = editText.getText().toString() != null ? editText.getText().toString() : "";
+            if (!obj.isEmpty()) {
+                try {
+                    if (obj.startsWith("0x") && obj.length() == 10) {
+                        parseColor = (int) Long.parseLong(obj.substring(2), 16);
+                    } else {
+                        parseColor = Color.parseColor(obj);
+                    }
+                    this.this$0.algui.getMenuBottomLeftButton().setTextColor(parseColor);
+                    AlGuiData.getMenuColorSPED(this.this$0.context).putInt((String) AlGuiData.getMenuColorData().get("菜单左下角按钮文本颜色键名"), parseColor);
+                    AlGuiData.getMenuColorSPED(this.this$0.context).apply();
+                    AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "应用成功", "已自动保存", 5000);
+                    return;
+                } catch (IllegalArgumentException e) {
+                    AlGuiBubbleNotification.Inform(this.this$0.context).showMistakeNotification_Simplicity(null, "应用失败", "无效的颜色值", 5000);
+                    return;
+                }
+            }
+            AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "应用失败", "请输入颜色值 例如：#009688 或 0xFF009688", 5000);
+        }
+    }
+
+    /* renamed from: irene.window.algui.AlGuiPrefabricatedMenu_LB$100000021, reason: invalid class name */
+    /* loaded from: classes.dex */
+    class AnonymousClass100000021 implements AlGui.T_EditTextOnChangeListener {
+        private final AlGuiPrefabricatedMenu_LB this$0;
+
+        AnonymousClass100000021(AlGuiPrefabricatedMenu_LB alGuiPrefabricatedMenu_LB) {
+            this.this$0 = alGuiPrefabricatedMenu_LB;
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void beforeTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void onTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void afterTextChanged(EditText editText, Editable editable) {
+            if (editable.toString().matches("[a-zA-Z0-9#]*")) {
+                return;
+            }
+            String replaceAll = editable.toString().replaceAll("[^a-zA-Z0-9#]", "");
+            editText.setText(replaceAll);
+            editText.setSelection(replaceAll.length());
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void buttonOnClick(EditText editText, View view, TextView textView, boolean z) {
+            int parseColor;
+            String obj = editText.getText().toString() != null ? editText.getText().toString() : "";
+            if (!obj.isEmpty()) {
+                try {
+                    if (obj.startsWith("0x") && obj.length() == 10) {
+                        parseColor = (int) Long.parseLong(obj.substring(2), 16);
+                    } else {
+                        parseColor = Color.parseColor(obj);
+                    }
+                    this.this$0.algui.getMenuBottomRightButton().setTextColor(parseColor);
+                    AlGuiData.getMenuColorSPED(this.this$0.context).putInt((String) AlGuiData.getMenuColorData().get("菜单右下角按钮文本颜色键名"), parseColor);
+                    AlGuiData.getMenuColorSPED(this.this$0.context).apply();
+                    AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "应用成功", "已自动保存", 5000);
+                    return;
+                } catch (IllegalArgumentException e) {
+                    AlGuiBubbleNotification.Inform(this.this$0.context).showMistakeNotification_Simplicity(null, "应用失败", "无效的颜色值", 5000);
+                    return;
+                }
+            }
+            AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "应用失败", "请输入颜色值 例如：#009688 或 0xFF009688", 5000);
+        }
+    }
+
+    /* renamed from: irene.window.algui.AlGuiPrefabricatedMenu_LB$100000022, reason: invalid class name */
+    /* loaded from: classes.dex */
+    class AnonymousClass100000022 implements AlGui.T_EditTextOnChangeListener {
+        private final AlGuiPrefabricatedMenu_LB this$0;
+
+        AnonymousClass100000022(AlGuiPrefabricatedMenu_LB alGuiPrefabricatedMenu_LB) {
+            this.this$0 = alGuiPrefabricatedMenu_LB;
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void beforeTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void onTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void afterTextChanged(EditText editText, Editable editable) {
+            if (editable.toString().matches("[a-zA-Z0-9#]*")) {
+                return;
+            }
+            String replaceAll = editable.toString().replaceAll("[^a-zA-Z0-9#]", "");
+            editText.setText(replaceAll);
+            editText.setSelection(replaceAll.length());
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void buttonOnClick(EditText editText, View view, TextView textView, boolean z) {
+            int parseColor;
+            String obj = editText.getText().toString() != null ? editText.getText().toString() : "";
+            if (!obj.isEmpty()) {
+                try {
+                    if (obj.startsWith("0x") && obj.length() == 10) {
+                        parseColor = (int) Long.parseLong(obj.substring(2), 16);
+                    } else {
+                        parseColor = Color.parseColor(obj);
+                    }
+                    this.this$0.algui.getMenuLiveStreamIcon().setImageTintList(ColorStateList.valueOf(parseColor));
+                    AlGuiData.getMenuColorSPED(this.this$0.context).putInt((String) AlGuiData.getMenuColorData().get("菜单直播模式图标颜色键名"), parseColor);
+                    AlGuiData.getMenuColorSPED(this.this$0.context).apply();
+                    AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "应用成功", "已自动保存", 5000);
+                    return;
+                } catch (IllegalArgumentException e) {
+                    AlGuiBubbleNotification.Inform(this.this$0.context).showMistakeNotification_Simplicity(null, "应用失败", "无效的颜色值", 5000);
+                    return;
+                }
+            }
+            AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "应用失败", "请输入颜色值 例如：#009688 或 0xFF009688", 5000);
+        }
+    }
+
+    /* renamed from: irene.window.algui.AlGuiPrefabricatedMenu_LB$100000023, reason: invalid class name */
+    /* loaded from: classes.dex */
+    class AnonymousClass100000023 implements AlGui.T_ButtonOnChangeListener {
+        private final AlGuiPrefabricatedMenu_LB this$0;
+
+        AnonymousClass100000023(AlGuiPrefabricatedMenu_LB alGuiPrefabricatedMenu_LB) {
+            this.this$0 = alGuiPrefabricatedMenu_LB;
+        }
+
+        @Override // irene.window.algui.AlGui.T_ButtonOnChangeListener
+        public void onClick(View view, GradientDrawable gradientDrawable, TextView textView, boolean z) {
+            AlGuiData.getMenuColorSPED(this.this$0.context).clear();
+            AlGuiData.getMenuColorSPED(this.this$0.context).apply();
+            this.this$0.algui.updateMenuAppearance();
+            AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "恢复成功", "已恢复所有颜色并清除保存的颜色配置", 5000);
+        }
+    }
+
+    /* renamed from: irene.window.algui.AlGuiPrefabricatedMenu_LB$100000024, reason: invalid class name */
+    /* loaded from: classes.dex */
+    class AnonymousClass100000024 implements AlGui.T_SeekBarFloatOnChangeListener {
+        private final AlGuiPrefabricatedMenu_LB this$0;
+
+        AnonymousClass100000024(AlGuiPrefabricatedMenu_LB alGuiPrefabricatedMenu_LB) {
+            this.this$0 = alGuiPrefabricatedMenu_LB;
+        }
+
+        @Override // irene.window.algui.AlGui.T_SeekBarFloatOnChangeListener
+        public void onStartTrackingTouch(TextView textView, SeekBar seekBar, float f) {
+        }
+
+        @Override // irene.window.algui.AlGui.T_SeekBarFloatOnChangeListener
+        public void onProgressChanged(TextView textView, SeekBar seekBar, float f, boolean z) {
+            this.this$0.algui.getMenuRootLayout().setFilletRadiu(ViewTool.convertDpToPx(this.this$0.context, f));
+        }
+
+        @Override // irene.window.algui.AlGui.T_SeekBarFloatOnChangeListener
+        public void onStopTrackingTouch(TextView textView, SeekBar seekBar, float f) {
+            AlGuiData.getMenuAttributeSPED(this.this$0.context).putFloat((String) AlGuiData.getMenuAttributeData().get("根布局圆角半径键名"), f);
+            AlGuiData.getMenuAttributeSPED(this.this$0.context).apply();
+        }
+    }
+
+    /* renamed from: irene.window.algui.AlGuiPrefabricatedMenu_LB$100000025, reason: invalid class name */
+    /* loaded from: classes.dex */
+    class AnonymousClass100000025 implements AlGui.T_SeekBarFloatOnChangeListener {
+        private final AlGuiPrefabricatedMenu_LB this$0;
+
+        AnonymousClass100000025(AlGuiPrefabricatedMenu_LB alGuiPrefabricatedMenu_LB) {
+            this.this$0 = alGuiPrefabricatedMenu_LB;
+        }
+
+        @Override // irene.window.algui.AlGui.T_SeekBarFloatOnChangeListener
+        public void onStartTrackingTouch(TextView textView, SeekBar seekBar, float f) {
+        }
+
+        @Override // irene.window.algui.AlGui.T_SeekBarFloatOnChangeListener
+        public void onProgressChanged(TextView textView, SeekBar seekBar, float f, boolean z) {
+            this.this$0.algui.getMenuRootLayout().setBorderSize(ViewTool.convertDpToPx(this.this$0.context, f));
+        }
+
+        @Override // irene.window.algui.AlGui.T_SeekBarFloatOnChangeListener
+        public void onStopTrackingTouch(TextView textView, SeekBar seekBar, float f) {
+            AlGuiData.getMenuAttributeSPED(this.this$0.context).putFloat((String) AlGuiData.getMenuAttributeData().get("根布局描边宽度键名"), f);
+            AlGuiData.getMenuAttributeSPED(this.this$0.context).apply();
+        }
+    }
+
+    /* renamed from: irene.window.algui.AlGuiPrefabricatedMenu_LB$100000026, reason: invalid class name */
+    /* loaded from: classes.dex */
+    class AnonymousClass100000026 implements AlGui.T_SeekBarFloatOnChangeListener {
+        private final AlGuiPrefabricatedMenu_LB this$0;
+
+        AnonymousClass100000026(AlGuiPrefabricatedMenu_LB alGuiPrefabricatedMenu_LB) {
+            this.this$0 = alGuiPrefabricatedMenu_LB;
+        }
+
+        @Override // irene.window.algui.AlGui.T_SeekBarFloatOnChangeListener
+        public void onStartTrackingTouch(TextView textView, SeekBar seekBar, float f) {
+        }
+
+        @Override // irene.window.algui.AlGui.T_SeekBarFloatOnChangeListener
+        public void onProgressChanged(TextView textView, SeekBar seekBar, float f, boolean z) {
+            this.this$0.algui.getMenuTopLine().setFilletRadiu(ViewTool.convertDpToPx(this.this$0.context, f));
+        }
+
+        @Override // irene.window.algui.AlGui.T_SeekBarFloatOnChangeListener
+        public void onStopTrackingTouch(TextView textView, SeekBar seekBar, float f) {
+            AlGuiData.getMenuAttributeSPED(this.this$0.context).putFloat((String) AlGuiData.getMenuAttributeData().get("菜单顶部线条圆角半径键名"), f);
+            AlGuiData.getMenuAttributeSPED(this.this$0.context).apply();
+        }
+    }
+
+    /* renamed from: irene.window.algui.AlGuiPrefabricatedMenu_LB$100000027, reason: invalid class name */
+    /* loaded from: classes.dex */
+    class AnonymousClass100000027 implements AlGui.T_SeekBarFloatOnChangeListener {
+        private final AlGuiPrefabricatedMenu_LB this$0;
+
+        AnonymousClass100000027(AlGuiPrefabricatedMenu_LB alGuiPrefabricatedMenu_LB) {
+            this.this$0 = alGuiPrefabricatedMenu_LB;
+        }
+
+        @Override // irene.window.algui.AlGui.T_SeekBarFloatOnChangeListener
+        public void onStartTrackingTouch(TextView textView, SeekBar seekBar, float f) {
+        }
+
+        @Override // irene.window.algui.AlGui.T_SeekBarFloatOnChangeListener
+        public void onProgressChanged(TextView textView, SeekBar seekBar, float f, boolean z) {
+            this.this$0.algui.getMenuRootLayout().setAlpha(f);
+        }
+
+        @Override // irene.window.algui.AlGui.T_SeekBarFloatOnChangeListener
+        public void onStopTrackingTouch(TextView textView, SeekBar seekBar, float f) {
+            AlGuiData.getMenuAttributeSPED(this.this$0.context).putFloat((String) AlGuiData.getMenuAttributeData().get("菜单透明度键名"), f);
+            AlGuiData.getMenuAttributeSPED(this.this$0.context).apply();
+        }
+    }
+
+    /* renamed from: irene.window.algui.AlGuiPrefabricatedMenu_LB$100000028, reason: invalid class name */
+    /* loaded from: classes.dex */
+    class AnonymousClass100000028 implements AlGui.T_ButtonOnChangeListener {
+        private final AlGuiPrefabricatedMenu_LB this$0;
+
+        AnonymousClass100000028(AlGuiPrefabricatedMenu_LB alGuiPrefabricatedMenu_LB) {
+            this.this$0 = alGuiPrefabricatedMenu_LB;
+        }
+
+        @Override // irene.window.algui.AlGui.T_ButtonOnChangeListener
+        public void onClick(View view, GradientDrawable gradientDrawable, TextView textView, boolean z) {
+            Iterator<? extends Map.Entry<String, ?>> it = AlGuiData.getMenuAttributeSP(this.this$0.context).getAll().entrySet().iterator();
+            while (it.hasNext()) {
+                String key = it.next().getKey();
+                if (!key.equals((String) AlGuiData.getMenuAttributeData().get("菜单滚动列表宽度键名")) && !key.equals((String) AlGuiData.getMenuAttributeData().get("菜单滚动列表高度键名"))) {
+                    AlGuiData.getMenuAttributeSPED(this.this$0.context).remove(key);
+                }
+            }
+            AlGuiData.getMenuAttributeSPED(this.this$0.context).apply();
+            this.this$0.algui.updateMenuAppearance();
+            AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "恢复成功", "已恢复所有属性并清除保存的属性配置", 5000);
+        }
     }
 
     public vLinearLayout addGameFrontSightMenu(ViewGroup viewGroup) {
@@ -1055,268 +1166,300 @@ public class AlGuiPrefabricatedMenu_LB {
         float f2 = 11;
         float f3 = 9;
         float f4 = 5;
-        vLinearLayout addCollapse = this.algui.addCollapse((CharSequence) "游戏准星", 10, ViewCompat.MEASURED_STATE_MASK, (Typeface) null, 3, -1, f, -3814679, false, this.algui.addLine(0.5f, -2039584, true), this.algui.addSwitch("游戏准星", f2, ViewCompat.MEASURED_STATE_MASK, null, "在游戏内绘制一个准星 - 提升精准度", 8, -6381922, null, -11751600, -10044566, -769226, -1092784, new AlGui.T_SwitchOnChangeListener(this) { // from class: irene.window.algui.AlGuiPrefabricatedMenu_LB.100000029
-            private final AlGuiPrefabricatedMenu_LB this$0;
-
-            {
-                this.this$0 = this;
-            }
-
-            @Override // irene.window.algui.AlGui.T_SwitchOnChangeListener
-            public void onClick(CompoundButton compoundButton, TextView textView, boolean z) {
-                if (z) {
-                    if (this.this$0.WaterMark == null || this.this$0.wManager == null || this.this$0.wParams == null) {
-                        if (this.this$0.initFrontSight()) {
-                            AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "初始化成功", "已加载游戏准星", 5000);
-                        } else {
-                            compoundButton.setChecked(false);
-                            AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "准星初始化失败", "可能没有悬浮窗权限或空指针异常", 5000);
-                            return;
-                        }
-                    }
-                    this.this$0.WaterMark.setVisibility(0);
-                    AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "开启成功", "已加载游戏准星", 5000);
-                    return;
-                }
-                if (this.this$0.WaterMark != null && this.this$0.wManager != null && this.this$0.wParams != null) {
-                    this.this$0.WaterMark.setVisibility(8);
-                    AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "关闭成功", "已关闭游戏准星", 5000);
-                }
-            }
-        }), this.algui.addEditText(f3, null, -3223858, "准星样式 例如：⊙☉⊕·✛╋☩ 等等", -1040122112, "", f4, -1476395008, f, 0, -1, "应用", f4, -11234587, f, -1, new AlGui.T_EditTextOnChangeListener(this) { // from class: irene.window.algui.AlGuiPrefabricatedMenu_LB.100000030
-            private final AlGuiPrefabricatedMenu_LB this$0;
-
-            {
-                this.this$0 = this;
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void afterTextChanged(EditText editText, Editable editable) {
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void beforeTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void onTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void buttonOnClick(EditText editText, View view, TextView textView, boolean z) {
-                if (this.this$0.WaterMark == null || this.this$0.wManager == null || this.this$0.wParams == null) {
-                    AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "应用失败", "游戏准星未初始化，无法设置！", 5000);
-                    return;
-                }
-                String obj = editText.getText().toString() != null ? editText.getText().toString() : "";
-                if (!obj.isEmpty()) {
-                    this.this$0.WaterMark.setText(obj);
-                    AlGuiData.getGameFrontSightSPED(this.this$0.context).putString((String) AlGuiData.getGameFrontSightData().get("游戏准星样式键名"), obj);
-                    AlGuiData.getGameFrontSightSPED(this.this$0.context).apply();
-                    AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "应用成功", "已自动保存配置", 5000);
-                    return;
-                }
-                AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "应用失败", "请输入准星样式符号 例如：⊙☉⊕·✛╋☩ 等等", 5000);
-            }
-        }), this.algui.addEditText(f3, null, -3223858, "准星颜色 例如：#009688 或 0xFF009688等等", -1040122112, "", f4, -1476395008, f, 0, -1, "应用", f4, -11234587, f, -1, new AlGui.T_EditTextOnChangeListener(this) { // from class: irene.window.algui.AlGuiPrefabricatedMenu_LB.100000031
-            private final AlGuiPrefabricatedMenu_LB this$0;
-
-            {
-                this.this$0 = this;
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void beforeTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void onTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void afterTextChanged(EditText editText, Editable editable) {
-                if (editable.toString().matches("[a-zA-Z0-9#]*")) {
-                    return;
-                }
-                String replaceAll = editable.toString().replaceAll("[^a-zA-Z0-9#]", "");
-                editText.setText(replaceAll);
-                editText.setSelection(replaceAll.length());
-            }
-
-            @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
-            public void buttonOnClick(EditText editText, View view, TextView textView, boolean z) {
-                int parseColor;
-                if (this.this$0.WaterMark == null || this.this$0.wManager == null || this.this$0.wParams == null) {
-                    AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "应用失败", "游戏准星未初始化，无法设置！", 5000);
-                    return;
-                }
-                String obj = editText.getText().toString() != null ? editText.getText().toString() : "";
-                if (!obj.isEmpty()) {
-                    try {
-                        if (obj.startsWith("0x") && obj.length() == 10) {
-                            parseColor = (int) Long.parseLong(obj.substring(2), 16);
-                        } else {
-                            parseColor = Color.parseColor(obj);
-                        }
-                        this.this$0.WaterMark.setTextColor(parseColor);
-                        AlGuiData.getGameFrontSightSPED(this.this$0.context).putInt((String) AlGuiData.getGameFrontSightData().get("游戏准星颜色键名"), parseColor);
-                        AlGuiData.getGameFrontSightSPED(this.this$0.context).apply();
-                        AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "应用成功", "已自动保存配置", 5000);
-                        return;
-                    } catch (IllegalArgumentException e) {
-                        AlGuiBubbleNotification.Inform(this.this$0.context).showMistakeNotification_Simplicity(null, "应用失败", "无效的颜色值", 5000);
-                        return;
-                    }
-                }
-                AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "应用失败", "请输入颜色值 例如：#009688 或 0xFF009688", 5000);
-            }
-        }), this.algui.addSeekBarFloat("准星大小", f2, ViewCompat.MEASURED_STATE_MASK, null, f, AlGuiData.getGameFrontSightSP(this.context).getFloat((String) AlGuiData.getGameFrontSightData().get("游戏准星大小键名"), ((Float) AlGuiData.getGameFrontSightData().get("游戏准星大小默认数据")).floatValue()), 100, -11234587, -11234587, -11234587, new AlGui.T_SeekBarFloatOnChangeListener(this) { // from class: irene.window.algui.AlGuiPrefabricatedMenu_LB.100000032
-            private final AlGuiPrefabricatedMenu_LB this$0;
-
-            {
-                this.this$0 = this;
-            }
-
-            @Override // irene.window.algui.AlGui.T_SeekBarFloatOnChangeListener
-            public void onProgressChanged(TextView textView, SeekBar seekBar, float f5, boolean z) {
-                if (this.this$0.WaterMark == null || this.this$0.wManager == null || this.this$0.wParams == null) {
-                    return;
-                }
-                this.this$0.WaterMark.setTextSize(0, ViewTool.convertDpToPx(this.this$0.context, f5));
-            }
-
-            @Override // irene.window.algui.AlGui.T_SeekBarFloatOnChangeListener
-            public void onStartTrackingTouch(TextView textView, SeekBar seekBar, float f5) {
-                if (this.this$0.WaterMark == null || this.this$0.wManager == null || this.this$0.wParams == null) {
-                    AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "应用失败", "游戏准星未初始化，无法设置！", 5000);
-                }
-            }
-
-            @Override // irene.window.algui.AlGui.T_SeekBarFloatOnChangeListener
-            public void onStopTrackingTouch(TextView textView, SeekBar seekBar, float f5) {
-                if (this.this$0.WaterMark == null || this.this$0.wManager == null || this.this$0.wParams == null) {
-                    return;
-                }
-                AlGuiData.getGameFrontSightSPED(this.this$0.context).putFloat((String) AlGuiData.getGameFrontSightData().get("游戏准星大小键名"), f5);
-                AlGuiData.getGameFrontSightSPED(this.this$0.context).apply();
-            }
-        }), this.algui.addSeekBarFloat("准星透明", f2, ViewCompat.MEASURED_STATE_MASK, null, f, AlGuiData.getGameFrontSightSP(this.context).getFloat((String) AlGuiData.getGameFrontSightData().get("游戏准星透明度键名"), ((Float) AlGuiData.getGameFrontSightData().get("游戏准星透明度默认数据")).floatValue()), 1, -11234587, -11234587, -11234587, new AlGui.T_SeekBarFloatOnChangeListener(this) { // from class: irene.window.algui.AlGuiPrefabricatedMenu_LB.100000033
-            private final AlGuiPrefabricatedMenu_LB this$0;
-
-            {
-                this.this$0 = this;
-            }
-
-            @Override // irene.window.algui.AlGui.T_SeekBarFloatOnChangeListener
-            public void onProgressChanged(TextView textView, SeekBar seekBar, float f5, boolean z) {
-                if (this.this$0.WaterMark == null || this.this$0.wManager == null || this.this$0.wParams == null) {
-                    return;
-                }
-                this.this$0.WaterMark.setAlpha(f5);
-            }
-
-            @Override // irene.window.algui.AlGui.T_SeekBarFloatOnChangeListener
-            public void onStartTrackingTouch(TextView textView, SeekBar seekBar, float f5) {
-                if (this.this$0.WaterMark == null || this.this$0.wManager == null || this.this$0.wParams == null) {
-                    AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "应用失败", "游戏准星未初始化，无法设置！", 5000);
-                }
-            }
-
-            @Override // irene.window.algui.AlGui.T_SeekBarFloatOnChangeListener
-            public void onStopTrackingTouch(TextView textView, SeekBar seekBar, float f5) {
-                if (this.this$0.WaterMark == null || this.this$0.wManager == null || this.this$0.wParams == null) {
-                    return;
-                }
-                AlGuiData.getGameFrontSightSPED(this.this$0.context).putFloat((String) AlGuiData.getGameFrontSightData().get("游戏准星透明度键名"), f5);
-                AlGuiData.getGameFrontSightSPED(this.this$0.context).apply();
-            }
-        }), this.algui.addSeekBarInt("X偏移(相对中心点)", f2, ViewCompat.MEASURED_STATE_MASK, null, NotificationManagerCompat.IMPORTANCE_UNSPECIFIED, AlGuiData.getGameFrontSightSP(this.context).getInt((String) AlGuiData.getGameFrontSightData().get("游戏准星X偏移键名"), ((Integer) AlGuiData.getGameFrontSightData().get("游戏准星X偏移默认数据")).intValue()), 1000, -11234587, -11234587, -11234587, new AlGui.T_SeekBarIntOnChangeListener(this) { // from class: irene.window.algui.AlGuiPrefabricatedMenu_LB.100000034
-            private final AlGuiPrefabricatedMenu_LB this$0;
-
-            {
-                this.this$0 = this;
-            }
-
-            @Override // irene.window.algui.AlGui.T_SeekBarIntOnChangeListener
-            public void onProgressChanged(TextView textView, SeekBar seekBar, int i, boolean z) {
-                if (this.this$0.WaterMark == null || this.this$0.wManager == null || this.this$0.wParams == null) {
-                    return;
-                }
-                this.this$0.wParams.x = i;
-                this.this$0.wManager.updateViewLayout(this.this$0.WaterMark, this.this$0.wParams);
-            }
-
-            @Override // irene.window.algui.AlGui.T_SeekBarIntOnChangeListener
-            public void onStartTrackingTouch(TextView textView, SeekBar seekBar, int i) {
-                if (this.this$0.WaterMark == null || this.this$0.wManager == null || this.this$0.wParams == null) {
-                    AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "应用失败", "游戏准星未初始化，无法设置！", 5000);
-                }
-            }
-
-            @Override // irene.window.algui.AlGui.T_SeekBarIntOnChangeListener
-            public void onStopTrackingTouch(TextView textView, SeekBar seekBar, int i) {
-                if (this.this$0.WaterMark == null || this.this$0.wManager == null || this.this$0.wParams == null) {
-                    return;
-                }
-                AlGuiData.getGameFrontSightSPED(this.this$0.context).putInt((String) AlGuiData.getGameFrontSightData().get("游戏准星X偏移键名"), seekBar.getProgress());
-                AlGuiData.getGameFrontSightSPED(this.this$0.context).apply();
-            }
-        }), this.algui.addSeekBarInt("Y偏移(相对中心点)", f2, ViewCompat.MEASURED_STATE_MASK, null, NotificationManagerCompat.IMPORTANCE_UNSPECIFIED, AlGuiData.getGameFrontSightSP(this.context).getInt((String) AlGuiData.getGameFrontSightData().get("游戏准星Y偏移键名"), ((Integer) AlGuiData.getGameFrontSightData().get("游戏准星Y偏移默认数据")).intValue()), 1000, -11234587, -11234587, -11234587, new AlGui.T_SeekBarIntOnChangeListener(this) { // from class: irene.window.algui.AlGuiPrefabricatedMenu_LB.100000035
-            private final AlGuiPrefabricatedMenu_LB this$0;
-
-            {
-                this.this$0 = this;
-            }
-
-            @Override // irene.window.algui.AlGui.T_SeekBarIntOnChangeListener
-            public void onProgressChanged(TextView textView, SeekBar seekBar, int i, boolean z) {
-                if (this.this$0.WaterMark == null || this.this$0.wManager == null || this.this$0.wParams == null) {
-                    return;
-                }
-                this.this$0.wParams.y = i;
-                this.this$0.wManager.updateViewLayout(this.this$0.WaterMark, this.this$0.wParams);
-            }
-
-            @Override // irene.window.algui.AlGui.T_SeekBarIntOnChangeListener
-            public void onStartTrackingTouch(TextView textView, SeekBar seekBar, int i) {
-                if (this.this$0.WaterMark == null || this.this$0.wManager == null || this.this$0.wParams == null) {
-                    AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "应用失败", "游戏准星未初始化，无法设置！", 5000);
-                }
-            }
-
-            @Override // irene.window.algui.AlGui.T_SeekBarIntOnChangeListener
-            public void onStopTrackingTouch(TextView textView, SeekBar seekBar, int i) {
-                if (this.this$0.WaterMark == null || this.this$0.wManager == null || this.this$0.wParams == null) {
-                    return;
-                }
-                AlGuiData.getGameFrontSightSPED(this.this$0.context).putInt((String) AlGuiData.getGameFrontSightData().get("游戏准星Y偏移键名"), seekBar.getProgress());
-                AlGuiData.getGameFrontSightSPED(this.this$0.context).apply();
-            }
-        }), this.algui.addButton("恢复默认配置", f2, -1, null, f4, -12627531, f, -1, -1, -2, new AlGui.T_ButtonOnChangeListener(this) { // from class: irene.window.algui.AlGuiPrefabricatedMenu_LB.100000036
-            private final AlGuiPrefabricatedMenu_LB this$0;
-
-            {
-                this.this$0 = this;
-            }
-
-            @Override // irene.window.algui.AlGui.T_ButtonOnChangeListener
-            public void onClick(View view, GradientDrawable gradientDrawable, TextView textView, boolean z) {
-                if (this.this$0.WaterMark == null || this.this$0.wManager == null || this.this$0.wParams == null) {
-                    AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "恢复失败", "游戏准星未初始化，无法恢复！", 5000);
-                    return;
-                }
-                AlGuiData.getGameFrontSightSPED(this.this$0.context).clear();
-                AlGuiData.getGameFrontSightSPED(this.this$0.context).apply();
-                this.this$0.updateFrontSightCF();
-                this.this$0.wManager.updateViewLayout(this.this$0.WaterMark, this.this$0.wParams);
-                AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "恢复成功", "已重置准星所有配置", 5000);
-            }
-        }), AlGui.GUI(this.context).addLinearLayout(17, 0, -1, -2, this.algui.addTextView("Copyright © 2023 艾琳 版权所有", f3, -6381922, Typeface.create(Typeface.DEFAULT, 0))));
+        vLinearLayout addCollapse = this.algui.addCollapse((CharSequence) "游戏准星", 10, ViewCompat.MEASURED_STATE_MASK, (Typeface) null, 3, -1, f, -3814679, false, this.algui.addLine(0.5f, -2039584, true), this.algui.addSwitch("游戏准星", f2, ViewCompat.MEASURED_STATE_MASK, null, "在游戏内绘制一个准星 - 提升精准度", 8, -6381922, null, -11751600, -10044566, -769226, -1092784, new AnonymousClass100000029(this)), this.algui.addEditText(f3, null, -3223858, "准星样式 例如：⊙☉⊕·✛╋☩ 等等", -1040122112, "", f4, -1476395008, f, 0, -1, "应用", f4, -11234587, f, -1, new AnonymousClass100000030(this)), this.algui.addEditText(f3, null, -3223858, "准星颜色 例如：#009688 或 0xFF009688等等", -1040122112, "", f4, -1476395008, f, 0, -1, "应用", f4, -11234587, f, -1, new AnonymousClass100000031(this)), this.algui.addSeekBarFloat("准星大小", f2, ViewCompat.MEASURED_STATE_MASK, null, f, AlGuiData.getGameFrontSightSP(this.context).getFloat((String) AlGuiData.getGameFrontSightData().get("游戏准星大小键名"), ((Float) AlGuiData.getGameFrontSightData().get("游戏准星大小默认数据")).floatValue()), 100, -11234587, -11234587, -11234587, new AnonymousClass100000032(this)), this.algui.addSeekBarFloat("准星透明", f2, ViewCompat.MEASURED_STATE_MASK, null, f, AlGuiData.getGameFrontSightSP(this.context).getFloat((String) AlGuiData.getGameFrontSightData().get("游戏准星透明度键名"), ((Float) AlGuiData.getGameFrontSightData().get("游戏准星透明度默认数据")).floatValue()), 1, -11234587, -11234587, -11234587, new AnonymousClass100000033(this)), this.algui.addSeekBarInt("X偏移(相对中心点)", f2, ViewCompat.MEASURED_STATE_MASK, null, NotificationManagerCompat.IMPORTANCE_UNSPECIFIED, AlGuiData.getGameFrontSightSP(this.context).getInt((String) AlGuiData.getGameFrontSightData().get("游戏准星X偏移键名"), ((Integer) AlGuiData.getGameFrontSightData().get("游戏准星X偏移默认数据")).intValue()), 1000, -11234587, -11234587, -11234587, new AnonymousClass100000034(this)), this.algui.addSeekBarInt("Y偏移(相对中心点)", f2, ViewCompat.MEASURED_STATE_MASK, null, NotificationManagerCompat.IMPORTANCE_UNSPECIFIED, AlGuiData.getGameFrontSightSP(this.context).getInt((String) AlGuiData.getGameFrontSightData().get("游戏准星Y偏移键名"), ((Integer) AlGuiData.getGameFrontSightData().get("游戏准星Y偏移默认数据")).intValue()), 1000, -11234587, -11234587, -11234587, new AnonymousClass100000035(this)), this.algui.addButton("恢复默认配置", f2, -1, null, f4, -12627531, f, -1, -1, -2, new AnonymousClass100000036(this)), AlGui.GUI(this.context).addLinearLayout(17, 0, -1, -2, this.algui.addTextView("Copyright © 2023 艾琳 版权所有", f3, -6381922, Typeface.create(Typeface.DEFAULT, 0))));
         if (viewGroup != null) {
             viewGroup.addView(addCollapse);
             return addCollapse;
         }
         return addCollapse;
+    }
+
+    /* renamed from: irene.window.algui.AlGuiPrefabricatedMenu_LB$100000029, reason: invalid class name */
+    /* loaded from: classes.dex */
+    class AnonymousClass100000029 implements AlGui.T_SwitchOnChangeListener {
+        private final AlGuiPrefabricatedMenu_LB this$0;
+
+        AnonymousClass100000029(AlGuiPrefabricatedMenu_LB alGuiPrefabricatedMenu_LB) {
+            this.this$0 = alGuiPrefabricatedMenu_LB;
+        }
+
+        @Override // irene.window.algui.AlGui.T_SwitchOnChangeListener
+        public void onClick(CompoundButton compoundButton, TextView textView, boolean z) {
+            if (z) {
+                if (this.this$0.WaterMark == null || this.this$0.wManager == null || this.this$0.wParams == null) {
+                    if (this.this$0.initFrontSight()) {
+                        AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "初始化成功", "已加载游戏准星", 5000);
+                    } else {
+                        compoundButton.setChecked(false);
+                        AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "准星初始化失败", "可能没有悬浮窗权限或空指针异常", 5000);
+                        return;
+                    }
+                }
+                this.this$0.WaterMark.setVisibility(0);
+                AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "开启成功", "已加载游戏准星", 5000);
+                return;
+            }
+            if (this.this$0.WaterMark != null && this.this$0.wManager != null && this.this$0.wParams != null) {
+                this.this$0.WaterMark.setVisibility(8);
+                AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "关闭成功", "已关闭游戏准星", 5000);
+            }
+        }
+    }
+
+    /* renamed from: irene.window.algui.AlGuiPrefabricatedMenu_LB$100000030, reason: invalid class name */
+    /* loaded from: classes.dex */
+    class AnonymousClass100000030 implements AlGui.T_EditTextOnChangeListener {
+        private final AlGuiPrefabricatedMenu_LB this$0;
+
+        AnonymousClass100000030(AlGuiPrefabricatedMenu_LB alGuiPrefabricatedMenu_LB) {
+            this.this$0 = alGuiPrefabricatedMenu_LB;
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void afterTextChanged(EditText editText, Editable editable) {
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void beforeTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void onTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void buttonOnClick(EditText editText, View view, TextView textView, boolean z) {
+            if (this.this$0.WaterMark == null || this.this$0.wManager == null || this.this$0.wParams == null) {
+                AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "应用失败", "游戏准星未初始化，无法设置！", 5000);
+                return;
+            }
+            String obj = editText.getText().toString() != null ? editText.getText().toString() : "";
+            if (!obj.isEmpty()) {
+                this.this$0.WaterMark.setText(obj);
+                AlGuiData.getGameFrontSightSPED(this.this$0.context).putString((String) AlGuiData.getGameFrontSightData().get("游戏准星样式键名"), obj);
+                AlGuiData.getGameFrontSightSPED(this.this$0.context).apply();
+                AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "应用成功", "已自动保存配置", 5000);
+                return;
+            }
+            AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "应用失败", "请输入准星样式符号 例如：⊙☉⊕·✛╋☩ 等等", 5000);
+        }
+    }
+
+    /* renamed from: irene.window.algui.AlGuiPrefabricatedMenu_LB$100000031, reason: invalid class name */
+    /* loaded from: classes.dex */
+    class AnonymousClass100000031 implements AlGui.T_EditTextOnChangeListener {
+        private final AlGuiPrefabricatedMenu_LB this$0;
+
+        AnonymousClass100000031(AlGuiPrefabricatedMenu_LB alGuiPrefabricatedMenu_LB) {
+            this.this$0 = alGuiPrefabricatedMenu_LB;
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void beforeTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void onTextChanged(EditText editText, CharSequence charSequence, int i, int i2, int i3) {
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void afterTextChanged(EditText editText, Editable editable) {
+            if (editable.toString().matches("[a-zA-Z0-9#]*")) {
+                return;
+            }
+            String replaceAll = editable.toString().replaceAll("[^a-zA-Z0-9#]", "");
+            editText.setText(replaceAll);
+            editText.setSelection(replaceAll.length());
+        }
+
+        @Override // irene.window.algui.AlGui.T_EditTextOnChangeListener
+        public void buttonOnClick(EditText editText, View view, TextView textView, boolean z) {
+            int parseColor;
+            if (this.this$0.WaterMark == null || this.this$0.wManager == null || this.this$0.wParams == null) {
+                AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "应用失败", "游戏准星未初始化，无法设置！", 5000);
+                return;
+            }
+            String obj = editText.getText().toString() != null ? editText.getText().toString() : "";
+            if (!obj.isEmpty()) {
+                try {
+                    if (obj.startsWith("0x") && obj.length() == 10) {
+                        parseColor = (int) Long.parseLong(obj.substring(2), 16);
+                    } else {
+                        parseColor = Color.parseColor(obj);
+                    }
+                    this.this$0.WaterMark.setTextColor(parseColor);
+                    AlGuiData.getGameFrontSightSPED(this.this$0.context).putInt((String) AlGuiData.getGameFrontSightData().get("游戏准星颜色键名"), parseColor);
+                    AlGuiData.getGameFrontSightSPED(this.this$0.context).apply();
+                    AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "应用成功", "已自动保存配置", 5000);
+                    return;
+                } catch (IllegalArgumentException e) {
+                    AlGuiBubbleNotification.Inform(this.this$0.context).showMistakeNotification_Simplicity(null, "应用失败", "无效的颜色值", 5000);
+                    return;
+                }
+            }
+            AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "应用失败", "请输入颜色值 例如：#009688 或 0xFF009688", 5000);
+        }
+    }
+
+    /* renamed from: irene.window.algui.AlGuiPrefabricatedMenu_LB$100000032, reason: invalid class name */
+    /* loaded from: classes.dex */
+    class AnonymousClass100000032 implements AlGui.T_SeekBarFloatOnChangeListener {
+        private final AlGuiPrefabricatedMenu_LB this$0;
+
+        AnonymousClass100000032(AlGuiPrefabricatedMenu_LB alGuiPrefabricatedMenu_LB) {
+            this.this$0 = alGuiPrefabricatedMenu_LB;
+        }
+
+        @Override // irene.window.algui.AlGui.T_SeekBarFloatOnChangeListener
+        public void onProgressChanged(TextView textView, SeekBar seekBar, float f, boolean z) {
+            if (this.this$0.WaterMark == null || this.this$0.wManager == null || this.this$0.wParams == null) {
+                return;
+            }
+            this.this$0.WaterMark.setTextSize(0, ViewTool.convertDpToPx(this.this$0.context, f));
+        }
+
+        @Override // irene.window.algui.AlGui.T_SeekBarFloatOnChangeListener
+        public void onStartTrackingTouch(TextView textView, SeekBar seekBar, float f) {
+            if (this.this$0.WaterMark == null || this.this$0.wManager == null || this.this$0.wParams == null) {
+                AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "应用失败", "游戏准星未初始化，无法设置！", 5000);
+            }
+        }
+
+        @Override // irene.window.algui.AlGui.T_SeekBarFloatOnChangeListener
+        public void onStopTrackingTouch(TextView textView, SeekBar seekBar, float f) {
+            if (this.this$0.WaterMark == null || this.this$0.wManager == null || this.this$0.wParams == null) {
+                return;
+            }
+            AlGuiData.getGameFrontSightSPED(this.this$0.context).putFloat((String) AlGuiData.getGameFrontSightData().get("游戏准星大小键名"), f);
+            AlGuiData.getGameFrontSightSPED(this.this$0.context).apply();
+        }
+    }
+
+    /* renamed from: irene.window.algui.AlGuiPrefabricatedMenu_LB$100000033, reason: invalid class name */
+    /* loaded from: classes.dex */
+    class AnonymousClass100000033 implements AlGui.T_SeekBarFloatOnChangeListener {
+        private final AlGuiPrefabricatedMenu_LB this$0;
+
+        AnonymousClass100000033(AlGuiPrefabricatedMenu_LB alGuiPrefabricatedMenu_LB) {
+            this.this$0 = alGuiPrefabricatedMenu_LB;
+        }
+
+        @Override // irene.window.algui.AlGui.T_SeekBarFloatOnChangeListener
+        public void onProgressChanged(TextView textView, SeekBar seekBar, float f, boolean z) {
+            if (this.this$0.WaterMark == null || this.this$0.wManager == null || this.this$0.wParams == null) {
+                return;
+            }
+            this.this$0.WaterMark.setAlpha(f);
+        }
+
+        @Override // irene.window.algui.AlGui.T_SeekBarFloatOnChangeListener
+        public void onStartTrackingTouch(TextView textView, SeekBar seekBar, float f) {
+            if (this.this$0.WaterMark == null || this.this$0.wManager == null || this.this$0.wParams == null) {
+                AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "应用失败", "游戏准星未初始化，无法设置！", 5000);
+            }
+        }
+
+        @Override // irene.window.algui.AlGui.T_SeekBarFloatOnChangeListener
+        public void onStopTrackingTouch(TextView textView, SeekBar seekBar, float f) {
+            if (this.this$0.WaterMark == null || this.this$0.wManager == null || this.this$0.wParams == null) {
+                return;
+            }
+            AlGuiData.getGameFrontSightSPED(this.this$0.context).putFloat((String) AlGuiData.getGameFrontSightData().get("游戏准星透明度键名"), f);
+            AlGuiData.getGameFrontSightSPED(this.this$0.context).apply();
+        }
+    }
+
+    /* renamed from: irene.window.algui.AlGuiPrefabricatedMenu_LB$100000034, reason: invalid class name */
+    /* loaded from: classes.dex */
+    class AnonymousClass100000034 implements AlGui.T_SeekBarIntOnChangeListener {
+        private final AlGuiPrefabricatedMenu_LB this$0;
+
+        AnonymousClass100000034(AlGuiPrefabricatedMenu_LB alGuiPrefabricatedMenu_LB) {
+            this.this$0 = alGuiPrefabricatedMenu_LB;
+        }
+
+        @Override // irene.window.algui.AlGui.T_SeekBarIntOnChangeListener
+        public void onProgressChanged(TextView textView, SeekBar seekBar, int i, boolean z) {
+            if (this.this$0.WaterMark == null || this.this$0.wManager == null || this.this$0.wParams == null) {
+                return;
+            }
+            this.this$0.wParams.x = i;
+            this.this$0.wManager.updateViewLayout(this.this$0.WaterMark, this.this$0.wParams);
+        }
+
+        @Override // irene.window.algui.AlGui.T_SeekBarIntOnChangeListener
+        public void onStartTrackingTouch(TextView textView, SeekBar seekBar, int i) {
+            if (this.this$0.WaterMark == null || this.this$0.wManager == null || this.this$0.wParams == null) {
+                AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "应用失败", "游戏准星未初始化，无法设置！", 5000);
+            }
+        }
+
+        @Override // irene.window.algui.AlGui.T_SeekBarIntOnChangeListener
+        public void onStopTrackingTouch(TextView textView, SeekBar seekBar, int i) {
+            if (this.this$0.WaterMark == null || this.this$0.wManager == null || this.this$0.wParams == null) {
+                return;
+            }
+            AlGuiData.getGameFrontSightSPED(this.this$0.context).putInt((String) AlGuiData.getGameFrontSightData().get("游戏准星X偏移键名"), seekBar.getProgress());
+            AlGuiData.getGameFrontSightSPED(this.this$0.context).apply();
+        }
+    }
+
+    /* renamed from: irene.window.algui.AlGuiPrefabricatedMenu_LB$100000035, reason: invalid class name */
+    /* loaded from: classes.dex */
+    class AnonymousClass100000035 implements AlGui.T_SeekBarIntOnChangeListener {
+        private final AlGuiPrefabricatedMenu_LB this$0;
+
+        AnonymousClass100000035(AlGuiPrefabricatedMenu_LB alGuiPrefabricatedMenu_LB) {
+            this.this$0 = alGuiPrefabricatedMenu_LB;
+        }
+
+        @Override // irene.window.algui.AlGui.T_SeekBarIntOnChangeListener
+        public void onProgressChanged(TextView textView, SeekBar seekBar, int i, boolean z) {
+            if (this.this$0.WaterMark == null || this.this$0.wManager == null || this.this$0.wParams == null) {
+                return;
+            }
+            this.this$0.wParams.y = i;
+            this.this$0.wManager.updateViewLayout(this.this$0.WaterMark, this.this$0.wParams);
+        }
+
+        @Override // irene.window.algui.AlGui.T_SeekBarIntOnChangeListener
+        public void onStartTrackingTouch(TextView textView, SeekBar seekBar, int i) {
+            if (this.this$0.WaterMark == null || this.this$0.wManager == null || this.this$0.wParams == null) {
+                AlGuiBubbleNotification.Inform(this.this$0.context).showAlertNotification_Simplicity(null, "应用失败", "游戏准星未初始化，无法设置！", 5000);
+            }
+        }
+
+        @Override // irene.window.algui.AlGui.T_SeekBarIntOnChangeListener
+        public void onStopTrackingTouch(TextView textView, SeekBar seekBar, int i) {
+            if (this.this$0.WaterMark == null || this.this$0.wManager == null || this.this$0.wParams == null) {
+                return;
+            }
+            AlGuiData.getGameFrontSightSPED(this.this$0.context).putInt((String) AlGuiData.getGameFrontSightData().get("游戏准星Y偏移键名"), seekBar.getProgress());
+            AlGuiData.getGameFrontSightSPED(this.this$0.context).apply();
+        }
+    }
+
+    /* renamed from: irene.window.algui.AlGuiPrefabricatedMenu_LB$100000036, reason: invalid class name */
+    /* loaded from: classes.dex */
+    class AnonymousClass100000036 implements AlGui.T_ButtonOnChangeListener {
+        private final AlGuiPrefabricatedMenu_LB this$0;
+
+        AnonymousClass100000036(AlGuiPrefabricatedMenu_LB alGuiPrefabricatedMenu_LB) {
+            this.this$0 = alGuiPrefabricatedMenu_LB;
+        }
+
+        @Override // irene.window.algui.AlGui.T_ButtonOnChangeListener
+        public void onClick(View view, GradientDrawable gradientDrawable, TextView textView, boolean z) {
+            if (this.this$0.WaterMark == null || this.this$0.wManager == null || this.this$0.wParams == null) {
+                AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "恢复失败", "游戏准星未初始化，无法恢复！", 5000);
+                return;
+            }
+            AlGuiData.getGameFrontSightSPED(this.this$0.context).clear();
+            AlGuiData.getGameFrontSightSPED(this.this$0.context).apply();
+            this.this$0.updateFrontSightCF();
+            this.this$0.wManager.updateViewLayout(this.this$0.WaterMark, this.this$0.wParams);
+            AlGuiBubbleNotification.Inform(this.this$0.context).showSuccessNotification_Simplicity(null, "恢复成功", "已重置准星所有配置", 5000);
+        }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -1335,7 +1478,7 @@ public class AlGuiPrefabricatedMenu_LB {
         ((ViewGroup.LayoutParams) this.wParams).width = -2;
         ((ViewGroup.LayoutParams) this.wParams).height = -2;
         this.wParams.format = 1;
-        this.wParams.windowAnimations = android.R.style.Animation.Toast;
+        this.wParams.windowAnimations = android.R.style.Animation_Toast;
         this.wParams.type = Build.VERSION.SDK_INT >= 26 ? 2038 : 2003;
         this.WaterMark = new TextView(this.context);
         this.WaterMark.setVisibility(8);

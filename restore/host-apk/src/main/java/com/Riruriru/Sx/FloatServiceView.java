@@ -68,23 +68,31 @@ public class FloatServiceView extends Service {
         this.wManager.addView(this.permissionStatus, this.wParams);
     }
 
-    private void startFileReadThread() {
-        this.fileReadThread = new Thread(new Runnable() { // from class: com.Riruriru.Sx.FloatServiceView.1
-            @Override // java.lang.Runnable
-            public void run() {
-                while (!Thread.currentThread().isInterrupted()) {
-                    try {
-                        String content = FloatServiceView.this.readFileContent(FloatServiceView.FILE_PATH);
-                        FloatServiceView.this.updateTextView(content);
-                        Thread.sleep(1000L);
-                    } catch (IOException e) {
-                        FloatServiceView.this.updateTextView("读取文件内容时出错: " + e.getMessage());
-                    } catch (InterruptedException e2) {
-                        Thread.currentThread().interrupt();
-                    }
+    /* JADX INFO: Access modifiers changed from: package-private */
+    /* renamed from: com.Riruriru.Sx.FloatServiceView$1, reason: invalid class name */
+    /* loaded from: classes3.dex */
+    public class AnonymousClass1 implements Runnable {
+        AnonymousClass1() {
+        }
+
+        @Override // java.lang.Runnable
+        public void run() {
+            while (!Thread.currentThread().isInterrupted()) {
+                try {
+                    String content = FloatServiceView.this.readFileContent(FloatServiceView.FILE_PATH);
+                    FloatServiceView.this.updateTextView(content);
+                    Thread.sleep(1000L);
+                } catch (IOException e) {
+                    FloatServiceView.this.updateTextView("读取文件内容时出错: " + e.getMessage());
+                } catch (InterruptedException e2) {
+                    Thread.currentThread().interrupt();
                 }
             }
-        });
+        }
+    }
+
+    private void startFileReadThread() {
+        this.fileReadThread = new Thread(new AnonymousClass1());
         this.fileReadThread.start();
     }
 
@@ -114,14 +122,25 @@ public class FloatServiceView extends Service {
         return content.toString();
     }
 
+    /* JADX INFO: Access modifiers changed from: package-private */
+    /* renamed from: com.Riruriru.Sx.FloatServiceView$2, reason: invalid class name */
+    /* loaded from: classes3.dex */
+    public class AnonymousClass2 implements Runnable {
+        final /* synthetic */ String val$content;
+
+        AnonymousClass2(String str) {
+            this.val$content = str;
+        }
+
+        @Override // java.lang.Runnable
+        public void run() {
+            FloatServiceView.this.permissionStatus.setText(this.val$content);
+        }
+    }
+
     /* JADX INFO: Access modifiers changed from: private */
-    public void updateTextView(final String content) {
-        new Handler(this.mContext.getMainLooper()).post(new Runnable() { // from class: com.Riruriru.Sx.FloatServiceView.2
-            @Override // java.lang.Runnable
-            public void run() {
-                FloatServiceView.this.permissionStatus.setText(content);
-            }
-        });
+    public void updateTextView(String content) {
+        new Handler(this.mContext.getMainLooper()).post(new AnonymousClass2(content));
     }
 
     @Override // android.app.Service

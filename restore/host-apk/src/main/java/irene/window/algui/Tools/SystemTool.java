@@ -69,7 +69,7 @@ public class SystemTool {
     }
 
     public static boolean inspectRootPermission() {
-        // 还原修正：jadx 丢失了变量声明（原 smali 里应形如 String[] paths = ...）
+        // 还原修正: jadx 丢失了变量声明（原 smali 里是 String[] xxx = ...）
         String[] paths = new String[]{"/system/bin/", "/system/xbin/"};
         return false;
     }
@@ -268,8 +268,10 @@ public class SystemTool {
     }
 
     public static int getRealScreenDP(Context context) {
-        float f = context.getResources().getDisplayMetrics().density;
-        return Math.min((int) (r2.widthPixels / f), (int) (r2.heightPixels / f));
+        // 还原修正: jadx 丢了局部变量（原为 DisplayMetrics dm = ...）
+        android.util.DisplayMetrics dm = context.getResources().getDisplayMetrics();
+        float f = dm.density;
+        return Math.min((int) (dm.widthPixels / f), (int) (dm.heightPixels / f));
     }
 
     public static String printSystemInfo() {

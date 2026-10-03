@@ -18,27 +18,48 @@ public class MainActivity extends Activity {
         FloatStartService.load(this);
         m86();
         Button btnQq = (Button) findViewById(R.id.btn_qq_group);
-        btnQq.setOnClickListener(new View.OnClickListener() { // from class: com.Riruriru.Sx.MainActivity.1
-            @Override // android.view.View.OnClickListener
-            public void onClick(View v) {
-                boolean success = MainActivity.this.joinQQGroup("ptE_5bcttkaXYz4YxpE9OH7oD8Th-o3Y");
-                if (!success) {
-                    Toast.makeText(MainActivity.this, "未安装QQ或版本过低", 0).show();
-                }
+        btnQq.setOnClickListener(new AnonymousClass1());
+        findViewById(R.id.btn_bilibili).setOnClickListener(new AnonymousClass2());
+        findViewById(R.id.btn_buy).setOnClickListener(new AnonymousClass3());
+    }
+
+    /* renamed from: com.Riruriru.Sx.MainActivity$1, reason: invalid class name */
+    /* loaded from: classes3.dex */
+    class AnonymousClass1 implements View.OnClickListener {
+        AnonymousClass1() {
+        }
+
+        @Override // android.view.View.OnClickListener
+        public void onClick(View v) {
+            boolean success = MainActivity.this.joinQQGroup("ptE_5bcttkaXYz4YxpE9OH7oD8Th-o3Y");
+            if (!success) {
+                Toast.makeText(MainActivity.this, "未安装QQ或版本过低", 0).show();
             }
-        });
-        findViewById(R.id.btn_bilibili).setOnClickListener(new View.OnClickListener() { // from class: com.Riruriru.Sx.MainActivity.2
-            @Override // android.view.View.OnClickListener
-            public void onClick(View v) {
-                MainActivity.this.openUrl("https://space.bilibili.com/1742678512");
-            }
-        });
-        findViewById(R.id.btn_buy).setOnClickListener(new View.OnClickListener() { // from class: com.Riruriru.Sx.MainActivity.3
-            @Override // android.view.View.OnClickListener
-            public void onClick(View v) {
-                MainActivity.this.openUrl("https://shop.xiaoman.top/links/50F4486F");
-            }
-        });
+        }
+    }
+
+    /* renamed from: com.Riruriru.Sx.MainActivity$2, reason: invalid class name */
+    /* loaded from: classes3.dex */
+    class AnonymousClass2 implements View.OnClickListener {
+        AnonymousClass2() {
+        }
+
+        @Override // android.view.View.OnClickListener
+        public void onClick(View v) {
+            MainActivity.this.openUrl("https://space.bilibili.com/1742678512");
+        }
+    }
+
+    /* renamed from: com.Riruriru.Sx.MainActivity$3, reason: invalid class name */
+    /* loaded from: classes3.dex */
+    class AnonymousClass3 implements View.OnClickListener {
+        AnonymousClass3() {
+        }
+
+        @Override // android.view.View.OnClickListener
+        public void onClick(View v) {
+            MainActivity.this.openUrl("https://shop.xiaoman.top/links/50F4486F");
+        }
     }
 
     public boolean joinQQGroup(String key) {

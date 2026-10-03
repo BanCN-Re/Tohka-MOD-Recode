@@ -63,32 +63,27 @@ public class AppTool {
     }
 
     public static boolean isRootEnabled() {
-        Process process = null;
+        // 还原修正: jadx 在 try/finally 嵌套里丢了 r1 声明，按语义重写
+        boolean rooted = false;
+        java.lang.Process process = null;
         try {
-            try {
-                process = Runtime.getRuntime().exec("su");
-                OutputStream outputStream = process.getOutputStream();
-                outputStream.write("echo \"test\" >/dev/null\n".getBytes());
-                outputStream.flush();
-                outputStream.close();
-                r1 = process.waitFor() == 0;
-            } finally {
-                if (process != null) {
-                    try {
-                        process.destroy();
-                    } catch (Exception e) {
-                    }
-                }
-            }
-        } catch (Exception e2) {
+            process = Runtime.getRuntime().exec("su");
+            OutputStream outputStream = process.getOutputStream();
+            outputStream.write("echo \"test\" >/dev/null\n".getBytes());
+            outputStream.flush();
+            outputStream.close();
+            rooted = process.waitFor() == 0;
+        } catch (Exception e) {
+            rooted = false;
+        } finally {
             if (process != null) {
                 try {
                     process.destroy();
-                } catch (Exception e3) {
+                } catch (Exception ignored) {
                 }
             }
         }
-        return r1;
+        return rooted;
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -100,68 +95,35 @@ public class AppTool {
         Code decompiled incorrectly, please refer to instructions dump.
     */
     public static boolean getRootPermission(Context context) {
-        String stringBuffer;
-        DataOutputStream dataOutputStream;
-        DataOutputStream dataOutputStream2 = null;
-        Process process = (DataOutputStream) 0;
+        // 还原修正: jadx 多变量类型推断失败（它自己标了 JADX WARN），按语义重写
+        java.lang.Process process = null;
+        DataOutputStream dataOutputStream = null;
         try {
-            try {
-                stringBuffer = new StringBuffer().append("chmod 777 ").append(context.getPackageCodePath()).toString();
-                process = Runtime.getRuntime().exec("su");
-                try {
-                    dataOutputStream = new DataOutputStream(process.getOutputStream());
-                } catch (Exception e) {
-                }
-            } catch (Throwable th) {
-                th = th;
-                if (dataOutputStream2 != null) {
-                    try {
-                        dataOutputStream2.close();
-                    } catch (Exception e2) {
-                        e2.printStackTrace();
-                        throw th;
-                    }
-                }
-                process.destroy();
-                throw th;
-            }
-            try {
-                dataOutputStream.writeBytes(new StringBuffer().append(stringBuffer).append("\n").toString());
-                dataOutputStream.writeBytes("exit\n");
-                dataOutputStream.flush();
-                process.waitFor();
+            String cmd = new StringBuffer().append("chmod 777 ")
+                    .append(context.getPackageCodePath()).toString();
+            process = Runtime.getRuntime().exec("su");
+            dataOutputStream = new DataOutputStream(process.getOutputStream());
+            dataOutputStream.writeBytes(new StringBuffer().append(cmd)
+                    .append("\n").toString());
+            dataOutputStream.writeBytes("exit\n");
+            dataOutputStream.flush();
+            process.waitFor();
+            return true;
+        } catch (Exception e) {
+            return false;
+        } finally {
+            if (dataOutputStream != null) {
                 try {
                     dataOutputStream.close();
-                    process.destroy();
-                } catch (Exception e3) {
-                    e3.printStackTrace();
+                } catch (Exception ignored) {
                 }
-                return true;
-            } catch (Exception e4) {
-                dataOutputStream2 = dataOutputStream;
-                if (dataOutputStream2 != null) {
-                    try {
-                        dataOutputStream2.close();
-                    } catch (Exception e5) {
-                        e5.printStackTrace();
-                        return false;
-                    }
-                }
-                process.destroy();
-                return false;
-            } catch (Throwable th2) {
-                th = th2;
-                dataOutputStream2 = dataOutputStream;
-                if (dataOutputStream2 != null) {
-                }
-                process.destroy();
-                throw th;
             }
-        } catch (Exception e6) {
-            process = 0;
-        } catch (Throwable th3) {
-            th = th3;
-            process = 0;
+            if (process != null) {
+                try {
+                    process.destroy();
+                } catch (Exception ignored) {
+                }
+            }
         }
     }
 

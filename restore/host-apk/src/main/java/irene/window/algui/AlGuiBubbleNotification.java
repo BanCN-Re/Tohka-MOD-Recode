@@ -67,7 +67,7 @@ public class AlGuiBubbleNotification {
         ((ViewGroup.LayoutParams) this.wParams).height = -2;
         this.wParams.gravity = 8388693;
         this.wParams.format = 1;
-        this.wParams.windowAnimations = android.R.style.Animation.Toast;
+        this.wParams.windowAnimations = android.R.style.Animation_Toast;
         this.wParams.flags = AlGuiData.getLiveStreamFlags() | 8 | 16777216;
         this.wParams.y = dpToPx(16);
         this.wParams.x = dpToPx(16);
@@ -197,46 +197,50 @@ public class AlGuiBubbleNotification {
             animationSet.addAnimation(scaleAnimation);
             animationSet.addAnimation(alphaAnimation);
             this.val$back.setColor(ViewTool.darkenColor(this.val$backColor, 0.7f));
-            animationSet.setAnimationListener(new Animation.AnimationListener(this, this.val$button, this.val$back, this.val$backColor, this.val$fun, view, this.val$buttonText) { // from class: irene.window.algui.AlGuiBubbleNotification.100000001.100000000
-                private final AnonymousClass100000001 this$0;
-                private final GradientDrawable val$back;
-                private final int val$backColor;
-                private final vLinearLayout val$button;
-                private final TextView val$buttonText;
-                private final T_ButtonOnChangeListener val$fun;
-                private final View val$v;
-
-                {
-                    this.this$0 = this;
-                    this.val$button = r2;
-                    this.val$back = r3;
-                    this.val$backColor = r4;
-                    this.val$fun = r5;
-                    this.val$v = view;
-                    this.val$buttonText = r7;
-                }
-
-                @Override // android.view.animation.Animation.AnimationListener
-                public void onAnimationRepeat(Animation animation) {
-                }
-
-                @Override // android.view.animation.Animation.AnimationListener
-                public void onAnimationStart(Animation animation) {
-                }
-
-                @Override // android.view.animation.Animation.AnimationListener
-                public void onAnimationEnd(Animation animation) {
-                    this.val$button.clearAnimation();
-                    this.val$back.setColor(this.val$backColor);
-                    if (!this.this$0.isOne || this.val$fun == null) {
-                        return;
-                    }
-                    this.val$fun.onClick(this.val$v, this.val$back, this.val$buttonText, this.this$0.isChecked);
-                    this.this$0.isChecked = !this.this$0.isChecked;
-                    this.this$0.isOne = false;
-                }
-            });
+            animationSet.setAnimationListener(new AnonymousClass100000000(this, this.val$button, this.val$back, this.val$backColor, this.val$fun, view, this.val$buttonText));
             this.val$button.startAnimation(animationSet);
+        }
+
+        /* renamed from: irene.window.algui.AlGuiBubbleNotification$100000001$100000000, reason: invalid class name */
+        /* loaded from: classes.dex */
+        class AnonymousClass100000000 implements Animation.AnimationListener {
+            private final AnonymousClass100000001 this$0;
+            private final GradientDrawable val$back;
+            private final int val$backColor;
+            private final vLinearLayout val$button;
+            private final TextView val$buttonText;
+            private final T_ButtonOnChangeListener val$fun;
+            private final View val$v;
+
+            AnonymousClass100000000(AnonymousClass100000001 anonymousClass100000001, vLinearLayout vlinearlayout, GradientDrawable gradientDrawable, int i, T_ButtonOnChangeListener t_ButtonOnChangeListener, View view, TextView textView) {
+                this.this$0 = anonymousClass100000001;
+                this.val$button = vlinearlayout;
+                this.val$back = gradientDrawable;
+                this.val$backColor = i;
+                this.val$fun = t_ButtonOnChangeListener;
+                this.val$v = view;
+                this.val$buttonText = textView;
+            }
+
+            @Override // android.view.animation.Animation.AnimationListener
+            public void onAnimationRepeat(Animation animation) {
+            }
+
+            @Override // android.view.animation.Animation.AnimationListener
+            public void onAnimationStart(Animation animation) {
+            }
+
+            @Override // android.view.animation.Animation.AnimationListener
+            public void onAnimationEnd(Animation animation) {
+                this.val$button.clearAnimation();
+                this.val$back.setColor(this.val$backColor);
+                if (!this.this$0.isOne || this.val$fun == null) {
+                    return;
+                }
+                this.val$fun.onClick(this.val$v, this.val$back, this.val$buttonText, this.this$0.isChecked);
+                this.this$0.isChecked = !this.this$0.isChecked;
+                this.this$0.isOne = false;
+            }
         }
     }
 
@@ -373,36 +377,40 @@ public class AlGuiBubbleNotification {
             if (this.val$layout != null) {
                 AlphaAnimation alphaAnimation = new AlphaAnimation(1, 0);
                 alphaAnimation.setDuration(2000);
-                alphaAnimation.setAnimationListener(new Animation.AnimationListener(this, this.val$layout) { // from class: irene.window.algui.AlGuiBubbleNotification.100000003.100000002
-                    private final AnonymousClass100000003 this$0;
-                    private final vLinearLayout val$layout;
-
-                    {
-                        this.this$0 = this;
-                        this.val$layout = r2;
-                    }
-
-                    @Override // android.view.animation.Animation.AnimationListener
-                    public void onAnimationRepeat(Animation animation) {
-                    }
-
-                    @Override // android.view.animation.Animation.AnimationListener
-                    public void onAnimationStart(Animation animation) {
-                    }
-
-                    @Override // android.view.animation.Animation.AnimationListener
-                    public void onAnimationEnd(Animation animation) {
-                        if (this.this$0.this$0.mainLayout.indexOfChild(this.val$layout) != -1) {
-                            this.val$layout.setVisibility(8);
-                            this.this$0.this$0.mainLayout.removeView(this.val$layout);
-                        }
-                        if (this.this$0.this$0.mainLayout.findViewById(AlGuiData.AlguiNotification.ButtonNotification.getId()) == null) {
-                            this.this$0.this$0.wParams.flags = AlGuiData.getLiveStreamFlags() | 24;
-                            this.this$0.this$0.updateW();
-                        }
-                    }
-                });
+                alphaAnimation.setAnimationListener(new AnonymousClass100000002(this, this.val$layout));
                 this.val$layout.startAnimation(alphaAnimation);
+            }
+        }
+
+        /* renamed from: irene.window.algui.AlGuiBubbleNotification$100000003$100000002, reason: invalid class name */
+        /* loaded from: classes.dex */
+        class AnonymousClass100000002 implements Animation.AnimationListener {
+            private final AnonymousClass100000003 this$0;
+            private final vLinearLayout val$layout;
+
+            AnonymousClass100000002(AnonymousClass100000003 anonymousClass100000003, vLinearLayout vlinearlayout) {
+                this.this$0 = anonymousClass100000003;
+                this.val$layout = vlinearlayout;
+            }
+
+            @Override // android.view.animation.Animation.AnimationListener
+            public void onAnimationRepeat(Animation animation) {
+            }
+
+            @Override // android.view.animation.Animation.AnimationListener
+            public void onAnimationStart(Animation animation) {
+            }
+
+            @Override // android.view.animation.Animation.AnimationListener
+            public void onAnimationEnd(Animation animation) {
+                if (this.this$0.this$0.mainLayout.indexOfChild(this.val$layout) != -1) {
+                    this.val$layout.setVisibility(8);
+                    this.this$0.this$0.mainLayout.removeView(this.val$layout);
+                }
+                if (this.this$0.this$0.mainLayout.findViewById(AlGuiData.AlguiNotification.ButtonNotification.getId()) == null) {
+                    this.this$0.this$0.wParams.flags = AlGuiData.getLiveStreamFlags() | 24;
+                    this.this$0.this$0.updateW();
+                }
             }
         }
     }
@@ -429,36 +437,40 @@ public class AlGuiBubbleNotification {
             if (this.val$layout != null) {
                 AlphaAnimation alphaAnimation = new AlphaAnimation(1, 0);
                 alphaAnimation.setDuration(2000);
-                alphaAnimation.setAnimationListener(new Animation.AnimationListener(this, this.val$layout) { // from class: irene.window.algui.AlGuiBubbleNotification.100000005.100000004
-                    private final AnonymousClass100000005 this$0;
-                    private final vLinearLayout val$layout;
-
-                    {
-                        this.this$0 = this;
-                        this.val$layout = r2;
-                    }
-
-                    @Override // android.view.animation.Animation.AnimationListener
-                    public void onAnimationRepeat(Animation animation) {
-                    }
-
-                    @Override // android.view.animation.Animation.AnimationListener
-                    public void onAnimationStart(Animation animation) {
-                    }
-
-                    @Override // android.view.animation.Animation.AnimationListener
-                    public void onAnimationEnd(Animation animation) {
-                        if (this.this$0.this$0.mainLayout.indexOfChild(this.val$layout) != -1) {
-                            this.val$layout.setVisibility(8);
-                            this.this$0.this$0.mainLayout.removeView(this.val$layout);
-                        }
-                        if (this.this$0.this$0.mainLayout.findViewById(AlGuiData.AlguiNotification.ButtonNotification.getId()) == null) {
-                            this.this$0.this$0.wParams.flags = AlGuiData.getLiveStreamFlags() | 24;
-                            this.this$0.this$0.updateW();
-                        }
-                    }
-                });
+                alphaAnimation.setAnimationListener(new AnonymousClass100000004(this, this.val$layout));
                 this.val$layout.startAnimation(alphaAnimation);
+            }
+        }
+
+        /* renamed from: irene.window.algui.AlGuiBubbleNotification$100000005$100000004, reason: invalid class name */
+        /* loaded from: classes.dex */
+        class AnonymousClass100000004 implements Animation.AnimationListener {
+            private final AnonymousClass100000005 this$0;
+            private final vLinearLayout val$layout;
+
+            AnonymousClass100000004(AnonymousClass100000005 anonymousClass100000005, vLinearLayout vlinearlayout) {
+                this.this$0 = anonymousClass100000005;
+                this.val$layout = vlinearlayout;
+            }
+
+            @Override // android.view.animation.Animation.AnimationListener
+            public void onAnimationRepeat(Animation animation) {
+            }
+
+            @Override // android.view.animation.Animation.AnimationListener
+            public void onAnimationStart(Animation animation) {
+            }
+
+            @Override // android.view.animation.Animation.AnimationListener
+            public void onAnimationEnd(Animation animation) {
+                if (this.this$0.this$0.mainLayout.indexOfChild(this.val$layout) != -1) {
+                    this.val$layout.setVisibility(8);
+                    this.this$0.this$0.mainLayout.removeView(this.val$layout);
+                }
+                if (this.this$0.this$0.mainLayout.findViewById(AlGuiData.AlguiNotification.ButtonNotification.getId()) == null) {
+                    this.this$0.this$0.wParams.flags = AlGuiData.getLiveStreamFlags() | 24;
+                    this.this$0.this$0.updateW();
+                }
             }
         }
     }
@@ -480,36 +492,40 @@ public class AlGuiBubbleNotification {
             if (this.val$layout != null) {
                 AlphaAnimation alphaAnimation = new AlphaAnimation(1, 0);
                 alphaAnimation.setDuration(2000);
-                alphaAnimation.setAnimationListener(new Animation.AnimationListener(this, this.val$layout) { // from class: irene.window.algui.AlGuiBubbleNotification.100000007.100000006
-                    private final AnonymousClass100000007 this$0;
-                    private final vLinearLayout val$layout;
-
-                    {
-                        this.this$0 = this;
-                        this.val$layout = r2;
-                    }
-
-                    @Override // android.view.animation.Animation.AnimationListener
-                    public void onAnimationRepeat(Animation animation) {
-                    }
-
-                    @Override // android.view.animation.Animation.AnimationListener
-                    public void onAnimationStart(Animation animation) {
-                    }
-
-                    @Override // android.view.animation.Animation.AnimationListener
-                    public void onAnimationEnd(Animation animation) {
-                        if (this.this$0.this$0.mainLayout.indexOfChild(this.val$layout) != -1) {
-                            this.val$layout.setVisibility(8);
-                            this.this$0.this$0.mainLayout.removeView(this.val$layout);
-                        }
-                        if (this.this$0.this$0.mainLayout.findViewById(AlGuiData.AlguiNotification.ButtonNotification.getId()) == null) {
-                            this.this$0.this$0.wParams.flags = AlGuiData.getLiveStreamFlags() | 24;
-                            this.this$0.this$0.updateW();
-                        }
-                    }
-                });
+                alphaAnimation.setAnimationListener(new AnonymousClass100000006(this, this.val$layout));
                 this.val$layout.startAnimation(alphaAnimation);
+            }
+        }
+
+        /* renamed from: irene.window.algui.AlGuiBubbleNotification$100000007$100000006, reason: invalid class name */
+        /* loaded from: classes.dex */
+        class AnonymousClass100000006 implements Animation.AnimationListener {
+            private final AnonymousClass100000007 this$0;
+            private final vLinearLayout val$layout;
+
+            AnonymousClass100000006(AnonymousClass100000007 anonymousClass100000007, vLinearLayout vlinearlayout) {
+                this.this$0 = anonymousClass100000007;
+                this.val$layout = vlinearlayout;
+            }
+
+            @Override // android.view.animation.Animation.AnimationListener
+            public void onAnimationRepeat(Animation animation) {
+            }
+
+            @Override // android.view.animation.Animation.AnimationListener
+            public void onAnimationStart(Animation animation) {
+            }
+
+            @Override // android.view.animation.Animation.AnimationListener
+            public void onAnimationEnd(Animation animation) {
+                if (this.this$0.this$0.mainLayout.indexOfChild(this.val$layout) != -1) {
+                    this.val$layout.setVisibility(8);
+                    this.this$0.this$0.mainLayout.removeView(this.val$layout);
+                }
+                if (this.this$0.this$0.mainLayout.findViewById(AlGuiData.AlguiNotification.ButtonNotification.getId()) == null) {
+                    this.this$0.this$0.wParams.flags = AlGuiData.getLiveStreamFlags() | 24;
+                    this.this$0.this$0.updateW();
+                }
             }
         }
     }
@@ -611,32 +627,36 @@ public class AlGuiBubbleNotification {
             if (this.val$layout != null) {
                 AlphaAnimation alphaAnimation = new AlphaAnimation(1, 0);
                 alphaAnimation.setDuration(2000);
-                alphaAnimation.setAnimationListener(new Animation.AnimationListener(this, this.val$layout) { // from class: irene.window.algui.AlGuiBubbleNotification.100000009.100000008
-                    private final AnonymousClass100000009 this$0;
-                    private final vLinearLayout val$layout;
-
-                    {
-                        this.this$0 = this;
-                        this.val$layout = r2;
-                    }
-
-                    @Override // android.view.animation.Animation.AnimationListener
-                    public void onAnimationRepeat(Animation animation) {
-                    }
-
-                    @Override // android.view.animation.Animation.AnimationListener
-                    public void onAnimationStart(Animation animation) {
-                    }
-
-                    @Override // android.view.animation.Animation.AnimationListener
-                    public void onAnimationEnd(Animation animation) {
-                        if (this.this$0.this$0.mainLayout.indexOfChild(this.val$layout) != -1) {
-                            this.val$layout.setVisibility(8);
-                            this.this$0.this$0.mainLayout.removeView(this.val$layout);
-                        }
-                    }
-                });
+                alphaAnimation.setAnimationListener(new AnonymousClass100000008(this, this.val$layout));
                 this.val$layout.startAnimation(alphaAnimation);
+            }
+        }
+
+        /* renamed from: irene.window.algui.AlGuiBubbleNotification$100000009$100000008, reason: invalid class name */
+        /* loaded from: classes.dex */
+        class AnonymousClass100000008 implements Animation.AnimationListener {
+            private final AnonymousClass100000009 this$0;
+            private final vLinearLayout val$layout;
+
+            AnonymousClass100000008(AnonymousClass100000009 anonymousClass100000009, vLinearLayout vlinearlayout) {
+                this.this$0 = anonymousClass100000009;
+                this.val$layout = vlinearlayout;
+            }
+
+            @Override // android.view.animation.Animation.AnimationListener
+            public void onAnimationRepeat(Animation animation) {
+            }
+
+            @Override // android.view.animation.Animation.AnimationListener
+            public void onAnimationStart(Animation animation) {
+            }
+
+            @Override // android.view.animation.Animation.AnimationListener
+            public void onAnimationEnd(Animation animation) {
+                if (this.this$0.this$0.mainLayout.indexOfChild(this.val$layout) != -1) {
+                    this.val$layout.setVisibility(8);
+                    this.this$0.this$0.mainLayout.removeView(this.val$layout);
+                }
             }
         }
     }

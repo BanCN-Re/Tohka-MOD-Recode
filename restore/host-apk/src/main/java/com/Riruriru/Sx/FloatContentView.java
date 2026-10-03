@@ -21,7 +21,6 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.core.view.ViewCompat;
-import com.google.android.material.card.MaterialCardViewHelper;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -61,25 +60,33 @@ public class FloatContentView extends PopupWindow {
         setupAssets();
     }
 
-    private void setupAssets() {
-        new Thread(new Runnable() { // from class: com.Riruriru.Sx.FloatContentView.1
-            @Override // java.lang.Runnable
-            public void run() {
-                try {
-                    FloatContentView.this.binaryFile = new File(FloatContentView.this.mContext.getFilesDir(), "64");
-                    FloatContentView.this.extractAssetFile("64", FloatContentView.this.binaryFile);
-                    FloatContentView.this.arkReSoFile = new File(FloatContentView.this.mContext.getFilesDir(), "libArkRe.so");
-                    FloatContentView.this.extractAssetFile("libArkRe.so", FloatContentView.this.arkReSoFile);
-                    FloatContentView.this.cherryTaleSoFile = new File(FloatContentView.this.mContext.getFilesDir(), "libCherryTale.so");
-                    FloatContentView.this.extractAssetFile("libCherryTale.so", FloatContentView.this.cherryTaleSoFile);
-                    if (FloatContentView.this.binaryFile.exists()) {
-                        FloatContentView.this.setFilePermissions(FloatContentView.this.binaryFile);
-                        Runtime.getRuntime().exec("sh -c chmod 777 " + FloatContentView.this.binaryFile.getAbsolutePath());
-                    }
-                } catch (Exception e) {
+    /* JADX INFO: Access modifiers changed from: package-private */
+    /* renamed from: com.Riruriru.Sx.FloatContentView$1, reason: invalid class name */
+    /* loaded from: classes3.dex */
+    public class AnonymousClass1 implements Runnable {
+        AnonymousClass1() {
+        }
+
+        @Override // java.lang.Runnable
+        public void run() {
+            try {
+                FloatContentView.this.binaryFile = new File(FloatContentView.this.mContext.getFilesDir(), "64");
+                FloatContentView.this.extractAssetFile("64", FloatContentView.this.binaryFile);
+                FloatContentView.this.arkReSoFile = new File(FloatContentView.this.mContext.getFilesDir(), "libArkRe.so");
+                FloatContentView.this.extractAssetFile("libArkRe.so", FloatContentView.this.arkReSoFile);
+                FloatContentView.this.cherryTaleSoFile = new File(FloatContentView.this.mContext.getFilesDir(), "libCherryTale.so");
+                FloatContentView.this.extractAssetFile("libCherryTale.so", FloatContentView.this.cherryTaleSoFile);
+                if (FloatContentView.this.binaryFile.exists()) {
+                    FloatContentView.this.setFilePermissions(FloatContentView.this.binaryFile);
+                    Runtime.getRuntime().exec("sh -c chmod 777 " + FloatContentView.this.binaryFile.getAbsolutePath());
                 }
+            } catch (Exception e) {
             }
-        }).start();
+        }
+    }
+
+    private void setupAssets() {
+        new Thread(new AnonymousClass1()).start();
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -196,39 +203,48 @@ public class FloatContentView extends PopupWindow {
         }
     }
 
-    private void initColorChangingSwitch(final Switch sw) {
-        this.colorSwitches.add(sw);
-        Runnable colorRunnable = new Runnable() { // from class: com.Riruriru.Sx.FloatContentView.2
-            private int r = 255;
-            private int g = 0;
-            private int b = 0;
-            private int step = 1;
+    /* renamed from: com.Riruriru.Sx.FloatContentView$2, reason: invalid class name */
+    /* loaded from: classes3.dex */
+    static class AnonymousClass2 implements Runnable {
+        final /* synthetic */ Switch val$sw;
+        private int r = 255;
+        private int g = 0;
+        private int b = 0;
+        private int step = 1;
 
-            @Override // java.lang.Runnable
-            public void run() {
-                sw.setTextColor(Color.rgb(this.r, this.g, this.b));
-                if (this.step == 1) {
-                    this.r--;
-                    this.g++;
-                    if (this.g == 255) {
-                        this.step = 2;
-                    }
-                } else if (this.step == 2) {
-                    this.g--;
-                    this.b++;
-                    if (this.b == 255) {
-                        this.step = 3;
-                    }
-                } else if (this.step == 3) {
-                    this.b--;
-                    this.r++;
-                    if (this.r == 255) {
-                        this.step = 1;
-                    }
+        AnonymousClass2(Switch r2) {
+            this.val$sw = r2;
+        }
+
+        @Override // java.lang.Runnable
+        public void run() {
+            this.val$sw.setTextColor(Color.rgb(this.r, this.g, this.b));
+            if (this.step == 1) {
+                this.r--;
+                this.g++;
+                if (this.g == 255) {
+                    this.step = 2;
                 }
-                sw.postDelayed(this, 10L);
+            } else if (this.step == 2) {
+                this.g--;
+                this.b++;
+                if (this.b == 255) {
+                    this.step = 3;
+                }
+            } else if (this.step == 3) {
+                this.b--;
+                this.r++;
+                if (this.r == 255) {
+                    this.step = 1;
+                }
             }
-        };
+            this.val$sw.postDelayed(this, 10L);
+        }
+    }
+
+    private void initColorChangingSwitch(Switch sw) {
+        this.colorSwitches.add(sw);
+        Runnable colorRunnable = new AnonymousClass2(sw);
         sw.post(colorRunnable);
     }
 
@@ -352,13 +368,7 @@ public class FloatContentView extends PopupWindow {
         switchButtonBg.setColor(-1996488705);
         switchButtonBg.setCornerRadius(10.0f);
         switchGameButton.setBackground(switchButtonBg);
-        switchGameButton.setOnClickListener(new View.OnClickListener() { // from class: com.Riruriru.Sx.FloatContentView.3
-            @Override // android.view.View.OnClickListener
-            public void onClick(View v) {
-                FloatContentView.this.selectedGame = (FloatContentView.this.selectedGame + 1) % 2;
-                FloatContentView.this.gameSelectionText.setText(FloatContentView.this.selectedGame == 0 ? "樱景物语" : "星陨计划");
-            }
-        });
+        switchGameButton.setOnClickListener(new AnonymousClass3());
         linearLayout6.addView(this.gameSelectionText);
         linearLayout6.addView(switchGameButton);
         linearLayout5.addView(linearLayout6);
@@ -371,18 +381,13 @@ public class FloatContentView extends PopupWindow {
         injectButtonBg.setCornerRadius(40.0f);
         injectButtonLayout.setBackground(injectButtonBg);
         injectButtonLayout.setGravity(17);
-        final TextView injectButtonText = new TextView(this.mContext);
+        TextView injectButtonText = new TextView(this.mContext);
         injectButtonText.setText("开始启动");
         injectButtonText.setTextSize(14.0f);
         injectButtonText.setTextColor(-1);
         injectButtonText.setTypeface(Typeface.defaultFromStyle(1));
         injectButtonLayout.addView(injectButtonText);
-        injectButtonLayout.setOnClickListener(new View.OnClickListener() { // from class: com.Riruriru.Sx.FloatContentView.4
-            @Override // android.view.View.OnClickListener
-            public void onClick(View v) {
-                FloatContentView.this.startInjection(injectButtonText);
-            }
-        });
+        injectButtonLayout.setOnClickListener(new AnonymousClass4(injectButtonText));
         linearLayout5.addView(injectButtonLayout);
         LinearLayout logLayout = new LinearLayout(this.mContext);
         LinearLayout.LayoutParams logLayoutParams = new LinearLayout.LayoutParams(-1, -2);
@@ -398,7 +403,7 @@ public class FloatContentView extends PopupWindow {
         this.tvLogOutput.setTextColor(-1);
         this.tvLogOutput.setPadding(15, 15, 15, 15);
         this.scrollViewLog = new ScrollView(this.mContext);
-        FrameLayout.LayoutParams scrollLogParams = new FrameLayout.LayoutParams(-1, MaterialCardViewHelper.DEFAULT_FADE_ANIM_DURATION);
+        FrameLayout.LayoutParams scrollLogParams = new FrameLayout.LayoutParams(-1, 150);
         this.scrollViewLog.setLayoutParams(scrollLogParams);
         this.scrollViewLog.addView(this.tvLogOutput);
         logLayout.addView(this.scrollViewLog);
@@ -416,10 +421,40 @@ public class FloatContentView extends PopupWindow {
         }
     }
 
+    /* JADX INFO: Access modifiers changed from: package-private */
+    /* renamed from: com.Riruriru.Sx.FloatContentView$3, reason: invalid class name */
+    /* loaded from: classes3.dex */
+    public class AnonymousClass3 implements View.OnClickListener {
+        AnonymousClass3() {
+        }
+
+        @Override // android.view.View.OnClickListener
+        public void onClick(View v) {
+            FloatContentView.this.selectedGame = (FloatContentView.this.selectedGame + 1) % 2;
+            FloatContentView.this.gameSelectionText.setText(FloatContentView.this.selectedGame == 0 ? "樱景物语" : "星陨计划");
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: package-private */
+    /* renamed from: com.Riruriru.Sx.FloatContentView$4, reason: invalid class name */
+    /* loaded from: classes3.dex */
+    public class AnonymousClass4 implements View.OnClickListener {
+        final /* synthetic */ TextView val$injectButtonText;
+
+        AnonymousClass4(TextView textView) {
+            this.val$injectButtonText = textView;
+        }
+
+        @Override // android.view.View.OnClickListener
+        public void onClick(View v) {
+            FloatContentView.this.startInjection(this.val$injectButtonText);
+        }
+    }
+
     /* JADX INFO: Access modifiers changed from: private */
-    public void startInjection(final TextView buttonText) {
-        final String packageName;
-        final File soFile;
+    public void startInjection(TextView buttonText) {
+        String packageName;
+        File soFile;
         if (this.selectedGame == 0) {
             packageName = "com.neversoft.rpg.erolabs";
             soFile = this.cherryTaleSoFile;
@@ -438,16 +473,31 @@ public class FloatContentView extends PopupWindow {
         buttonText.setEnabled(false);
         buttonText.setText("注入中...");
         this.tvLogOutput.setText("");
-        new Thread(new Runnable() { // from class: com.Riruriru.Sx.FloatContentView.5
-            @Override // java.lang.Runnable
-            public void run() {
-                FloatContentView.this.executeInjection(packageName, "", soFile.getAbsolutePath(), buttonText);
-            }
-        }).start();
+        new Thread(new AnonymousClass5(packageName, soFile, buttonText)).start();
+    }
+
+    /* JADX INFO: Access modifiers changed from: package-private */
+    /* renamed from: com.Riruriru.Sx.FloatContentView$5, reason: invalid class name */
+    /* loaded from: classes3.dex */
+    public class AnonymousClass5 implements Runnable {
+        final /* synthetic */ TextView val$buttonText;
+        final /* synthetic */ String val$packageName;
+        final /* synthetic */ File val$soFile;
+
+        AnonymousClass5(String str, File file, TextView textView) {
+            this.val$packageName = str;
+            this.val$soFile = file;
+            this.val$buttonText = textView;
+        }
+
+        @Override // java.lang.Runnable
+        public void run() {
+            FloatContentView.this.executeInjection(this.val$packageName, "", this.val$soFile.getAbsolutePath(), this.val$buttonText);
+        }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void executeInjection(String packageName, String pid, String soPath, final TextView buttonText) {
+    public void executeInjection(String packageName, String pid, String soPath, TextView buttonText) {
         appendLog("启动中...");
         try {
             File targetSo = new File(soPath);
@@ -461,30 +511,13 @@ public class FloatContentView extends PopupWindow {
                 command.add(soPath);
                 ProcessBuilder builder = new ProcessBuilder(command);
                 builder.redirectErrorStream(true);
-                Process process = builder.start();
+                java.lang.Process process = builder.start();
                 BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
                 do {
                 } while (reader.readLine() != null);
-                final int exitCode = process.waitFor();
+                int exitCode = process.waitFor();
                 if (this.tvLogOutput != null) {
-                    this.tvLogOutput.post(new Runnable() { // from class: com.Riruriru.Sx.FloatContentView.6
-                        @Override // java.lang.Runnable
-                        public void run() {
-                            if (exitCode == 0) {
-                                FloatContentView.this.tvLogOutput.setText("启动成功 即将退出");
-                                FloatContentView.this.tvLogOutput.postDelayed(new Runnable() { // from class: com.Riruriru.Sx.FloatContentView.6.1
-                                    @Override // java.lang.Runnable
-                                    public void run() {
-                                        Process.killProcess(Process.myPid());
-                                        System.exit(0);
-                                    }
-                                }, 1000L);
-                            } else {
-                                FloatContentView.this.tvLogOutput.setText("启动失败：未启动游戏或驱动异常");
-                                FloatContentView.this.resetButton(buttonText);
-                            }
-                        }
-                    });
+                    this.tvLogOutput.post(new AnonymousClass6(exitCode, buttonText));
                 }
                 return;
             }
@@ -496,42 +529,108 @@ public class FloatContentView extends PopupWindow {
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
-    public void resetButton(final TextView buttonText) {
-        if (buttonText != null) {
-            buttonText.post(new Runnable() { // from class: com.Riruriru.Sx.FloatContentView.7
-                @Override // java.lang.Runnable
-                public void run() {
-                    buttonText.setEnabled(true);
-                    buttonText.setText("开始启动");
-                }
-            });
+    /* JADX INFO: Access modifiers changed from: package-private */
+    /* renamed from: com.Riruriru.Sx.FloatContentView$6, reason: invalid class name */
+    /* loaded from: classes3.dex */
+    public class AnonymousClass6 implements Runnable {
+        final /* synthetic */ TextView val$buttonText;
+        final /* synthetic */ int val$exitCode;
+
+        AnonymousClass6(int i, TextView textView) {
+            this.val$exitCode = i;
+            this.val$buttonText = textView;
+        }
+
+        @Override // java.lang.Runnable
+        public void run() {
+            if (this.val$exitCode == 0) {
+                FloatContentView.this.tvLogOutput.setText("启动成功 即将退出");
+                FloatContentView.this.tvLogOutput.postDelayed(new AnonymousClass1(), 1000L);
+            } else {
+                FloatContentView.this.tvLogOutput.setText("启动失败：未启动游戏或驱动异常");
+                FloatContentView.this.resetButton(this.val$buttonText);
+            }
+        }
+
+        /* renamed from: com.Riruriru.Sx.FloatContentView$6$1, reason: invalid class name */
+        /* loaded from: classes3.dex */
+        static class AnonymousClass1 implements Runnable {
+            AnonymousClass1() {
+            }
+
+            @Override // java.lang.Runnable
+            public void run() {
+                Process.killProcess(Process.myPid());
+                System.exit(0);
+            }
         }
     }
 
-    private void appendLog(final String text) {
+    /* JADX INFO: Access modifiers changed from: package-private */
+    /* renamed from: com.Riruriru.Sx.FloatContentView$7, reason: invalid class name */
+    /* loaded from: classes3.dex */
+    static public class AnonymousClass7 implements Runnable {
+        final /* synthetic */ TextView val$buttonText;
+
+        AnonymousClass7(TextView textView) {
+            this.val$buttonText = textView;
+        }
+
+        @Override // java.lang.Runnable
+        public void run() {
+            this.val$buttonText.setEnabled(true);
+            this.val$buttonText.setText("开始启动");
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public void resetButton(TextView buttonText) {
+        if (buttonText != null) {
+            buttonText.post(new AnonymousClass7(buttonText));
+        }
+    }
+
+    /* JADX INFO: Access modifiers changed from: package-private */
+    /* renamed from: com.Riruriru.Sx.FloatContentView$8, reason: invalid class name */
+    /* loaded from: classes3.dex */
+    public class AnonymousClass8 implements Runnable {
+        final /* synthetic */ String val$text;
+
+        AnonymousClass8(String str) {
+            this.val$text = str;
+        }
+
+        @Override // java.lang.Runnable
+        public void run() {
+            String currentText;
+            String currentText2 = FloatContentView.this.tvLogOutput.getText().toString();
+            if (!currentText2.isEmpty()) {
+                currentText = currentText2 + "\n" + this.val$text;
+            } else {
+                currentText = this.val$text;
+            }
+            FloatContentView.this.tvLogOutput.setText(currentText);
+            if (FloatContentView.this.scrollViewLog != null) {
+                FloatContentView.this.scrollViewLog.postDelayed(new AnonymousClass1(), 100L);
+            }
+        }
+
+        /* renamed from: com.Riruriru.Sx.FloatContentView$8$1, reason: invalid class name */
+        /* loaded from: classes3.dex */
+        class AnonymousClass1 implements Runnable {
+            AnonymousClass1() {
+            }
+
+            @Override // java.lang.Runnable
+            public void run() {
+                FloatContentView.this.scrollViewLog.fullScroll(130);
+            }
+        }
+    }
+
+    private void appendLog(String text) {
         if (this.tvLogOutput != null) {
-            this.tvLogOutput.post(new Runnable() { // from class: com.Riruriru.Sx.FloatContentView.8
-                @Override // java.lang.Runnable
-                public void run() {
-                    String currentText;
-                    String currentText2 = FloatContentView.this.tvLogOutput.getText().toString();
-                    if (!currentText2.isEmpty()) {
-                        currentText = currentText2 + "\n" + text;
-                    } else {
-                        currentText = text;
-                    }
-                    FloatContentView.this.tvLogOutput.setText(currentText);
-                    if (FloatContentView.this.scrollViewLog != null) {
-                        FloatContentView.this.scrollViewLog.postDelayed(new Runnable() { // from class: com.Riruriru.Sx.FloatContentView.8.1
-                            @Override // java.lang.Runnable
-                            public void run() {
-                                FloatContentView.this.scrollViewLog.fullScroll(130);
-                            }
-                        }, 100L);
-                    }
-                }
-            });
+            this.tvLogOutput.post(new AnonymousClass8(text));
         }
     }
 

@@ -207,11 +207,16 @@ Tohka-MOD-Recode/
 
 ## 作者与致谢
 
-| 角色 | 说明 |
+| 角色 | 承担者 |
 | --- | --- |
-| **原作者** | 哔哩哔哩 [My-血-233](https://space.bilibili.com/)、艾琳（AlGui 框架） |
-| **逆向还原** | [BanCN](https://github.com/BanCN-Re) |
-| **原始 MOD** | Riruriru Mod 1.1.2 |
+| **原始 MOD 作者** | 哔哩哔哩 **My-血-233**（Riruriru Mod 1.1.2） |
+| **AlGui 框架作者** | **艾琳**（irene，`irene.window.algui`，28 个类） |
+| **逆向** | **GLM 5.3** —— DEX/AXML 拆解、native 汇编分析、卡密状态机定位、载荷接口提取 |
+| **文档整理与推断** | **Opus 5.5** —— 模块文档、jadx 失真成因推断、修复策略、架构说明 |
+| **还原实现** | **DeepSeek V4.1 Flash** —— 源码级还原、修复全部编译错误、搭可编译工程、构建验证与发布 |
+| **仓库** | [BanCN-Re/Tohka-MOD-Recode](https://github.com/BanCN-Re/Tohka-MOD-Recode) |
+
+三者的具体分工见 [CREDITS.md](CREDITS.md)。
 
 详见 [CREDITS.md](CREDITS.md)。
 

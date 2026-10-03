@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  Riruriru Mod 1.1.2 宿主清单（逆向还原）
+  Riruriru Mod 1.1.2 宿主清单（逆向还原重建版）
 
   与原包一致的关键属性：
-    sharedUserId="com.Riruriru.Sx"  与配套游戏共享 UID（安装期属性，改动需先卸载）
     targetSdkVersion=27             低 target，便于拿 MANAGE_EXTERNAL_STORAGE 等
     extractNativeLibs=false         .so 不解压，直接 mmap
     requestLegacyExternalStorage   用旧式外部存储访问
     debuggable=true                 原包就是打开的
 
-  注意：原包里 AndroidX 自动生成的组件（InitializationProvider / ProfileInstallReceiver）
-  由依赖在合并时自带，这里不重复声明，否则会冲突。
+  与还原版源码的两点差异（有意为之，见 ../COMPILE-FIXES.md）：
+    1. 去掉了 sharedUserId="com.Riruriru.Sx"
+       原版靠它与游戏共享 UID 来读游戏私有目录；重建版走 root，
+       不需要它，去掉后也不再要求签名与游戏一致，安装更省事。
+    2. AndroidX 自动生成的组件（InitializationProvider / ProfileInstallReceiver）
+       不在这里声明 —— 依赖会自带，重复声明会冲突。
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.Riruriru.Sx"
-    android:sharedUserId="com.Riruriru.Sx"
     android:versionCode="1"
     android:versionName="1.1.2">
 
@@ -60,8 +62,8 @@
             android:name="com.Riruriru.Sx.FloatServiceView"
             android:exported="false" />
 
-        <!-- 原包里还有一个 FloatStartService（还原的源码里有，但原 manifest 未声明；
-             这里按还原源码补上，让"启动悬浮窗"按钮能工作） -->
+        <!-- 还原源码里有 FloatStartService，原 manifest 未声明；
+             这里补上，让"启动悬浮窗"按钮能工作 -->
         <service
             android:name="com.Riruriru.Sx.FloatStartService"
             android:exported="false" />

@@ -90,21 +90,25 @@ public class AlGuiSoundEffect {
                 this.mediaPlayer.setDataSource(new StringBuffer().append(new StringBuffer().append(this.context.getCacheDir().getPath()).append("/").toString()).append(str).toString());
                 this.mediaPlayer.prepare();
                 this.mediaPlayer.start();
-                this.mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener(this) { // from class: irene.window.algui.AlGuiSoundEffect.100000000
-                    private final AlGuiSoundEffect this$0;
-
-                    {
-                        this.this$0 = this;
-                    }
-
-                    @Override // android.media.MediaPlayer.OnCompletionListener
-                    public void onCompletion(MediaPlayer mediaPlayer) {
-                        mediaPlayer.release();
-                    }
-                });
+                this.mediaPlayer.setOnCompletionListener(new AnonymousClass100000000(this));
             }
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    /* renamed from: irene.window.algui.AlGuiSoundEffect$100000000, reason: invalid class name */
+    /* loaded from: classes.dex */
+    class AnonymousClass100000000 implements MediaPlayer.OnCompletionListener {
+        private final AlGuiSoundEffect this$0;
+
+        AnonymousClass100000000(AlGuiSoundEffect alGuiSoundEffect) {
+            this.this$0 = alGuiSoundEffect;
+        }
+
+        @Override // android.media.MediaPlayer.OnCompletionListener
+        public void onCompletion(MediaPlayer mediaPlayer) {
+            mediaPlayer.release();
         }
     }
 }
