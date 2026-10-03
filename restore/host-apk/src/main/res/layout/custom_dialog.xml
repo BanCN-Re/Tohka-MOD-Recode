@@ -1,0 +1,3 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+  <Button android:id="@+id/gen_7f080087" android:layout_width="100px" android:layout_height="wrap_content" android:layout_marginTop="5dip" android:layout_marginRight="5dip" android:text=" Ok "/>
+</RelativeLayout>

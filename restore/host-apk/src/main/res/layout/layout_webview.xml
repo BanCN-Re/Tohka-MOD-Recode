@@ -1,0 +1,5 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+  <WebView android:id="@+id/gen_7f0801c1" android:layout_width="match_parent" android:layout_height="0dip" android:layout_weight="1.000000"/>
+  <Button android:id="@+id/gen_7f08005c" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="关闭"/>
+  <Button android:id="@+id/gen_7f08005d" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="启动"/>
+</LinearLayout>

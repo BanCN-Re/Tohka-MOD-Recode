@@ -1,0 +1,68 @@
+# ============================================================
+#  .gitignore
+# ============================================================
+
+# ---------- 大件二进制：不进仓库，走 Release ----------
+# 三个载荷合计约 16 MB，且属于原作者作品，不适合放进源码仓库
+restore/host-apk/src/main/assets/64
+restore/host-apk/src/main/assets/*.so
+restore/host-apk/assets/
+restore/host-apk/res-final/assets/
+restore/host-apk/_res-full-backup/assets/
+work/assets/
+
+# ---------- 原始 APK（含原作者作品） ----------
+*.apk
+*.apks
+*.xapk
+Riruriru Mod*
+# Release 用的 APK 放这里，不被忽略
+!release-assets/*.apk
+
+# ---------- 原始 payload .so ----------
+# 注意：只排除 work/ 与 assets/ 下的原始载荷；
+# restore/injector 下的复刻源码是 .c，不受影响
+work/*.so
+*.so
+!restore/injector/**/*.c
+
+# ---------- 构建产物 ----------
+build/
+.gradle/
+local.properties
+*.iml
+.idea/
+captures/
+.externalNativeBuild/
+.cxx/
+*.class
+
+# ---------- 还原中间产物（可重新生成） ----------
+restore/host-apk/_deps/
+restore/host-apk/_javac-out/
+restore/host-apk/_verify/
+restore/host-apk/_syntax/
+restore/host-apk/_jadx-R-backup/
+restore/host-apk/_res-full-backup/
+restore/host-apk/src/main/res-full-backup/
+restore/_out/
+restore/_*.txt
+restore/_*.log
+restore/_push/
+
+# ---------- 逆向工具（体积大，可自行下载） ----------
+tools/jadx/
+tools/jadx.zip
+
+# ---------- 分析原始数据（体积大，可重新生成） ----------
+work/*.txt
+work/*.log
+
+# ---------- 设备备份与测试产物 ----------
+evidence/
+*.log
+
+# ---------- 系统 ----------
+Thumbs.db
+Desktop.ini
+.DS_Store

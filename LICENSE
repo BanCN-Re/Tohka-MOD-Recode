@@ -1,0 +1,48 @@
+MIT License
+
+Copyright (c) 2026 BanCN
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## 适用范围说明 / Scope Note
+
+本 MIT 许可仅覆盖**本仓库的逆向还原成果**，即：
+
+- `restore/` 下由本项目还原出的源码、文档、脚本
+- 构建脚本与工程配置
+
+**不覆盖**以下内容，其著作权归各自权利人所有：
+
+- 原始 MOD 程序（Riruriru Mod / Tohka MOD）及其作者（哔哩哔哩 My-血-233）
+- AlGui 悬浮窗框架及其作者（艾琳）
+- 目标游戏（Ark ReCode / Cherry Tale）的任何内容
+- 任何第三方库（AndroidX、Material Components、Dear ImGui 等）
+
+本项目对这些内容**不主张任何权利**，仅出于技术研究与学习目的进行还原与说明。
+
+---
+
+This MIT License covers ONLY the reverse-engineering deliverables produced in
+this repository (source code under `restore/`, documentation, and tooling).
+
+It does NOT cover the original MOD software, the AlGui framework, the target
+games, or any third-party libraries — all rights to those remain with their
+respective owners. This project claims no rights over them.

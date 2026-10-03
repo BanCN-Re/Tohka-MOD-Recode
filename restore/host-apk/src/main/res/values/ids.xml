@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="btn_qq_group" type="id"/>
+    <item name="btn_bilibili" type="id"/>
+    <item name="btn_buy" type="id"/>
+</resources>
